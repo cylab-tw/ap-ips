@@ -9,7 +9,6 @@ url: /en/governance
 
 ---
 
-
 ## Governance and Board
 
 AP-IPS is governed by a board composed of representatives from participating countries and organizations.
