@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resources | AP-IPS</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #4A2C84;
+      padding: 10px;
+    }
+
+    .navbar-menu {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-menu a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .navbar-menu a:hover {
+      text-decoration: underline;
+    }
+
+    .navbar-menu a:not(:last-child) {
+      border-right: 1px solid white;
+      padding-right: 15px;
+    }
+
+    .navbar-logo {
+      height: 45px;
+      width: auto;
+    }
+
+    .navbar-search {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-search input {
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .navbar-search button {
+      margin-left: 5px;
+      padding: 5px 10px;
+      background-color: white;
+      color: #4A2C84;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .navbar-search button:hover {
+      background-color: #ddd;
+    }
+
+    .content img {
+      max-width: 50%;
+      display: block;
+      margin: 0 auto;
+      height: auto;
+    }
+
+    #searchSuggestions {
+      background-color: white;
+      border: 1px solid #ccc;
+      position: absolute;
+      z-index: 1000;
+      width: 200px;
+    }
+
+    #searchSuggestions div {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    #searchSuggestions div:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/en/" style="margin-right: auto;">
+    <img src="https://hackmd.io/_uploads/HJCHVxGSZl.png" alt="Logo" class="navbar-logo">
+  </a>
+
+  <div class="navbar-menu">
+    
+    
+      
+        <a href="/en/"
+           >
+           Home
+        </a>
+      
+        <a href="/en/news"
+           >
+           News
+        </a>
+      
+        <a href="/en/introduction"
+           >
+           Introduction
+        </a>
+      
+        <a href="/en/events"
+           >
+           Events
+        </a>
+      
+        <a href="/en/resources"
+           >
+           Resources
+        </a>
+      
+        <a href="/en/about"
+           >
+           About
+        </a>
+      
+        <a href="/en/contact"
+           >
+           Contact us
+        </a>
+      
+    
+  </div>
+
+  <div class="navbar-search">
+    <input type="text" id="searchInput" placeholder="Search..." oninput="updateSuggestions()">
+    <button onclick="performSearch()">Search</button>
+    <div id="searchSuggestions">
+      <!-- Suggestions will be displayed here -->
+    </div>
+  </div>
+</nav>
+
+<div id="searchResults" style="margin: 20px;">
+  <!-- Search results will be displayed here -->
+</div>
+
+<main class="content">
+  <h2 id="hl7-fhir-international-patient-summary-ips"><a href="/en/hl7-fhir-ips">HL7 FHIR International Patient Summary (IPS)</a></h2>
+<h2 id="ihe-profiles"><a href="/en/ihe-profiles">IHE Profiles</a></h2>
+<h2 id="national-standards"><a href="/en/national-standards">National Standards</a></h2>
+<h2 id="tools--implementations"><a href="/en/tools-implementations">Tools &amp; Implementations</a></h2>
+
+</main>
+
+<script>
+  function updateSuggestions() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const suggestionsContainer = document.getElementById('searchSuggestions');
+    suggestionsContainer.innerHTML = '';
+
+    const pages = [
+      { title: 'Home', url: '/en/', content: 'Asia Pacific International Patient Summary (AP IPS) Advancing Cross-Border Healthcare Interoperability in the Asia-Pacific Region.' },
+      { title: 'News', url: '/en/news', content: 'Latest updates and news about AP-IPS and its initiatives.' },
+      { title: 'Introduction', url: '/en/introduction', content: 'Learn about the AP-IPS alliance and its goals for healthcare interoperability.' },
+      { title: 'Events', url: '/en/events', content: 'Upcoming events including Connectathon and Plugathon for interoperability testing.' },
+      { title: 'Resources', url: '/en/resources', content: 'Access HL7 FHIR IPS specifications, IHE profiles, and national standards.' },
+      { title: 'About', url: '/en/about', content: 'Information about AP-IPS and its mission to advance healthcare interoperability.' },
+      { title: 'Contact', url: '/en/contact', content: 'Get in touch with AP-IPS for inquiries and collaboration opportunities.' }
+    ];
+
+    const suggestions = pages.filter(page => page.content.toLowerCase().includes(query)).slice(0, 5);
+
+    if (suggestions.length > 0) {
+      suggestions.forEach(suggestion => {
+        const suggestionItem = document.createElement('div');
+        suggestionItem.innerHTML = `<a href="${suggestion.url}">${suggestion.title}</a>`;
+        suggestionsContainer.appendChild(suggestionItem);
+      });
+    } else {
+      suggestionsContainer.innerHTML = '<p>No suggestions found.</p>';
+    }
+  }
+
+  function performSearch() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const resultsContainer = document.getElementById('searchResults');
+    resultsContainer.innerHTML = '';
+
+    const pages = [
+      { title: 'Home', url: '/en/', content: 'Asia Pacific International Patient Summary (AP IPS) Advancing Cross-Border Healthcare Interoperability in the Asia-Pacific Region.' },
+      { title: 'News', url: '/en/news', content: 'Latest updates and news about AP-IPS and its initiatives.' },
+      { title: 'Introduction', url: '/en/introduction', content: 'Learn about the AP-IPS alliance and its goals for healthcare interoperability.' },
+      { title: 'Events', url: '/en/events', content: 'Upcoming events including Connectathon and Plugathon for interoperability testing.' },
+      { title: 'Resources', url: '/en/resources', content: 'Access HL7 FHIR IPS specifications, IHE profiles, and national standards.' },
+      { title: 'About', url: '/en/about', content: 'Information about AP-IPS and its mission to advance healthcare interoperability.' },
+      { title: 'Contact', url: '/en/contact', content: 'Get in touch with AP-IPS for inquiries and collaboration opportunities.' }
+    ];
+
+    const results = pages.filter(page => page.content.toLowerCase().includes(query));
+
+    if (results.length > 0) {
+      results.forEach(result => {
+        const preview = result.content.substring(0, 150) + '...';
+        const resultItem = document.createElement('div');
+        resultItem.innerHTML = `<a href="${result.url}">${result.title}</a><p>${preview}</p>`;
+        resultsContainer.appendChild(resultItem);
+      });
+    } else {
+      resultsContainer.innerHTML = '<p>No results found.</p>';
+    }
+  }
+</script>
+
+</body>
+</html>

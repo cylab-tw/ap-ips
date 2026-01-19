@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plugathon | AP-IPS</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #4A2C84;
+      padding: 10px;
+    }
+
+    .navbar-menu {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-menu a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .navbar-menu a:hover {
+      text-decoration: underline;
+    }
+
+    .navbar-menu a:not(:last-child) {
+      border-right: 1px solid white;
+      padding-right: 15px;
+    }
+
+    .navbar-logo {
+      height: 45px;
+      width: auto;
+    }
+
+    .navbar-search {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-search input {
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .navbar-search button {
+      margin-left: 5px;
+      padding: 5px 10px;
+      background-color: white;
+      color: #4A2C84;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .navbar-search button:hover {
+      background-color: #ddd;
+    }
+
+    .content img {
+      max-width: 50%;
+      display: block;
+      margin: 0 auto;
+      height: auto;
+    }
+
+    #searchSuggestions {
+      background-color: white;
+      border: 1px solid #ccc;
+      position: absolute;
+      z-index: 1000;
+      width: 200px;
+    }
+
+    #searchSuggestions div {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    #searchSuggestions div:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/en/" style="margin-right: auto;">
+    <img src="https://hackmd.io/_uploads/HJCHVxGSZl.png" alt="Logo" class="navbar-logo">
+  </a>
+
+  <div class="navbar-menu">
+    
+    
+      
+        <a href="/en/"
+           >
+           Home
+        </a>
+      
+        <a href="/en/news"
+           >
+           News
+        </a>
+      
+        <a href="/en/introduction"
+           >
+           Introduction
+        </a>
+      
+        <a href="/en/events"
+           >
+           Events
+        </a>
+      
+        <a href="/en/resources"
+           >
+           Resources
+        </a>
+      
+        <a href="/en/about"
+           >
+           About
+        </a>
+      
+        <a href="/en/contact"
+           >
+           Contact us
+        </a>
+      
+    
+  </div>
+
+  <div class="navbar-search">
+    <input type="text" id="searchInput" placeholder="Search..." oninput="updateSuggestions()">
+    <button onclick="performSearch()">Search</button>
+    <div id="searchSuggestions">
+      <!-- Suggestions will be displayed here -->
+    </div>
+  </div>
+</nav>
+
+<div id="searchResults" style="margin: 20px;">
+  <!-- Search results will be displayed here -->
+</div>
+
+<main class="content">
+  <p><a href="/en/events">Back to Events</a></p>
+
+<hr />
+
+<h2 id="plugathon">Plugathon</h2>
+<p>Plugathons emphasize rapid, developer-oriented testing and prototyping based on international standards, e.g., HL7, DICOM, and FHIR. These events lower the barrier to participation and foster hands-on collaboration among engineers, architects, and domain experts.</p>
+<h3 id="track-1-sharing-of-fhir-international-patient-demographics">Track #1: Sharing of FHIR International Patient Demographics</h3>
+<h4 id="description">Description</h4>
+<ul>
+  <li>This track focuses on establishing cross-institutional and cross-border patient identity consistency through a Master Patient Index (MPI) mechanism. The Patient Master Identity Registry (PMIR) Profile enables different systems to share, synchronize, and update patient demographic data (e.g., name, date of birth, identifiers), ensuring that the same individual can be accurately identified across international healthcare domains.</li>
+</ul>
+
+<h4 id="goal">Goal</h4>
+<ul>
+  <li>To realize cross-border patient identity federation, providing the foundational layer for international health data exchange.</li>
+</ul>
+
+<h4 id="scenarios">Scenarios</h4>
+<ul>
+  <li>Synchronizing patient demographic updates among multiple FHIR servers in different countries.</li>
+  <li>Resolving patient identity conflicts and maintaining consistency via PMIR subscription/notification.</li>
+  <li>Demonstrating cross-system queries of patient demographics through FHIR-based APIs.</li>
+</ul>
+
+<h4 id="future-outlook">Future Outlook</h4>
+<ul>
+  <li>The PMIR-based patient identity framework will evolve toward cross-border integration with the Master Patient Index (MPI), enabling international patient linking and deduplication.</li>
+  <li>Future work may include identity federation between national healthcare systems and trusted patient matching algorithms leveraging AI/ML techniques.</li>
+  <li>Integration with FHIR Consent and Privacy Policies to govern data access across regions.</li>
+</ul>
+
+<p><img src="https://hackmd.io/_uploads/rk3sRXW4Wg.jpg" alt="12" /></p>
+
+<h3 id="track-2-sharing-of-fhir-international-patient-summary">Track #2: Sharing of FHIR International Patient Summary</h3>
+<h4 id="description-1">Description</h4>
+<ul>
+  <li>This track supports cross-system exchange of patient summaries based on FHIR International Patient Summary (IPS) specifications.</li>
+  <li>The goal is to enable secure sharing of key health information—such as allergies, medications, conditions, procedures, and immunizations—across countries and healthcare organizations.</li>
+</ul>
+
+<h4 id="goal-1">Goal</h4>
+<ul>
+  <li>To establish a standardized framework for cross-border exchange of health summaries, facilitating continuity of care for international and mobile patients.</li>
+</ul>
+
+<h4 id="scenarios-1">Scenarios</h4>
+<ul>
+  <li><strong>Scenario #1 – Basic Sharing (Minimal IPS)</strong>
+    <ul>
+      <li><strong>Purpose</strong>:** Validate creation and sharing of the minimal IPS composition with all required resources.</li>
+      <li><strong>Content:</strong>
+        <ul>
+          <li>Composition (IPS profile) with required metadata.</li>
+          <li>Patient (IPS patient profile).</li>
+          <li>At least 1 Problem, 1 Allergy, and Medical Summary section.</li>
+        </ul>
+      </li>
+      <li><strong>Test Flow:</strong>
+        <ul>
+          <li>Creator creates IPS with minimal content.</li>
+          <li>Consumer queries/retrieves the IPS via FHIR API (DocumentReference/Composition).</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Scenario #2 – Advanced Sharing (Expanded IPS)</strong>
+    <ul>
+      <li><strong>Purpose</strong>:** Validate creation and sharing of the Expanded IPS composition with optional required resources.</li>
+      <li><strong>Content:</strong>
+        <ul>
+          <li>#2-1 Laboratory Report
+            <ul>
+              <li>Add DiagnosticReport (Laboratory profile) with referenced Observations.</li>
+              <li>Include LOINC-coded lab results in IPS Results section.</li>
+            </ul>
+          </li>
+          <li>#2-2 Pathology Report
+            <ul>
+              <li>Add DiagnosticReport (Pathology profile) with Observation and possible image references (DocumentReference).</li>
+            </ul>
+          </li>
+          <li>#2-3 Radiology Report with Image (IPS + WIA)
+            <ul>
+              <li>Add DiagnosticReport (Radiology profile) with ImagingStudy and image references (e.g., DICOMweb URL in Media).</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Test Flow:</strong>
+        <ul>
+          <li>Creator creates an expanded IPS with one or more of the above reports.</li>
+          <li>Consumer retrieves and verifies completeness of references.</li>
+          <li>Verify that referenced resources are resolvable and conform to profiles.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Scenario #3 – Retrieval and Display IPS</strong>
+    <ul>
+      <li><strong>Purpose</strong>:**
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+      </li>
+      <li><strong>Content:</strong> Any IPS from Scenario #1 or #2.</li>
+      <li><strong>Test Flow:</strong>
+        <ul>
+          <li>Query IPS: Recipient queries IPS via FHIR API.</li>
+          <li>Retrieve IPS Bundle: retrieve IPS Bundle (Composition + referenced resources).</li>
+          <li>Render in a human-readable view: preserving section structure and narrative text.</li>
+          <li>SVCM Mapping [Option]:
+            <ul>
+              <li>Identify coded elements in the IPS (e.g., LOINC, SNOMED CT, ICD‑10).</li>
+              <li>Display mapped terms alongside original codes in the viewer.</li>
+              <li>Query an SVCM server for a ConceptMap to map codes to a alternative code system. e.g, Japan, Korea, or Taiwan code systems.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="actors-transactions-diagram">Actors &amp;Transactions Diagram</h4>
+<ul>
+  <li>
+    <p>Exchange IPS via FHIR RESTful API
+<img src="https://hackmd.io/_uploads/HkQJZ2lV-l.png" alt="圖片" /></p>
+  </li>
+  <li>
+    <p>IPS with Imaging Report via FHIR and DICOMweb API
+<img src="https://hackmd.io/_uploads/Sk2Z-3l4Zx.png" alt="圖片" /></p>
+  </li>
+  <li>
+    <p>IHE SVCM (Sharing Valuesets, Codes, and Maps)
+<img src="https://hackmd.io/_uploads/B1OH-3lNZx.png" alt="圖片" /></p>
+  </li>
+</ul>
+
+<h4 id="future-outlook-1">Future Outlook</h4>
+<ul>
+  <li>Expansion from IPS to comprehensive health records and domain-specific summaries, e.g., oncology, immunization, and maternal health.</li>
+  <li>Adoption of FHIR-based translation and terminology mapping services (SVCM) to ensure multilingual and semantic interoperability across borders.</li>
+</ul>
+
+<p><img src="https://hackmd.io/_uploads/rkTUEhyNWx.jpg" alt="未命名" /></p>
+
+<h3 id="track-3-sharing-of-fhir-ips-with-digtial-health-wallet">Track #3: Sharing of FHIR IPS with Digtial Health Wallet</h3>
+<h4 id="description-2">Description</h4>
+<p>This track focuses on enabling patient-mediated exchange of FHIR IPS integrating with digital signature, verifiable credentials, and digital health wallet technologies. In this track, the FHIR IPS is packaged as a cryptographically verifiable and portable credential, allowing patients to securely carry, present, and share their health summaries across borders. This approach leverages emerging international initiatives and national digital identity infrastructures, such as:</p>
+<ul>
+  <li>WHO Smart Health Cards (SHC)</li>
+  <li>Japan My Number Card</li>
+  <li>Taiwan Digital Identity Wallet</li>
+  <li>Other national or regional digital wallet platforms</li>
+</ul>
+
+<p>FHIR IPS data is exchanged using QR codes or secure digital channels, with access strictly controlled by explicit patient consent. Advanced credential technologies such as Selective Disclosure JWT (SD-JWT) are used to ensure privacy-preserving data sharing.</p>
+
+<h4 id="goal-2">Goal</h4>
+<p>The primary goals of this track are to:</p>
+<ul>
+  <li>Enable portable, patient-controlled FHIR IPS facilitating cross-border, emergency, and ad-hoc healthcare scenarios</li>
+  <li>Align FHIR IPS with global digital identity and verifiable credential ecosystems to ensure data authenticity, integrity, and trust through digital signatures and certificates</li>
+  <li>Support selective disclosure, allowing patients to share only the necessary portions of their IPS</li>
+</ul>
+
+<p>Ultimately, this track aims to shift IPS exchange from system-to-system only models toward a patient-centric interoperability paradigm.</p>
+
+<h4 id="scenarios-2">Scenarios</h4>
+<p>Typical scenarios addressed in this track include:</p>
+<ol>
+  <li><strong>Cross-border Travel and Emergency Care</strong>
+A patient traveling abroad presents a QR code from their digital health wallet.
+The receiving healthcare provider verifies the IPS credential, validates the digital signature, and retrieves the IPS after patient consent.</li>
+  <li><strong>Patient-Controlled Selective Sharing</strong>
+Using SD-JWT, a patient selectively discloses specific IPS sections (e.g., allergies, medications) while withholding other sensitive information.</li>
+  <li><strong>Outpatient or Referral Visits</strong>
+Patients share their IPS during first-time visits without requiring prior system integration between institutions.</li>
+  <li><strong>Public Health or Disaster Response</strong>
+Rapid access to trusted patient summaries using offline-capable QR codes and verifiable credentials.</li>
+  <li><strong>Integration with National Digital Identity Systems</strong>
+Binding IPS credentials to national identity wallets (e.g., My Number, Taiwan Digital ID) to establish trusted identity assurance.</li>
+</ol>
+
+<h4 id="future-outlook-2">Future Outlook</h4>
+<p>This track represents a critical step toward the future of trusted, decentralized, and patient-driven health data exchange. Future directions include:</p>
+<ul>
+  <li>Deeper alignment with W3C Verifiable Credentials (VC) standards</li>
+  <li>Broader adoption of SD-JWT and privacy-enhancing technologies</li>
+  <li>Interoperability testing between health wallets, identity wallets, and healthcare systems</li>
+  <li>Harmonization with AP IPS governance models and international regulatory frameworks</li>
+  <li>Expansion to support additional FHIR-based artifacts beyond IPS (e.g., immunization records, imaging summaries)</li>
+  <li>By combining FHIR IPS, digital identity, and cryptographic trust mechanisms, this track lays the foundation for a scalable and globally interoperable personal health record ecosystem.</li>
+</ul>
+
+<p><img src="https://hackmd.io/_uploads/SkKj82yVZx.jpg" alt="未命名" /></p>
+
+</main>
+
+<script>
+  function updateSuggestions() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const suggestionsContainer = document.getElementById('searchSuggestions');
+    suggestionsContainer.innerHTML = '';
+
+    const pages = [
+      { title: 'Home', url: '/en/', content: 'Asia Pacific International Patient Summary (AP IPS) Advancing Cross-Border Healthcare Interoperability in the Asia-Pacific Region.' },
+      { title: 'News', url: '/en/news', content: 'Latest updates and news about AP-IPS and its initiatives.' },
+      { title: 'Introduction', url: '/en/introduction', content: 'Learn about the AP-IPS alliance and its goals for healthcare interoperability.' },
+      { title: 'Events', url: '/en/events', content: 'Upcoming events including Connectathon and Plugathon for interoperability testing.' },
+      { title: 'Resources', url: '/en/resources', content: 'Access HL7 FHIR IPS specifications, IHE profiles, and national standards.' },
+      { title: 'About', url: '/en/about', content: 'Information about AP-IPS and its mission to advance healthcare interoperability.' },
+      { title: 'Contact', url: '/en/contact', content: 'Get in touch with AP-IPS for inquiries and collaboration opportunities.' }
+    ];
+
+    const suggestions = pages.filter(page => page.content.toLowerCase().includes(query)).slice(0, 5);
+
+    if (suggestions.length > 0) {
+      suggestions.forEach(suggestion => {
+        const suggestionItem = document.createElement('div');
+        suggestionItem.innerHTML = `<a href="${suggestion.url}">${suggestion.title}</a>`;
+        suggestionsContainer.appendChild(suggestionItem);
+      });
+    } else {
+      suggestionsContainer.innerHTML = '<p>No suggestions found.</p>';
+    }
+  }
+
+  function performSearch() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const resultsContainer = document.getElementById('searchResults');
+    resultsContainer.innerHTML = '';
+
+    const pages = [
+      { title: 'Home', url: '/en/', content: 'Asia Pacific International Patient Summary (AP IPS) Advancing Cross-Border Healthcare Interoperability in the Asia-Pacific Region.' },
+      { title: 'News', url: '/en/news', content: 'Latest updates and news about AP-IPS and its initiatives.' },
+      { title: 'Introduction', url: '/en/introduction', content: 'Learn about the AP-IPS alliance and its goals for healthcare interoperability.' },
+      { title: 'Events', url: '/en/events', content: 'Upcoming events including Connectathon and Plugathon for interoperability testing.' },
+      { title: 'Resources', url: '/en/resources', content: 'Access HL7 FHIR IPS specifications, IHE profiles, and national standards.' },
+      { title: 'About', url: '/en/about', content: 'Information about AP-IPS and its mission to advance healthcare interoperability.' },
+      { title: 'Contact', url: '/en/contact', content: 'Get in touch with AP-IPS for inquiries and collaboration opportunities.' }
+    ];
+
+    const results = pages.filter(page => page.content.toLowerCase().includes(query));
+
+    if (results.length > 0) {
+      results.forEach(result => {
+        const preview = result.content.substring(0, 150) + '...';
+        const resultItem = document.createElement('div');
+        resultItem.innerHTML = `<a href="${result.url}">${result.title}</a><p>${preview}</p>`;
+        resultsContainer.appendChild(resultItem);
+      });
+    } else {
+      resultsContainer.innerHTML = '<p>No results found.</p>';
+    }
+  }
+</script>
+
+</body>
+</html>

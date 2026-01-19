@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  background: #1f2d3d;
+  padding: 14px 24px;
+}
+
+.navbar a {
+  color: #ffffff;
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+.navbar a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.lang-switch {
+  float: right;
+}
+
+.content {
+  padding: 28px;
+  max-width: 1100px;
+  margin: auto;
+}

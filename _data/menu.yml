@@ -1,0 +1,36 @@
+en:
+  - title: Home
+    url: /en/
+  - title: News
+    url: /en/news
+  - title: Introduction
+    url: /en/introduction
+  - title: Events
+    url: /en/events
+    sub_menu:
+      - title: Connectathon
+        url: /en/connectathon
+      - title: Plugathon
+        url: /en/plugathon
+  - title: Resources
+    url: /en/resources
+  - title: About
+    url: /en/about
+  - title: Contact us
+    url: /en/contact
+
+zh:
+  - title: 首頁
+    url: /zh/
+  - title: 最新消息
+    url: /zh/news
+  - title: 聯盟介紹
+    url: /zh/introduction
+  - title: 活動
+    url: /zh/events
+  - title: 資源
+    url: /zh/resources
+  - title: 關於我們
+    url: /zh/about
+  - title: 聯絡我們
+    url: /zh/contact

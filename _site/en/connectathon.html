@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Connectathon | AP-IPS</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #4A2C84;
+      padding: 10px;
+    }
+
+    .navbar-menu {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-menu a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .navbar-menu a:hover {
+      text-decoration: underline;
+    }
+
+    .navbar-menu a:not(:last-child) {
+      border-right: 1px solid white;
+      padding-right: 15px;
+    }
+
+    .navbar-logo {
+      height: 45px;
+      width: auto;
+    }
+
+    .navbar-search {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-search input {
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .navbar-search button {
+      margin-left: 5px;
+      padding: 5px 10px;
+      background-color: white;
+      color: #4A2C84;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .navbar-search button:hover {
+      background-color: #ddd;
+    }
+
+    .content img {
+      max-width: 50%;
+      display: block;
+      margin: 0 auto;
+      height: auto;
+    }
+
+    #searchSuggestions {
+      background-color: white;
+      border: 1px solid #ccc;
+      position: absolute;
+      z-index: 1000;
+      width: 200px;
+    }
+
+    #searchSuggestions div {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    #searchSuggestions div:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/en/" style="margin-right: auto;">
+    <img src="https://hackmd.io/_uploads/HJCHVxGSZl.png" alt="Logo" class="navbar-logo">
+  </a>
+
+  <div class="navbar-menu">
+    
+    
+      
+        <a href="/en/"
+           >
+           Home
+        </a>
+      
+        <a href="/en/news"
+           >
+           News
+        </a>
+      
+        <a href="/en/introduction"
+           >
+           Introduction
+        </a>
+      
+        <a href="/en/events"
+           >
+           Events
+        </a>
+      
+        <a href="/en/resources"
+           >
+           Resources
+        </a>
+      
+        <a href="/en/about"
+           >
+           About
+        </a>
+      
+        <a href="/en/contact"
+           >
+           Contact us
+        </a>
+      
+    
+  </div>
+
+  <div class="navbar-search">
+    <input type="text" id="searchInput" placeholder="Search..." oninput="updateSuggestions()">
+    <button onclick="performSearch()">Search</button>
+    <div id="searchSuggestions">
+      <!-- Suggestions will be displayed here -->
+    </div>
+  </div>
+</nav>
+
+<div id="searchResults" style="margin: 20px;">
+  <!-- Search results will be displayed here -->
+</div>
+
+<main class="content">
+  <p><a href="/en/events">Back to Events</a></p>
+
+<h2 id="connectathon">Connectathon</h2>
+<ul>
+  <li>IHE Connectathons provide a structured, profile-driven testing environment where participants validate interoperability using IHE profiles and HL7 international standards. Within AP-IPS, Connectathon activities focus on cross-border IPS exchange scenarios, alignment of national FHIR implementation guides, and verification of real-world interoperability between systems from different countries.</li>
+  <li>Key objectives include:
+    <ul>
+      <li>Validating standards conformance and interoperability</li>
+      <li>Identifying gaps between specifications and real-world implementation</li>
+      <li>Strengthening regional alignment with international standards</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="../../assets/images/connectathon.jpg" alt="Connectathon" /></p>
+
+<h3 id="what-is-a-connectathon">What is a Connectathon?</h3>
+<p>Connectathon is a portmanteau of the words <strong>Connectivity</strong> and <strong>Marathon</strong>. It is an interoperability testing event conducted over several consecutive days (typically three to five days), during which participants meet <strong>face-to-face</strong> to test interoperability among their developed systems.</p>
+
+<p>Participants implement systems based on specific <strong>profiles</strong> and <strong>clinical or operational scenarios</strong>. These profiles are typically structured by decomposing requirements into <strong>actors</strong> and <strong>transactions</strong>, where communication between actors is defined using open, internationally recognized standards such as HL7, DICOM, IEEE, OSI, and other international or industry-standard specifications.</p>
+
+<h3 id="purpose-of-a-connectathon">Purpose of a Connectathon</h3>
+<p>The primary objective of a Connectathon is to verify interoperability among systems developed in accordance with specified standards and profiles. Prior to the event, participants may prepare and test their systems using open-source testing tools or their own development environments. A Connectathon provides a structured and rigorous validation environment, enabling participants to collaboratively test interoperability between products. Standardized technical frameworks allow systems to be tested in a manner consistent with real-world deployment or publication conditions.</p>
+
+<h3 id="benefits-of-participation">Benefits of Participation</h3>
+<p>Organizations participating in a Connectathon can:</p>
+<ul>
+  <li>Validate whether their products conform to relevant standards;</li>
+  <li>Test interoperability with systems from other vendors using real-world use cases;</li>
+  <li>Rapidly identify and resolve technical integration and interface issues through close, collaborative problem-solving.</li>
+</ul>
+
+<p>During the event, participants conduct live connection tests with other systems to verify compliance with international standards. Any non-conformant issues identified can often be corrected within a short timeframe. Connectathon testing environments support the validation of tens of thousands of transactions, and results are evaluated by neutral Connectathon Monitors, who independently assess and confirm interoperability outcomes.</p>
+
+<h3 id="after-the-connectathon">After the Connectathon</h3>
+<p>Upon completion, results are published in a <strong>Connectathon Results Matrix</strong>, allowing stakeholders to review verified interoperability outcomes. Through Connectathon activities, industry participants foster data exchange, mutual collaboration, and cooperative development, ultimately enabling the creation of products with <strong>global market competitiveness</strong>.</p>
+
+<h3 id="achieving-healthcare-it-interoperability-through-collaboration">Achieving Healthcare IT Interoperability Through Collaboration</h3>
+<p>To promote interoperability between healthcare IT users and vendors, the following key practices are essential:</p>
+<ul>
+  <li>Clearly defining <strong>use cases</strong>;</li>
+  <li>Identifying the <strong>information</strong> and <strong>processes</strong> required to support those use cases;</li>
+  <li>Implementing information exchange using <strong>existing international standards</strong>;</li>
+  <li>Participating in <strong>annual Connectathons</strong> to demonstrate system <strong>conformance</strong>;</li>
+  <li>Encouraging close collaboration among <strong>care providers, IT professionals, and vendors</strong> to jointly define standards and common guidelines.
+In this collaborative model, care providers contribute real-world clinical challenges, IT professionals and vendors develop standards-compliant solutions to address those needs, and healthcare organizations procure systems that conform to shared guidelines and interoperability requirements.</li>
+</ul>
+
+<p><img src="../../assets/images/plugathon.jpg" alt="Plugathon" />
+<img src="../../assets/images/ips_exchange.jpg" alt="IPS Exchange" />
+<img src="../../assets/images/ips_imaging.jpg" alt="IPS Imaging" />
+<img src="../../assets/images/svcm.jpg" alt="SVCM" /></p>
+
+</main>
+
+<script>
+  function updateSuggestions() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const suggestionsContainer = document.getElementById('searchSuggestions');
+    suggestionsContainer.innerHTML = '';
+
+    const pages = [
+      { title: 'Home', url: '/en/', content: 'Asia Pacific International Patient Summary (AP IPS) Advancing Cross-Border Healthcare Interoperability in the Asia-Pacific Region.' },
+      { title: 'News', url: '/en/news', content: 'Latest updates and news about AP-IPS and its initiatives.' },
+      { title: 'Introduction', url: '/en/introduction', content: 'Learn about the AP-IPS alliance and its goals for healthcare interoperability.' },
+      { title: 'Events', url: '/en/events', content: 'Upcoming events including Connectathon and Plugathon for interoperability testing.' },
+      { title: 'Resources', url: '/en/resources', content: 'Access HL7 FHIR IPS specifications, IHE profiles, and national standards.' },
+      { title: 'About', url: '/en/about', content: 'Information about AP-IPS and its mission to advance healthcare interoperability.' },
+      { title: 'Contact', url: '/en/contact', content: 'Get in touch with AP-IPS for inquiries and collaboration opportunities.' }
+    ];
+
+    const suggestions = pages.filter(page => page.content.toLowerCase().includes(query)).slice(0, 5);
+
+    if (suggestions.length > 0) {
+      suggestions.forEach(suggestion => {
+        const suggestionItem = document.createElement('div');
+        suggestionItem.innerHTML = `<a href="${suggestion.url}">${suggestion.title}</a>`;
+        suggestionsContainer.appendChild(suggestionItem);
+      });
+    } else {
+      suggestionsContainer.innerHTML = '<p>No suggestions found.</p>';
+    }
+  }
+
+  function performSearch() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const resultsContainer = document.getElementById('searchResults');
+    resultsContainer.innerHTML = '';
+
+    const pages = [
+      { title: 'Home', url: '/en/', content: 'Asia Pacific International Patient Summary (AP IPS) Advancing Cross-Border Healthcare Interoperability in the Asia-Pacific Region.' },
+      { title: 'News', url: '/en/news', content: 'Latest updates and news about AP-IPS and its initiatives.' },
+      { title: 'Introduction', url: '/en/introduction', content: 'Learn about the AP-IPS alliance and its goals for healthcare interoperability.' },
+      { title: 'Events', url: '/en/events', content: 'Upcoming events including Connectathon and Plugathon for interoperability testing.' },
+      { title: 'Resources', url: '/en/resources', content: 'Access HL7 FHIR IPS specifications, IHE profiles, and national standards.' },
+      { title: 'About', url: '/en/about', content: 'Information about AP-IPS and its mission to advance healthcare interoperability.' },
+      { title: 'Contact', url: '/en/contact', content: 'Get in touch with AP-IPS for inquiries and collaboration opportunities.' }
+    ];
+
+    const results = pages.filter(page => page.content.toLowerCase().includes(query));
+
+    if (results.length > 0) {
+      results.forEach(result => {
+        const preview = result.content.substring(0, 150) + '...';
+        const resultItem = document.createElement('div');
+        resultItem.innerHTML = `<a href="${result.url}">${result.title}</a><p>${preview}</p>`;
+        resultsContainer.appendChild(resultItem);
+      });
+    } else {
+      resultsContainer.innerHTML = '<p>No results found.</p>';
+    }
+  }
+</script>
+
+</body>
+</html>

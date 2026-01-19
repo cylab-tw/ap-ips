@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Overview | AP-IPS</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #4A2C84;
+      padding: 10px;
+    }
+
+    .navbar-menu {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-menu a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .navbar-menu a:hover {
+      text-decoration: underline;
+    }
+
+    .navbar-menu a:not(:last-child) {
+      border-right: 1px solid white;
+      padding-right: 15px;
+    }
+
+    .navbar-logo {
+      height: 45px;
+      width: auto;
+    }
+
+    .navbar-search {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-search input {
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .navbar-search button {
+      margin-left: 5px;
+      padding: 5px 10px;
+      background-color: white;
+      color: #4A2C84;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .navbar-search button:hover {
+      background-color: #ddd;
+    }
+
+    .content img {
+      max-width: 50%;
+      display: block;
+      margin: 0 auto;
+      height: auto;
+    }
+
+    #searchSuggestions {
+      background-color: white;
+      border: 1px solid #ccc;
+      position: absolute;
+      z-index: 1000;
+      width: 200px;
+    }
+
+    #searchSuggestions div {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    #searchSuggestions div:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/en/" style="margin-right: auto;">
+    <img src="https://hackmd.io/_uploads/HJCHVxGSZl.png" alt="Logo" class="navbar-logo">
+  </a>
+
+  <div class="navbar-menu">
+    
+    
+      
+        <a href="/en/"
+           >
+           Home
+        </a>
+      
+        <a href="/en/news"
+           >
+           News
+        </a>
+      
+        <a href="/en/introduction"
+           >
+           Introduction
+        </a>
+      
+        <a href="/en/events"
+           >
+           Events
+        </a>
+      
+        <a href="/en/resources"
+           >
+           Resources
+        </a>
+      
+        <a href="/en/about"
+           >
+           About
+        </a>
+      
+        <a href="/en/contact"
+           >
+           Contact us
+        </a>
+      
+    
+  </div>
+
+  <div class="navbar-search">
+    <input type="text" id="searchInput" placeholder="Search..." oninput="updateSuggestions()">
+    <button onclick="performSearch()">Search</button>
+    <div id="searchSuggestions">
+      <!-- Suggestions will be displayed here -->
+    </div>
+  </div>
+</nav>
+
+<div id="searchResults" style="margin: 20px;">
+  <!-- Search results will be displayed here -->
+</div>
+
+<main class="content">
+  <p><a href="/en/introduction">Back to Introduction</a></p>
+
+<hr />
+
+<h2 id="how-ap-ips-works">How AP-IPS Works</h2>
+<p>AP-IPS operates as a collaborative, country-driven interoperability framework that enables participating Asia-Pacific economies to jointly define, test, and validate interoperable IPS through collaborative specifications and Plugathon-based validation.</p>
+
+<p><img src="https://hackmd.io/_uploads/ryg0w5yVbl.jpg" alt="未命名" /></p>
+
+<h3 id="1-regional-needs-and-use-case-identification">1. Regional Needs and Use-Case Identification</h3>
+<p>Participating economies—through healthcare authorities, standards organizations, academic institutions, hospitals, and industry representatives—collectively identify cross-border clinical scenarios where the IPS is required, such as emergency care, referral continuity, disaster response, and patient mobility. National inputs are consolidated to reflect regional clinical and operational needs, ensuring that IPS exchange requirements are grounded in real-world practice rather than isolated technical assumptions.</p>
+
+<h3 id="2-joint-specification-development">2. Joint Specification Development</h3>
+<p>Based on agreed regional use cases, AP-IPS establishes multinational specification working groups, composed of representatives from participating countries. Rather than unilateral specification development, AP-IPS emphasizes co-creation, where all participating countries contribute equally to the definition of interoperable IPS exchange specifications. These groups collaboratively define:</p>
+<ul>
+  <li>IPS exchange profiles and constraints</li>
+  <li>FHIR-based data elements and extensions</li>
+  <li>Terminology alignment and localization considerations</li>
+  <li>Security, transport, and governance assumptions</li>
+</ul>
+
+<h3 id="3-open-reference-implementations-and-tooling">3. Open Reference Implementations and Tooling</h3>
+<p>To accelerate adoption and ensure consistency, AP IPS encourages the development of open-source reference implementations, validation tools, and sample datasets that lower barriers to entry and improve implementation quality across the region. These artifacts serve as practical guidance for:</p>
+<ul>
+  <li>National implementers</li>
+  <li>Healthcare providers</li>
+  <li>Vendors and startups</li>
+  <li>Research and innovation communities</li>
+</ul>
+
+<h3 id="4-asia-pacific-plugathon">4. Asia-Pacific Plugathon</h3>
+<p>AP-IPS conducts an annual Asia Pacific Plugathon, modeled after IHE Connectathon principles but focused specifically on IPS exchange. Participation includes healthcare institutions, system vendors, startups, and national initiatives, fostering a neutral, vendor-independent testing environment. During the Plugathon:</p>
+<ul>
+  <li>Implementers test system-to-system IPS exchanges based on AP-IPS specifications;</li>
+  <li>Cross-country interoperability is validated in realistic scenarios;</li>
+  <li>Technical and semantic issues are identified collaboratively.</li>
+</ul>
+
+<h3 id="5-alignment-with-international-standards">5. Alignment with International Standards</h3>
+<p>Results from Plugathon testing and pilot deployments are systematically reviewed by AP-IPS working groups. This establishes a continuous improvement loop, ensuring that AP-IPS specifications remain clinically relevant, technically sound, and internationally aligned. AP-IPS does not replace global standards. Instead, it acts as a regional convergence platform, consolidating Asia-Pacific implementation experience and feeding it back into</p>
+<ul>
+  <li>HL7 IPS Working Groups,</li>
+  <li>IHE international domain committees, and</li>
+  <li>Other relevant international standardization activities.</li>
+</ul>
+
+<h2 id="asia-pacific-green-button--one-click-your-ips-anywhere-in-asia-pacific">Asia Pacific Green Button — One Click, Your IPS, Anywhere in Asia-Pacific</h2>
+<div style="display: flex; align-items: center;">
+  <div style="flex: 1;">
+    <p>The AP Green Button is a patient-centered, standards-based digital access mechanism that enables individuals to securely access, download, and share their IPS across the Asia-Pacific region.</p>
+    <p>It is designed to support trusted, cross-border health information exchange, empowering patients to authorize the use of their essential clinical data for care delivery, emergency treatment, and medication dispensing.</p>
+    <p>The AP Green Button aligns with international interoperability principles promoted by WHO, HL7 International, IHE, and regional digital health initiatives. The AP Green Button is a one-click mechanism that allows patients to:</p>
+    <ul>
+      <li>Download your IPS</li>
+      <li>Store it in a Digital Health Wallet</li>
+      <li>Share selected information via QR code or secure link</li>
+      <li>Authorize access across countries, healthcare providers, and pharmacies</li>
+    </ul>
+  </div>
+  <div style="flex: 1; text-align: right;">
+    <img src="https://hackmd.io/_uploads/SJL8I3g4Zx.png" alt="未命名" style="max-width: 50%; height: auto;" />
+  </div>
+</div>
+
+<h3 id="policy-statement">Policy Statement</h3>
+<ul>
+  <li>The AP Green Button promotes patient-mediated health information exchange by providing a simple, secure, and interoperable mechanism for individuals to access and share their IPS. By leveraging IPS, verifiable digital credentials, and selective disclosure technologies, the Green Button supports:
+    <ul>
+      <li>Continuity of care across borders</li>
+      <li>Emergency medical decision-making</li>
+      <li>Safe medication reconciliation</li>
+      <li>Patient trust and data sovereignty</li>
+    </ul>
+  </li>
+  <li>The system is built on open standards and respects national digital identity frameworks, such as:
+    <ul>
+      <li>WHO Smart Health Cards</li>
+      <li>Japan My Number ecosystem</li>
+      <li>Taiwan Digital Identity Wallet</li>
+    </ul>
+  </li>
+</ul>
+
+<p>There are three common scenarios of AP Green Button:</p>
+<ul>
+  <li>Scenario 1: Cross-border Medical Care (Hospital)</li>
+  <li>Scenario 2: Cross-border Pharmacy Dispensing</li>
+  <li>Scenario 3: Emergency Care</li>
+</ul>
+
+<p><img src="https://hackmd.io/_uploads/HyMxXxgN-e.jpg" alt="未命名" /></p>
+
+</main>
+
+<script>
+  function updateSuggestions() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const suggestionsContainer = document.getElementById('searchSuggestions');
+    suggestionsContainer.innerHTML = '';
+
+    const pages = [
+      { title: 'Home', url: '/en/', content: 'Asia Pacific International Patient Summary (AP IPS) Advancing Cross-Border Healthcare Interoperability in the Asia-Pacific Region.' },
+      { title: 'News', url: '/en/news', content: 'Latest updates and news about AP-IPS and its initiatives.' },
+      { title: 'Introduction', url: '/en/introduction', content: 'Learn about the AP-IPS alliance and its goals for healthcare interoperability.' },
+      { title: 'Events', url: '/en/events', content: 'Upcoming events including Connectathon and Plugathon for interoperability testing.' },
+      { title: 'Resources', url: '/en/resources', content: 'Access HL7 FHIR IPS specifications, IHE profiles, and national standards.' },
+      { title: 'About', url: '/en/about', content: 'Information about AP-IPS and its mission to advance healthcare interoperability.' },
+      { title: 'Contact', url: '/en/contact', content: 'Get in touch with AP-IPS for inquiries and collaboration opportunities.' }
+    ];
+
+    const suggestions = pages.filter(page => page.content.toLowerCase().includes(query)).slice(0, 5);
+
+    if (suggestions.length > 0) {
+      suggestions.forEach(suggestion => {
+        const suggestionItem = document.createElement('div');
+        suggestionItem.innerHTML = `<a href="${suggestion.url}">${suggestion.title}</a>`;
+        suggestionsContainer.appendChild(suggestionItem);
+      });
+    } else {
+      suggestionsContainer.innerHTML = '<p>No suggestions found.</p>';
+    }
+  }
+
+  function performSearch() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const resultsContainer = document.getElementById('searchResults');
+    resultsContainer.innerHTML = '';
+
+    const pages = [
+      { title: 'Home', url: '/en/', content: 'Asia Pacific International Patient Summary (AP IPS) Advancing Cross-Border Healthcare Interoperability in the Asia-Pacific Region.' },
+      { title: 'News', url: '/en/news', content: 'Latest updates and news about AP-IPS and its initiatives.' },
+      { title: 'Introduction', url: '/en/introduction', content: 'Learn about the AP-IPS alliance and its goals for healthcare interoperability.' },
+      { title: 'Events', url: '/en/events', content: 'Upcoming events including Connectathon and Plugathon for interoperability testing.' },
+      { title: 'Resources', url: '/en/resources', content: 'Access HL7 FHIR IPS specifications, IHE profiles, and national standards.' },
+      { title: 'About', url: '/en/about', content: 'Information about AP-IPS and its mission to advance healthcare interoperability.' },
+      { title: 'Contact', url: '/en/contact', content: 'Get in touch with AP-IPS for inquiries and collaboration opportunities.' }
+    ];
+
+    const results = pages.filter(page => page.content.toLowerCase().includes(query));
+
+    if (results.length > 0) {
+      results.forEach(result => {
+        const preview = result.content.substring(0, 150) + '...';
+        const resultItem = document.createElement('div');
+        resultItem.innerHTML = `<a href="${result.url}">${result.title}</a><p>${preview}</p>`;
+        resultsContainer.appendChild(resultItem);
+      });
+    } else {
+      resultsContainer.innerHTML = '<p>No results found.</p>';
+    }
+  }
+</script>
+
+</body>
+</html>
