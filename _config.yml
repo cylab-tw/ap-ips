@@ -4,7 +4,7 @@
 title: AP-IPS
 description: Asia-Pacific International Patient Summary Initiative
 url: "https://cylab-tw.github.io"
-baseurl: "/ap-ips"   # ❗一定要與 repo 名稱一致
+baseurl: "/ap-ips"
 
 # =========================
 # Build settings
