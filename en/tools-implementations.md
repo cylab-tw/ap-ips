@@ -5,7 +5,7 @@ lang: en
 url: /en/tools-implementations
 ---
 
-# [Back to Resources](/en/resources)
+# [Back to Resources](../en/resources)
 
 ## Tools & Implementations
 AP-IPS promotes the use of reference implementations, open-source tools, and test servers to support learning and adoption. Sample FHIR resources, validation tools, and implementation examples are shared to facilitate participation.

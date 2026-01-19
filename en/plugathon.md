@@ -5,7 +5,7 @@ lang: en
 url: /en/plugathon
 ---
 
-[Back to Events](/en/events)
+[Back to Events](../en/events)
 
 ---
 

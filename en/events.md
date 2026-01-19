@@ -6,5 +6,5 @@ url: /en/events
 ---
 
 # Events
-### [Connectathon](/en/connectathon)
-### [Plugathon](/en/plugathon)
+### [Connectathon](../en/connectathon)
+### [Plugathon](../en/plugathon)

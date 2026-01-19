@@ -5,7 +5,7 @@ lang: en
 url: /en/ihe-profiles
 ---
 
-[Back to Resources]("/en/Resources")
+[Back to Resources](../en/Resources)
 
 ---
 

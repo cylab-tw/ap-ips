@@ -4,7 +4,7 @@ title: National Standards
 lang: en
 url: /en/national-standards
 ---
-# [Back to Resources](/en/resources)
+# [Back to Resources](../en/resources)
 
 ## National Standards 
 ### National Core IG
