@@ -4,40 +4,41 @@
 title: AP-IPS
 description: Asia-Pacific International Patient Summary Initiative
 url: "https://cylab-tw.github.io"
-baseurl: ""   # 若是 user.github.io，一定要是空字串
+baseurl: "/AP-IPS"   # ❗一定要與 repo 名稱一致
 
 # =========================
 # Build settings
 # =========================
 theme: minima
 markdown: kramdown
-highlighter: rouge
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
 # =========================
-# Language / i18n settings
+# i18n (自訂，不影響 build)
 # =========================
-languages: ["en", "zh"]
-default_lang: "en"
+languages:
+  - en
+  - zh
+default_lang: en
 
 # =========================
-# Collections (optional)
+# ⚠️ 移除 pages collection（重要）
 # =========================
-collections:
-  pages:
-    output: true
-    permalink: /:path/
+# collections:
+#   pages:
+#     output: true
+#     permalink: /:path/
 
 # =========================
-# Navigation (from _data)
+# Navigation data
 # =========================
 menu_data: menu
 
 # =========================
-# Exclude files
+# Exclude
 # =========================
 exclude:
   - README.md
