@@ -17,7 +17,7 @@ AP-IPS is governed by a board composed of representatives from participating cou
 
 | **Name**                 | **Organization**                 |
 |--------------------------|-----------------------------------|
-| Yasunari Shiokawa (Salt) | IHE-Japan                         |
+| **Yasunari Shiokawa (Salt)** | IHE-Japan                         |
 | Masayoshi Seki           | IHE-Japan                         |
 | Takeshi Ozeki            | IHE-Japan                         |
 | Sunao Watanabe           | MEDIS-DC                          |

@@ -14,7 +14,7 @@ url: /en/connectathon
   - Identifying gaps between specifications and real-world implementation
   - Strengthening regional alignment with international standards
 
-![Connectathon](../../assets/images/connectathon.jpg)
+![Connectathon](https://hackmd.io/_uploads/Bk1ikKJVWe.png)
 
 ### What is a Connectathon?
 Connectathon is a portmanteau of the words **Connectivity** and **Marathon**. It is an interoperability testing event conducted over several consecutive days (typically three to five days), during which participants meet **face-to-face** to test interoperability among their developed systems.
@@ -44,7 +44,4 @@ To promote interoperability between healthcare IT users and vendors, the followi
 * Encouraging close collaboration among **care providers, IT professionals, and vendors** to jointly define standards and common guidelines.
 In this collaborative model, care providers contribute real-world clinical challenges, IT professionals and vendors develop standards-compliant solutions to address those needs, and healthcare organizations procure systems that conform to shared guidelines and interoperability requirements.
 
-![Plugathon](../../assets/images/plugathon.jpg)
-![IPS Exchange](../../assets/images/ips_exchange.jpg)
-![IPS Imaging](../../assets/images/ips_imaging.jpg)
-![SVCM](../../assets/images/svcm.jpg)
+![圖片](https://hackmd.io/_uploads/r1Wl8YJV-g.png)
