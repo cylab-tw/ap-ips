@@ -5,7 +5,7 @@ lang: en
 url: /en/governance
 ---
 
-[Back to Introduction](/en/introduction)
+[Back to Introduction]({{ "/en/introduction" | relative_url }})
 
 ---
 

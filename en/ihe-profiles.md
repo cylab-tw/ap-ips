@@ -4,7 +4,10 @@ title: IHE Profiles
 lang: en
 url: /en/ihe-profiles
 ---
-# [Back to Resources](/en/resources)
+
+[Back to Resources]({{ "/en/Resources" | relative_url }})
+
+---
 
 ## IHE Profiles
 Relevant IHE profiles supporting document sharing, FHIR-based exchange, and cross-community access are introduced here. This section highlights how IHE profiles complement HL7 FHIR to enable robust interoperability.

@@ -5,7 +5,7 @@ lang: en
 url: /en/connectathon
 ---
 
-[Back to Events](/en/events)
+# [Back to Events]({{ "/en/events" | relative_url }})
 
 ## Connectathon
 * IHE Connectathons provide a structured, profile-driven testing environment where participants validate interoperability using IHE profiles and HL7 international standards. Within AP-IPS, Connectathon activities focus on cross-border IPS exchange scenarios, alignment of national FHIR implementation guides, and verification of real-world interoperability between systems from different countries.
