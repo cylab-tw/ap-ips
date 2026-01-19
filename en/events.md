@@ -6,5 +6,5 @@ url: /en/events
 ---
 
 # Events
-### [Connectathon]({{ "/en/connectathon" | relative_url }})
-### [Plugathon]({{ "/en/plugathon" | relative_url }})
+### [Connectathon](/en/connectathon)
+### [Plugathon](/en/plugathon)
