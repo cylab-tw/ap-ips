@@ -1,1 +1,47 @@
-theme: jekyll-theme-cayman
+# =========================
+# Site settings
+# =========================
+title: AP-IPS
+description: Asia-Pacific International Patient Summary Initiative
+url: "https://YOUR_GITHUB_USERNAME.github.io"
+baseurl: ""   # 若是 user.github.io，一定要是空字串
+
+# =========================
+# Build settings
+# =========================
+theme: minima
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# =========================
+# Language / i18n settings
+# =========================
+languages: ["en", "zh"]
+default_lang: "en"
+
+# =========================
+# Collections (optional)
+# =========================
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# =========================
+# Navigation (from _data)
+# =========================
+menu_data: menu
+
+# =========================
+# Exclude files
+# =========================
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
