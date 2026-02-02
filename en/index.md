@@ -20,23 +20,22 @@ AP-IPS promotes a continuous and iterative interoperability lifecycle:
 * Those videos were created by NotebookLM. 
  
 ###  FHIR IPS: Your Health History, Unlocked 
-[![English](https://img.youtube.com/vi/5gO8gKLLZFQ/0.jpg)](https://www.youtube.com/watch?v=5gO8gKLLZFQ)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5gO8gKLLZFQ" title="FHIR IPS: Your Health History, Unlocked" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### FHIR IPS 国際健康パスポート：ボーダレスな医療情報 (日本語)
-[![Traditional Chinese 1](https://img.youtube.com/vi/a97RQ0qYm3A/0.jpg)](https://www.youtube.com/watch?v=a97RQ0qYm3A)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/a97RQ0qYm3A" title="FHIR IPS 国際健康パスポート：ボーダレスな医療情報" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 ### FHIR IPS국제건강여권: 국경없는의료정보 (한국어)
-[![Traditional Chinese 1](https://img.youtube.com/vi/u6U3IhGYfr0/0.jpg)](https://www.youtube.com/watch?v=u6U3IhGYfr0)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u6U3IhGYfr0" title="FHIR IPS국제건강여권: 국경없는의료정보" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
  
 ### FHIR IPS國際健康護照：無國界醫療數據 (繁體中文)
-[![Traditional Chinese 1](https://img.youtube.com/vi/NR5ZjdnFjeY/0.jpg)](https://www.youtube.com/watch?v=NR5ZjdnFjeY)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NR5ZjdnFjeY" title="FHIR IPS國際健康護照：無國界醫療數據" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### 你的醫療保健準備好迎接一個無國界的世界了嗎? (繁體中文) 
-[![Traditional Chinese 2](https://img.youtube.com/vi/tMd9qNO4c4E/0.jpg)](https://www.youtube.com/watch?v=tMd9qNO4c4E)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tMd9qNO4c4E" title="你的醫療保健準備好迎接一個無國界的世界了嗎?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-### 
-**Standards → Implementation → Connectathon → Validation**
+## Standards → Implementation → Connectathon → Validation**
 
 ![Lifecycle](https://hackmd.io/_uploads/rJSU0RkNWx.png)

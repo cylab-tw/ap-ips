@@ -11,6 +11,7 @@
       align-items: center;
       background-color: #4A2C84;
       padding: 10px;
+      position: relative;
     }
 
     .navbar-menu {
@@ -36,7 +37,7 @@
     }
 
     .navbar-logo {
-      height: 45px;
+      height: 40px;
       width: auto;
     }
 
@@ -77,7 +78,12 @@
       border: 1px solid #ccc;
       position: absolute;
       z-index: 1000;
-      width: 200px;
+      top: calc(100% + 6px);
+      right: 10px;
+      margin-top: 0;
+      width: 260px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      display: none;
     }
 
     #searchSuggestions div {
@@ -88,13 +94,54 @@
     #searchSuggestions div:hover {
       background-color: #f0f0f0;
     }
+
+    #searchSuggestions a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    #searchSuggestions p {
+      margin: 0;
+      padding: 10px;
+      color: #555;
+    }
+
+    #searchResults {
+      margin: 20px;
+      padding: 10px 0;
+    }
+
+    .search-result {
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .search-result a {
+      color: #4A2C84;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .search-result a:hover {
+      text-decoration: underline;
+    }
+
+    .search-result p {
+      margin: 6px 0 0;
+      color: #444;
+    }
+
+    mark.search-hit {
+      background: #ffeb3b;
+      padding: 0 2px;
+    }
   </style>
 </head>
 <body>
 
 <nav class="navbar">
   <a href="/en/" style="margin-right: auto;">
-    <img src="https://hackmd.io/_uploads/HJCHVxGSZl.png" alt="Logo" class="navbar-logo">
+    <img src="https://hackmd.io/_uploads/BJqBUW0IZg.png" alt="Logo" class="navbar-logo">
   </a>
 
   <div class="navbar-menu">
@@ -148,7 +195,7 @@
   </div>
 </nav>
 
-<div id="searchResults" style="margin: 20px;">
+<div id="searchResults">
   <!-- Search results will be displayed here -->
 </div>
 
@@ -172,32 +219,157 @@
 
 </main>
 
+<script id="searchData" type="application/json">
+  [
+    
+    
+      {
+        "title": "About",
+        "url": "/en/about.html",
+        "content": "About AP-IPSVisionTo establish the Asia-Pacific region as a leader in cross-border healthcare interoperability.Mission  Promote HL7 FHIR IPS  Enable interoperability testing  Foster collaboration  Support patient-centered exchangeAlignment  HL7 International  IHE International  National FHIR initiatives"
+      },
+    
+      {
+        "title": "Connectathon",
+        "url": "/en/connectathon.html",
+        "content": "Back to EventsConnectathon  IHE Connectathons provide a structured, profile-driven testing environment where participants validate interoperability using IHE profiles and HL7 international standards. Within AP-IPS, Connectathon activities focus on cross-border IPS exchange scenarios, alignment of national FHIR implementation guides, and verification of real-world interoperability between systems from different countries.  Key objectives include:          Validating standards conformance and interoperability      Identifying gaps between specifications and real-world implementation      Strengthening regional alignment with international standards      What is a Connectathon?Connectathon is a portmanteau of the words Connectivity and Marathon. It is an interoperability testing event conducted over several consecutive days (typically three to five days), during which participants meet face-to-face to test interoperability among their developed systems.Participants implement systems based on specific profiles and clinical or operational scenarios. These profiles are typically structured by decomposing requirements into actors and transactions, where communication between actors is defined using open, internationally recognized standards such as HL7, DICOM, IEEE, OSI, and other international or industry-standard specifications.Purpose of a ConnectathonThe primary objective of a Connectathon is to verify interoperability among systems developed in accordance with specified standards and profiles. Prior to the event, participants may prepare and test their systems using open-source testing tools or their own development environments. A Connectathon provides a structured and rigorous validation environment, enabling participants to collaboratively test interoperability between products. Standardized technical frameworks allow systems to be tested in a manner consistent with real-world deployment or publication conditions.Benefits of ParticipationOrganizations participating in a Connectathon can:  Validate whether their products conform to relevant standards;  Test interoperability with systems from other vendors using real-world use cases;  Rapidly identify and resolve technical integration and interface issues through close, collaborative problem-solving.During the event, participants conduct live connection tests with other systems to verify compliance with international standards. Any non-conformant issues identified can often be corrected within a short timeframe. Connectathon testing environments support the validation of tens of thousands of transactions, and results are evaluated by neutral Connectathon Monitors, who independently assess and confirm interoperability outcomes.After the ConnectathonUpon completion, results are published in a Connectathon Results Matrix, allowing stakeholders to review verified interoperability outcomes. Through Connectathon activities, industry participants foster data exchange, mutual collaboration, and cooperative development, ultimately enabling the creation of products with global market competitiveness.Achieving Healthcare IT Interoperability Through CollaborationTo promote interoperability between healthcare IT users and vendors, the following key practices are essential:  Clearly defining use cases;  Identifying the information and processes required to support those use cases;  Implementing information exchange using existing international standards;  Participating in annual Connectathons to demonstrate system conformance;  Encouraging close collaboration among care providers, IT professionals, and vendors to jointly define standards and common guidelines.In this collaborative model, care providers contribute real-world clinical challenges, IT professionals and vendors develop standards-compliant solutions to address those needs, and healthcare organizations procure systems that conform to shared guidelines and interoperability requirements."
+      },
+    
+      {
+        "title": "Contact us",
+        "url": "/en/contact.html",
+        "content": "Contact UsFor general inquiries or collaboration opportunities, please contact the AP-IPS Secretariat.Founding Statement      The AP-IPS is founded on the shared recognition that cross-border healthcare interoperability is essential to modern healthcare delivery. As patient mobility increases and healthcare systems become more interconnected, the ability to securely exchange essential clinical information across national boundaries is no longer optional—it is a necessity.        AP-IPS is established to serve as a neutral, collaborative platform that advances the adoption of the HL7 FHIR International Patient Summary through real-world testing, technical collaboration, and regional alignment. By leveraging the proven methodologies of Plugathons, the alliance bridges the gap between standards and implementation.        The founding members commit to openness, transparency, and international cooperation, with the shared goal of improving continuity of care, patient safety, and healthcare quality across the Asia-Pacific region. Through AP-IPS, we aspire to contribute meaningfully to the global interoperability ecosystem and empower patients and healthcare providers alike.  "
+      },
+    
+      {
+        "title": "Events",
+        "url": "/en/events.html",
+        "content": "# Events### [Connectathon](../en/connectathon)### [Plugathon](../en/plugathon)"
+      },
+    
+      {
+        "title": "Governance",
+        "url": "/en/governance.html",
+        "content": "[Back to Introduction](../en/introduction)---## Governance and BoardAP-IPS is governed by a board composed of representatives from participating countries and organizations.### JAPAN| **Name**                 | **Organization**                 ||--------------------------|-----------------------------------|| **Yasunari Shiokawa (Salt)** | IHE-Japan                         || Masayoshi Seki           | IHE-Japan                         || Takeshi Ozeki            | IHE-Japan                         || Sunao Watanabe           | MEDIS-DC                          || Takanori Yamashita       | JAMI                              || Masahito Kawamori        | University of Tokyo               || Yoshimasa Kawazoe        | University of Tokyo               || Takeshi Imai             | University of Tokyo               || Katsuhiko Nishino        | Tokyo Metroporitan Hiroo Hospital || Kazunori Nozaki,         | University of Osaka               || Syoji Uzawa(Observer)    | IHE-Japan                         |### South Korea| **Name**                 | **Organization**                 ||--------------------------|-----------------------------------|| **Hyoungho Do**          | IHE Korea                        || JoonHyun Song            | HL7 Korea                         || HeeKyoung Jung           | Daegu Technopark                  |### Taiwan|  **Name**                    | **Organization**                                              ||------------------------------|----------------------------------------------------------------|| **Chung-Yueh Lien (連中岳)** | Medical Image Standards   Association of Taiwan (MISAT)National Taipei University of Nursing and Health Sciences  || Chien-Yeh Hsu (徐建業) | National Taipei University of Nursing and Health Sciences  || Lorex Yang (楊宇凡)          | Sitatech Information Services Co., Ltd                          || Tom Wang (王安宇)            | EBM Technologies                                                || Ping Huang Tsai              | TwHealth Nexus Inc                                             || BI-Shan(Samantha) Hsu        | TwHealth Nexus Inc                                             || Simon Yu                     | TwHealth Nexus Inc                                             |## Member Countries- Australia- Japan- Malaysia- Singapore- South Korea- Taiwan"
+      },
+    
+      {
+        "title": "HL7 FHIR IPS",
+        "url": "/en/hl7-fhir-ips.html",
+        "content": "[Back to Resources](../en/resources)---## HL7 FHIR International Patient Summary (IPS)This section provides background and reference materials on the HL7 FHIR IPS specification, including its scope, design principles, and clinical use cases. Links to official HL7 IPS Implementation Guides and supporting documentation are provided."
+      },
+    
+      {
+        "title": "IHE Profiles",
+        "url": "/en/ihe-profiles.html",
+        "content": "[Back to Resources](../en/resources)---## IHE ProfilesRelevant IHE profiles supporting document sharing, FHIR-based exchange, and cross-community access are introduced here. This section highlights how IHE profiles complement HL7 FHIR to enable robust interoperability.### Data Content* [International Patient Summary (IPS)](https://build.fhir.org/ig/HL7/fhir-ips)* Sharing Value Sets, Concepts, Maps (SVCM)### Communication Protocol* Sharing of International Patient Summary (sIPS)* [Mobile Health Document Sharing (MHDS)](#Mobile-Health-Document-Sharing-MHDS)* Patient Master Identity Registry (PMIR)### Privacy & Security* Internet User Authorization (IUA)* Audit Trail and Node Authentication (ATNA)* [Privacy Consent on FHIR (PCF)](https://profiles.ihe.net/ITI/PCF/)* Cross-Enterprise User Assertion (XUA)"
+      },
+    
+      {
+        "title": "Home",
+        "url": "/en/",
+        "content": "# Asia Pacific International Patient Summary (AP IPS)### Advancing Cross-Border Healthcare Interoperability in the Asia-Pacific Region![Overview](https://hackmd.io/_uploads/ryaDLusmZe.png)The alliance of Asia Pacific International Patient Summary (AP-IPS) is an international collaborative initiative dedicated to promoting the adoption, implementation, and testing of the Fast Healthcare Interoperability Resources (FHIR) International Patient Summary (IPS).AP-IPS brings together national IHE organizations, HL7 organizations, standards experts, healthcare institutions, and industry partners to address real-world interoperability challenges and accelerate digital health transformation.AP-IPS promotes a continuous and iterative interoperability lifecycle:## Video * Those videos were created by NotebookLM.  ###  FHIR IPS: Your Health History, Unlocked ### FHIR IPS 国際健康パスポート：ボーダレスな医療情報 (日本語)### FHIR IPS국제건강여권: 국경없는의료정보 (한국어) ### FHIR IPS國際健康護照：無國界醫療數據 (繁體中文)### 你的醫療保健準備好迎接一個無國界的世界了嗎? (繁體中文) ## Standards → Implementation → Connectathon → Validation**![Lifecycle](https://hackmd.io/_uploads/rJSU0RkNWx.png)"
+      },
+    
+      {
+        "title": "Introduction",
+        "url": "/en/introduction.html",
+        "content": "### [Asia Pacific Green Button](../en/overview)### [Governance and Board](../en/governance)# IntroductionThe Asia Pacific International Patient Summary Alliance (AP-IPS) was established to support international healthcare interoperability by focusing on the International Patient Summary (IPS) as a foundational use case.## How AP-IPS WorksAP-IPS operates as a collaborative, country-driven interoperability framework that enables participating Asia-Pacific economies to jointly define, test, and validate interoperable IPS through collaborative specifications and Plugathon-based validation.![未命名](https://hackmd.io/_uploads/ryg0w5yVbl.jpg)### 1. Regional Needs and Use-Case IdentificationParticipating economies—through healthcare authorities, standards organizations, academic institutions, hospitals, and industry representatives—collectively identify cross-border clinical scenarios where the IPS is required, such as emergency care, referral continuity, disaster response, and patient mobility. National inputs are consolidated to reflect regional clinical and operational needs, ensuring that IPS exchange requirements are grounded in real-world practice rather than isolated technical assumptions.### 2. Joint Specification DevelopmentBased on agreed regional use cases, AP-IPS establishes multinational specification working groups, composed of representatives from participating countries. Rather than unilateral specification development, AP-IPS emphasizes co-creation, where all participating countries contribute equally to the definition of interoperable IPS exchange specifications. These groups collaboratively define:* IPS exchange profiles and constraints* FHIR-based data elements and extensions* Terminology alignment and localization considerations* Security, transport, and governance assumptions### 3. Open Reference Implementations and ToolingTo accelerate adoption and ensure consistency, AP IPS encourages the development of open-source reference implementations, validation tools, and sample datasets that lower barriers to entry and improve implementation quality across the region. These artifacts serve as practical guidance for:* National implementers* Healthcare providers* Vendors and startups* Research and innovation communities### 4. Asia-Pacific PlugathonAP-IPS conducts an annual Asia Pacific Plugathon, modeled after IHE Connectathon principles but focused specifically on IPS exchange. Participation includes healthcare institutions, system vendors, startups, and national initiatives, fostering a neutral, vendor-independent testing environment. During the Plugathon:* Implementers test system-to-system IPS exchanges based on AP-IPS specifications;* Cross-country interoperability is validated in realistic scenarios;* Technical and semantic issues are identified collaboratively.### 5. Alignment with International StandardsResults from Plugathon testing and pilot deployments are systematically reviewed by AP-IPS working groups. This establishes a continuous improvement loop, ensuring that AP-IPS specifications remain clinically relevant, technically sound, and internationally aligned. AP-IPS does not replace global standards. Instead, it acts as a regional convergence platform, consolidating Asia-Pacific implementation experience and feeding it back into * HL7 IPS Working Groups,* IHE international domain committees, and* Other relevant international standardization activities."
+      },
+    
+      {
+        "title": "National Standards",
+        "url": "/en/national-standards.html",
+        "content": "# [Back to Resources](../en/resources)## National Standards ### National Core IGFHIR Patient Resource as defined in national or regional FHIR Implementation Guides. | **Nation**   | *Specification*                                             | **Version** ||--------------|--------------------------------------------------------------|-------------|| Taiwan       | ([TW Core IG](https://twcore.mohw.gov.tw/ig/twcore) )        | 1.0.0       || Japan        | ([JP Core IG](https://jpfhir.jp/fhir/core))                  | 1.2.0       || South Korea  | ([KR Core IG](https://www.hl7korea.or.kr/fhir/krcore/))      | 1.0.2       || Australia    | ([AU Core IG](https://build.fhir.org/ig/hl7au/au-fhir-core/))| 1.0.0       || Malaysia     | ([MY Core IG](https://simplifier.net/guide/mycore/))         | 1.0.2       |#### Core PatientsFHIR Patient Resource as defined in national or regional FHIR Implementation Guides, such as: IPS: [Patient (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/en/StructureDefinition-Patient-uv-ips.html), [TW Core Patient](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Patient-twcore.html), ([JP Core IG](https://jpfhir.jp/fhir/core)): [JP Core Patient](https://jpfhir.jp/fhir/core/1.1.0/StructureDefinition-jp-patient.html), [KR Core Patient](https://www.hl7korea.or.kr/fhir/krcore/StructureDefinition-krcore-patient.html), [AU Core Patient](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-patient.html), [PatientMyCore](https://simplifier.net/guide/mycore/Home/Resource/FHIR-Artifact/Resource-Profile/Resource/Base/Individual/Patient--MY-Core.page.md?version=current). * The patient profiles are High correlated resources congested with patient:   - Practitioner   - PractitionerRole   - RelatedPerson   - Organization"
+      },
+    
+      {
+        "title": "News",
+        "url": "/en/news.html",
+        "content": "# NewsThe News section provides updates on alliance activities, including announcements of upcoming Connectathons and Plugathons, summaries of completed events, and alignment activities with HL7 and IHE.## 2026 IHE Japan Connectathon Week![IHE Japan](https://hackmd.io/_uploads/Bkij_h1Ebl.png)### Asia Pacific Plugathon![AP Plugathon](https://hackmd.io/_uploads/BkNRpDoQ-e.png)"
+      },
+    
+      {
+        "title": "Overview",
+        "url": "/en/overview.html",
+        "content": "[Back to Introduction](../en/introduction)---## Asia Pacific Green Button### One Click, Your IPS, Anywhere in Asia-Pacific      The AP Green Button is a patient-centered, standards-based digital access mechanism that enables individuals to securely access, download, and share their IPS across the Asia-Pacific region.    It is designed to support trusted, cross-border health information exchange, empowering patients to authorize the use of their essential clinical data for care delivery, emergency treatment, and medication dispensing.    The AP Green Button aligns with international interoperability principles promoted by WHO, HL7 International, IHE, and regional digital health initiatives. The AP Green Button is a one-click mechanism that allows patients to:          Download your IPS      Store it in a Digital Health Wallet      Share selected information via QR code or secure link      Authorize access across countries, healthcare providers, and pharmacies              ### Policy Statement* The AP Green Button promotes patient-mediated health information exchange by providing a simple, secure, and interoperable mechanism for individuals to access and share their IPS. By leveraging IPS, verifiable digital credentials, and selective disclosure technologies, the Green Button supports:  - Continuity of care across borders  - Emergency medical decision-making  - Safe medication reconciliation  -  Patient trust and data sovereignty* The system is built on open standards and respects national digital identity frameworks, such as:  - WHO Smart Health Cards  - Japan My Number ecosystem  - Taiwan Digital Identity WalletThere are three common scenarios of AP Green Button: * Scenario 1: Cross-border Medical Care (Hospital)* Scenario 2: Cross-border Pharmacy Dispensing* Scenario 3: Emergency Care![未命名](https://hackmd.io/_uploads/HyMxXxgN-e.jpg)"
+      },
+    
+      {
+        "title": "Plugathon",
+        "url": "/en/plugathon.html",
+        "content": "[Back to Events](../en/events)---## PlugathonPlugathons emphasize rapid, developer-oriented testing and prototyping based on international standards, e.g., HL7, DICOM, and FHIR. These events lower the barrier to participation and foster hands-on collaboration among engineers, architects, and domain experts.### Track #1: Sharing of FHIR International Patient Demographics#### Description* This track focuses on establishing cross-institutional and cross-border patient identity consistency through a Master Patient Index (MPI) mechanism. The Patient Master Identity Registry (PMIR) Profile enables different systems to share, synchronize, and update patient demographic data (e.g., name, date of birth, identifiers), ensuring that the same individual can be accurately identified across international healthcare domains.#### Goal* To realize cross-border patient identity federation, providing the foundational layer for international health data exchange.#### Scenarios* Synchronizing patient demographic updates among multiple FHIR servers in different countries.* Resolving patient identity conflicts and maintaining consistency via PMIR subscription/notification.* Demonstrating cross-system queries of patient demographics through FHIR-based APIs.#### Future Outlook* The PMIR-based patient identity framework will evolve toward cross-border integration with the Master Patient Index (MPI), enabling international patient linking and deduplication.* Future work may include identity federation between national healthcare systems and trusted patient matching algorithms leveraging AI/ML techniques.* Integration with FHIR Consent and Privacy Policies to govern data access across regions.![12](https://hackmd.io/_uploads/rk3sRXW4Wg.jpg)### Track #2: Sharing of FHIR International Patient Summary#### Description* This track supports cross-system exchange of patient summaries based on FHIR International Patient Summary (IPS) specifications.* The goal is to enable secure sharing of key health information—such as allergies, medications, conditions, procedures, and immunizations—across countries and healthcare organizations.#### Goal* To establish a standardized framework for cross-border exchange of health summaries, facilitating continuity of care for international and mobile patients.#### Scenarios* **Scenario #1 – Basic Sharing (Minimal IPS)**  - **Purpose**:** Validate creation and sharing of the minimal IPS composition with all required resources.  - **Content:**      - Composition (IPS profile) with required metadata.      - Patient (IPS patient profile).      - At least 1 Problem, 1 Allergy, and Medical Summary section.  - **Test Flow:**      - Creator creates IPS with minimal content.      - Consumer queries/retrieves the IPS via FHIR API (DocumentReference/Composition).* **Scenario #2 – Advanced Sharing (Expanded IPS)**  - **Purpose**:** Validate creation and sharing of the Expanded IPS composition with optional required resources.  - **Content:**     - #2-1 Laboratory Report         - Add DiagnosticReport (Laboratory profile) with referenced Observations.         - Include LOINC-coded lab results in IPS Results section.     - #2-2 Pathology Report         - Add DiagnosticReport (Pathology profile) with Observation and possible image references (DocumentReference).     - #2-3 Radiology Report with Image (IPS + WIA)         - Add DiagnosticReport (Radiology profile) with ImagingStudy and image references (e.g., DICOMweb URL in Media).  - **Test Flow:**     - Creator creates an expanded IPS with one or more of the above reports.     - Consumer retrieves and verifies completeness of references.     - Verify that referenced resources are resolvable and conform to profiles.* **Scenario #3 – Retrieval and Display IPS**  - **Purpose**:**      - [Required]: Validate correct rendering of IPS in a clinical viewer.      - [Optional]: Test mapping of coded values between code systems using the IHE SVCM profile to ensure terminology interoperability,.  - **Content:** Any IPS from Scenario #1 or #2.  - **Test Flow:**      - Query IPS: Recipient queries IPS via FHIR API.      - Retrieve IPS Bundle: retrieve IPS Bundle (Composition + referenced resources).      - Render in a human-readable view: preserving section structure and narrative text.      - SVCM Mapping [Option]:          - Identify coded elements in the IPS (e.g., LOINC, SNOMED CT, ICD‑10).          - Display mapped terms alongside original codes in the viewer.          - Query an SVCM server for a ConceptMap to map codes to a alternative code system. e.g, Japan, Korea, or Taiwan code systems.#### Actors &Transactions Diagram* Exchange IPS via FHIR RESTful API![圖片](https://hackmd.io/_uploads/HkQJZ2lV-l.png)* IPS with Imaging Report via FHIR and DICOMweb API![圖片](https://hackmd.io/_uploads/Sk2Z-3l4Zx.png)* IHE SVCM (Sharing Valuesets, Codes, and Maps)![圖片](https://hackmd.io/_uploads/B1OH-3lNZx.png)#### Future Outlook* Expansion from IPS to comprehensive health records and domain-specific summaries, e.g., oncology, immunization, and maternal health.* Adoption of FHIR-based translation and terminology mapping services (SVCM) to ensure multilingual and semantic interoperability across borders.![未命名](https://hackmd.io/_uploads/rkTUEhyNWx.jpg)### Track #3: Sharing of FHIR IPS with Digtial Health Wallet #### DescriptionThis track focuses on enabling patient-mediated exchange of FHIR IPS integrating with digital signature, verifiable credentials, and digital health wallet technologies. In this track, the FHIR IPS is packaged as a cryptographically verifiable and portable credential, allowing patients to securely carry, present, and share their health summaries across borders. This approach leverages emerging international initiatives and national digital identity infrastructures, such as:* WHO Smart Health Cards (SHC)* Japan My Number Card* Taiwan Digital Identity Wallet* Other national or regional digital wallet platformsFHIR IPS data is exchanged using QR codes or secure digital channels, with access strictly controlled by explicit patient consent. Advanced credential technologies such as Selective Disclosure JWT (SD-JWT) are used to ensure privacy-preserving data sharing.#### GoalThe primary goals of this track are to:* Enable portable, patient-controlled FHIR IPS facilitating cross-border, emergency, and ad-hoc healthcare scenarios* Align FHIR IPS with global digital identity and verifiable credential ecosystems to ensure data authenticity, integrity, and trust through digital signatures and certificates* Support selective disclosure, allowing patients to share only the necessary portions of their IPSUltimately, this track aims to shift IPS exchange from system-to-system only models toward a patient-centric interoperability paradigm.#### ScenariosTypical scenarios addressed in this track include:1. **Cross-border Travel and Emergency Care**A patient traveling abroad presents a QR code from their digital health wallet.The receiving healthcare provider verifies the IPS credential, validates the digital signature, and retrieves the IPS after patient consent.2. **Patient-Controlled Selective Sharing**Using SD-JWT, a patient selectively discloses specific IPS sections (e.g., allergies, medications) while withholding other sensitive information.3. **Outpatient or Referral Visits**Patients share their IPS during first-time visits without requiring prior system integration between institutions.4. **Public Health or Disaster Response**Rapid access to trusted patient summaries using offline-capable QR codes and verifiable credentials.5. **Integration with National Digital Identity Systems**Binding IPS credentials to national identity wallets (e.g., My Number, Taiwan Digital ID) to establish trusted identity assurance.#### Future OutlookThis track represents a critical step toward the future of trusted, decentralized, and patient-driven health data exchange. Future directions include:* Deeper alignment with W3C Verifiable Credentials (VC) standards* Broader adoption of SD-JWT and privacy-enhancing technologies* Interoperability testing between health wallets, identity wallets, and healthcare systems* Harmonization with AP IPS governance models and international regulatory frameworks* Expansion to support additional FHIR-based artifacts beyond IPS (e.g., immunization records, imaging summaries)* By combining FHIR IPS, digital identity, and cryptographic trust mechanisms, this track lays the foundation for a scalable and globally interoperable personal health record ecosystem.![未命名](https://hackmd.io/_uploads/SkKj82yVZx.jpg)"
+      },
+    
+      {
+        "title": "Resources",
+        "url": "/en/resources.html",
+        "content": "## [HL7 FHIR International Patient Summary (IPS)](../en/hl7-fhir-ips)## [IHE Profiles](../en/ihe-profiles)## [National Standards](../en/national-standards)## [Tools & Implementations](../en/tools-implementations)"
+      },
+    
+      {
+        "title": "Tools & Implementations",
+        "url": "/en/tools-implementations.html",
+        "content": "# [Back to Resources](../en/resources)## Tools & ImplementationsAP-IPS promotes the use of reference implementations, open-source tools, and test servers to support learning and adoption. Sample FHIR resources, validation tools, and implementation examples are shared to facilitate participation.* [IPS Online Validator](https://validator.dicom.tw/)   - Upload FHIR JSON directly and validated through the web interface. This tool performs validation based on various FHIR IG specifications including IPS, TW Core IG, etc.   - During validation, the FHIR JSON must include the meta.profile information. Please refer to the [user guide](https://validator.dicom.tw/app/docs/) for details.* [IPS Viewer](https://www.ipsviewer.com/)* [SMART Health Cards with SD-JWT](https://www.linkedin.com/pulse/fixing-all-nothing-problem-health-data-sharing-fhir-josh-mandel-md-9k6gc)* [Selective Disclosure for JSON Web Tokens(SD-JWT)](https://datatracker.ietf.org/doc/html/rfc9901)"
+      }
+    
+  ]
+</script>
+
 <script>
+  const pages = JSON.parse(document.getElementById('searchData').textContent || '[]');
+
+  function escapeRegExp(text) {
+    return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function highlightMatch(text, query) {
+    if (!query || !text) return text || '';
+    const regex = new RegExp(escapeRegExp(query), 'gi');
+    return text.replace(regex, (match) => `<mark class="search-hit">${match}</mark>`);
+  }
+
+  function getSnippet(content, query, radius = 80) {
+    if (!content) return '';
+    const lower = content.toLowerCase();
+    const q = query.toLowerCase();
+    const idx = lower.indexOf(q);
+    if (idx === -1) {
+      return content.substring(0, 180) + (content.length > 180 ? '...' : '');
+    }
+    const start = Math.max(0, idx - radius);
+    const end = Math.min(content.length, idx + q.length + radius);
+    const prefix = start > 0 ? '...' : '';
+    const suffix = end < content.length ? '...' : '';
+    return prefix + content.substring(start, end) + suffix;
+  }
+
   function updateSuggestions() {
     const query = document.getElementById('searchInput').value.toLowerCase();
     const suggestionsContainer = document.getElementById('searchSuggestions');
     suggestionsContainer.innerHTML = '';
 
-    const pages = [
-      { title: 'Home', url: '/en/', content: 'Asia Pacific International Patient Summary (AP IPS) Advancing Cross-Border Healthcare Interoperability in the Asia-Pacific Region.' },
-      { title: 'News', url: '/en/news', content: 'Latest updates and news about AP-IPS and its initiatives.' },
-      { title: 'Introduction', url: '/en/introduction', content: 'Learn about the AP-IPS alliance and its goals for healthcare interoperability.' },
-      { title: 'Events', url: '/en/events', content: 'Upcoming events including Connectathon and Plugathon for interoperability testing.' },
-      { title: 'Resources', url: '/en/resources', content: 'Access HL7 FHIR IPS specifications, IHE profiles, and national standards.' },
-      { title: 'About', url: '/en/about', content: 'Information about AP-IPS and its mission to advance healthcare interoperability.' },
-      { title: 'Contact', url: '/en/contact', content: 'Get in touch with AP-IPS for inquiries and collaboration opportunities.' }
-    ];
+    if (!query.trim()) {
+      suggestionsContainer.style.display = 'none';
+      return;
+    }
 
-    const suggestions = pages.filter(page => page.content.toLowerCase().includes(query)).slice(0, 5);
+    const suggestions = pages.filter(page =>
+      (page.title || '').toLowerCase().includes(query) ||
+      (page.content || '').toLowerCase().includes(query)
+    ).slice(0, 5);
 
     if (suggestions.length > 0) {
       suggestions.forEach(suggestion => {
         const suggestionItem = document.createElement('div');
-        suggestionItem.innerHTML = `<a href="${suggestion.url}">${suggestion.title}</a>`;
+        const title = highlightMatch(suggestion.title || '', query);
+        suggestionItem.innerHTML = `<a href="${suggestion.url}">${title}</a>`;
         suggestionsContainer.appendChild(suggestionItem);
       });
+      suggestionsContainer.style.display = 'block';
     } else {
       suggestionsContainer.innerHTML = '<p>No suggestions found.</p>';
+      suggestionsContainer.style.display = 'block';
     }
   }
 
@@ -206,29 +378,40 @@
     const resultsContainer = document.getElementById('searchResults');
     resultsContainer.innerHTML = '';
 
-    const pages = [
-      { title: 'Home', url: '/en/', content: 'Asia Pacific International Patient Summary (AP IPS) Advancing Cross-Border Healthcare Interoperability in the Asia-Pacific Region.' },
-      { title: 'News', url: '/en/news', content: 'Latest updates and news about AP-IPS and its initiatives.' },
-      { title: 'Introduction', url: '/en/introduction', content: 'Learn about the AP-IPS alliance and its goals for healthcare interoperability.' },
-      { title: 'Events', url: '/en/events', content: 'Upcoming events including Connectathon and Plugathon for interoperability testing.' },
-      { title: 'Resources', url: '/en/resources', content: 'Access HL7 FHIR IPS specifications, IHE profiles, and national standards.' },
-      { title: 'About', url: '/en/about', content: 'Information about AP-IPS and its mission to advance healthcare interoperability.' },
-      { title: 'Contact', url: '/en/contact', content: 'Get in touch with AP-IPS for inquiries and collaboration opportunities.' }
-    ];
+    if (!query.trim()) {
+      resultsContainer.innerHTML = '<p>Please enter a search term.</p>';
+      return;
+    }
 
-    const results = pages.filter(page => page.content.toLowerCase().includes(query));
+    const results = pages.filter(page =>
+      (page.title || '').toLowerCase().includes(query) ||
+      (page.content || '').toLowerCase().includes(query)
+    );
 
     if (results.length > 0) {
+      const heading = document.createElement('h3');
+      heading.textContent = `Search results for "${query}" (${results.length})`;
+      resultsContainer.appendChild(heading);
+
       results.forEach(result => {
-        const preview = result.content.substring(0, 150) + '...';
+        const previewRaw = getSnippet(result.content || '', query, 80);
+        const preview = highlightMatch(previewRaw, query);
+        const title = highlightMatch(result.title || '', query);
         const resultItem = document.createElement('div');
-        resultItem.innerHTML = `<a href="${result.url}">${result.title}</a><p>${preview}</p>`;
+        resultItem.className = 'search-result';
+        resultItem.innerHTML = `<a href="${result.url}">${title}</a><p>${preview}</p>`;
         resultsContainer.appendChild(resultItem);
       });
     } else {
       resultsContainer.innerHTML = '<p>No results found.</p>';
     }
   }
+
+  document.getElementById('searchInput').addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      performSearch();
+    }
+  });
 </script>
 
 </body>
