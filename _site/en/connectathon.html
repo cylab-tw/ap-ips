@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Connectathon | AP-IPS</title>
   <link rel="stylesheet" href="/assets/style.css">
   <style>
@@ -17,6 +18,29 @@
     .navbar-menu {
       display: flex;
       align-items: center;
+    }
+
+    .navbar-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .navbar-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #fff;
+      margin: 4px 0;
+      border-radius: 1px;
     }
 
     .navbar-menu a {
@@ -73,6 +97,17 @@
       height: auto;
     }
 
+    .content iframe,
+    .content embed,
+    .content video {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      display: block;
+      margin: 0 auto;
+    }
+
     #searchSuggestions {
       background-color: white;
       border: 1px solid #ccc;
@@ -104,6 +139,58 @@
       margin: 0;
       padding: 10px;
       color: #555;
+    }
+
+    @media (max-width: 900px) {
+      .navbar {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .navbar-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        display: none;
+        background-color: #4A2C84;
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .navbar-menu.is-open {
+        display: flex;
+      }
+
+      .navbar-menu a {
+        width: 100%;
+        margin: 0;
+        padding: 10px 15px;
+      }
+
+      .navbar-menu a:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-right: 15px;
+      }
+
+      .navbar-toggle {
+        display: inline-flex;
+      }
+
+      .navbar-search {
+        width: 100%;
+      }
+
+      .navbar-search input {
+        flex: 1;
+        width: 100%;
+      }
+
+      #searchSuggestions {
+        right: 0;
+        left: 0;
+        width: auto;
+      }
     }
 
     #searchResults {
@@ -144,7 +231,13 @@
     <img src="https://hackmd.io/_uploads/BJqBUW0IZg.png" alt="Logo" class="navbar-logo">
   </a>
 
-  <div class="navbar-menu">
+  <button class="navbar-toggle" type="button" aria-expanded="false" aria-controls="navbarMenu" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="navbar-menu" id="navbarMenu">
     
     
       
@@ -443,6 +536,25 @@ In this collaborative model, care providers contribute real-world clinical chall
   document.getElementById('searchInput').addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
       performSearch();
+    }
+  });
+
+  function toggleMenu() {
+    const menu = document.getElementById('navbarMenu');
+    const button = document.querySelector('.navbar-toggle');
+    const isOpen = menu.classList.toggle('is-open');
+    if (button) {
+      button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+  }
+
+  window.addEventListener('resize', () => {
+    const menu = document.getElementById('navbarMenu');
+    const button = document.querySelector('.navbar-toggle');
+    if (!menu || !button) return;
+    if (window.innerWidth > 900) {
+      menu.classList.remove('is-open');
+      button.setAttribute('aria-expanded', 'false');
     }
   });
 </script>
