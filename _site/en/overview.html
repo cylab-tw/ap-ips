@@ -91,10 +91,53 @@
     }
 
     .content img {
-      max-width: 50%;
+      max-width: 75%;
       display: block;
-      margin: 0 auto;
+      margin: 20px auto;
       height: auto;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .content img:hover {
+      opacity: 0.8;
+    }
+
+    /* 圖片放大模態框樣式 */
+    .image-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      cursor: pointer;
+    }
+
+    .image-modal img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 95%;
+      max-height: 95%;
+      cursor: zoom-out;
+    }
+
+    .image-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .image-modal-close:hover {
+      color: #bbb;
     }
 
     .content iframe,
@@ -228,7 +271,7 @@
 
 <nav class="navbar">
   <a href="/en/" style="margin-right: auto;">
-    <img src="https://hackmd.io/_uploads/BJqBUW0IZg.png" alt="Logo" class="navbar-logo">
+    <img src="/assets/images/logo.png" alt="Logo" class="navbar-logo">
   </a>
 
   <button class="navbar-toggle" type="button" aria-expanded="false" aria-controls="navbarMenu" onclick="toggleMenu()">
@@ -312,7 +355,7 @@
     </ul>
   </div>
   <div style="flex: 1; text-align: right;">
-    <img src="https://hackmd.io/_uploads/SJL8I3g4Zx.png" alt="未命名" style="max-width: 50%; height: auto;" />
+    <img src="../assets/images/green-button.png" alt="未命名" style="max-width: 50%; height: auto;" />
   </div>
 </div>
 
@@ -342,7 +385,7 @@
   <li>Scenario 3: Emergency Care</li>
 </ul>
 
-<p><img src="https://hackmd.io/_uploads/HyMxXxgN-e.jpg" alt="未命名" /></p>
+<p><img src="../assets/images/green-button-scenarios.jpg" alt="未命名" /></p>
 
 </main>
 
@@ -425,7 +468,7 @@
       {
         "title": "Plugathon",
         "url": "/en/plugathon.html",
-        "content": "[Back to Events](../en/events)---## PlugathonPlugathons emphasize rapid, developer-oriented testing and prototyping based on international standards, e.g., HL7, DICOM, and FHIR. These events lower the barrier to participation and foster hands-on collaboration among engineers, architects, and domain experts.### Track #1: Sharing of FHIR International Patient Demographics#### Description* This track focuses on establishing cross-institutional and cross-border patient identity consistency through a Master Patient Index (MPI) mechanism. The Patient Master Identity Registry (PMIR) Profile enables different systems to share, synchronize, and update patient demographic data (e.g., name, date of birth, identifiers), ensuring that the same individual can be accurately identified across international healthcare domains.#### Goal* To realize cross-border patient identity federation, providing the foundational layer for international health data exchange.#### Scenarios* Synchronizing patient demographic updates among multiple FHIR servers in different countries.* Resolving patient identity conflicts and maintaining consistency via PMIR subscription/notification.* Demonstrating cross-system queries of patient demographics through FHIR-based APIs.#### Future Outlook* The PMIR-based patient identity framework will evolve toward cross-border integration with the Master Patient Index (MPI), enabling international patient linking and deduplication.* Future work may include identity federation between national healthcare systems and trusted patient matching algorithms leveraging AI/ML techniques.* Integration with FHIR Consent and Privacy Policies to govern data access across regions.![12](https://hackmd.io/_uploads/rk3sRXW4Wg.jpg)### Track #2: Sharing of FHIR International Patient Summary#### Description* This track supports cross-system exchange of patient summaries based on FHIR International Patient Summary (IPS) specifications.* The goal is to enable secure sharing of key health information—such as allergies, medications, conditions, procedures, and immunizations—across countries and healthcare organizations.#### Goal* To establish a standardized framework for cross-border exchange of health summaries, facilitating continuity of care for international and mobile patients.#### Scenarios* **Scenario #1 – Basic Sharing (Minimal IPS)**  - **Purpose**:** Validate creation and sharing of the minimal IPS composition with all required resources.  - **Content:**      - Composition (IPS profile) with required metadata.      - Patient (IPS patient profile).      - At least 1 Problem, 1 Allergy, and Medical Summary section.  - **Test Flow:**      - Creator creates IPS with minimal content.      - Consumer queries/retrieves the IPS via FHIR API (DocumentReference/Composition).* **Scenario #2 – Advanced Sharing (Expanded IPS)**  - **Purpose**:** Validate creation and sharing of the Expanded IPS composition with optional required resources.  - **Content:**     - #2-1 Laboratory Report         - Add DiagnosticReport (Laboratory profile) with referenced Observations.         - Include LOINC-coded lab results in IPS Results section.     - #2-2 Pathology Report         - Add DiagnosticReport (Pathology profile) with Observation and possible image references (DocumentReference).     - #2-3 Radiology Report with Image (IPS + WIA)         - Add DiagnosticReport (Radiology profile) with ImagingStudy and image references (e.g., DICOMweb URL in Media).  - **Test Flow:**     - Creator creates an expanded IPS with one or more of the above reports.     - Consumer retrieves and verifies completeness of references.     - Verify that referenced resources are resolvable and conform to profiles.* **Scenario #3 – Retrieval and Display IPS**  - **Purpose**:**      - [Required]: Validate correct rendering of IPS in a clinical viewer.      - [Optional]: Test mapping of coded values between code systems using the IHE SVCM profile to ensure terminology interoperability,.  - **Content:** Any IPS from Scenario #1 or #2.  - **Test Flow:**      - Query IPS: Recipient queries IPS via FHIR API.      - Retrieve IPS Bundle: retrieve IPS Bundle (Composition + referenced resources).      - Render in a human-readable view: preserving section structure and narrative text.      - SVCM Mapping [Option]:          - Identify coded elements in the IPS (e.g., LOINC, SNOMED CT, ICD‑10).          - Display mapped terms alongside original codes in the viewer.          - Query an SVCM server for a ConceptMap to map codes to a alternative code system. e.g, Japan, Korea, or Taiwan code systems.#### Actors &Transactions Diagram* Exchange IPS via FHIR RESTful API![圖片](https://hackmd.io/_uploads/HkQJZ2lV-l.png)* IPS with Imaging Report via FHIR and DICOMweb API![圖片](https://hackmd.io/_uploads/Sk2Z-3l4Zx.png)* IHE SVCM (Sharing Valuesets, Codes, and Maps)![圖片](https://hackmd.io/_uploads/B1OH-3lNZx.png)#### Future Outlook* Expansion from IPS to comprehensive health records and domain-specific summaries, e.g., oncology, immunization, and maternal health.* Adoption of FHIR-based translation and terminology mapping services (SVCM) to ensure multilingual and semantic interoperability across borders.![未命名](https://hackmd.io/_uploads/rkTUEhyNWx.jpg)### Track #3: Sharing of FHIR IPS with Digtial Health Wallet #### DescriptionThis track focuses on enabling patient-mediated exchange of FHIR IPS integrating with digital signature, verifiable credentials, and digital health wallet technologies. In this track, the FHIR IPS is packaged as a cryptographically verifiable and portable credential, allowing patients to securely carry, present, and share their health summaries across borders. This approach leverages emerging international initiatives and national digital identity infrastructures, such as:* WHO Smart Health Cards (SHC)* Japan My Number Card* Taiwan Digital Identity Wallet* Other national or regional digital wallet platformsFHIR IPS data is exchanged using QR codes or secure digital channels, with access strictly controlled by explicit patient consent. Advanced credential technologies such as Selective Disclosure JWT (SD-JWT) are used to ensure privacy-preserving data sharing.#### GoalThe primary goals of this track are to:* Enable portable, patient-controlled FHIR IPS facilitating cross-border, emergency, and ad-hoc healthcare scenarios* Align FHIR IPS with global digital identity and verifiable credential ecosystems to ensure data authenticity, integrity, and trust through digital signatures and certificates* Support selective disclosure, allowing patients to share only the necessary portions of their IPSUltimately, this track aims to shift IPS exchange from system-to-system only models toward a patient-centric interoperability paradigm.#### ScenariosTypical scenarios addressed in this track include:1. **Cross-border Travel and Emergency Care**A patient traveling abroad presents a QR code from their digital health wallet.The receiving healthcare provider verifies the IPS credential, validates the digital signature, and retrieves the IPS after patient consent.2. **Patient-Controlled Selective Sharing**Using SD-JWT, a patient selectively discloses specific IPS sections (e.g., allergies, medications) while withholding other sensitive information.3. **Outpatient or Referral Visits**Patients share their IPS during first-time visits without requiring prior system integration between institutions.4. **Public Health or Disaster Response**Rapid access to trusted patient summaries using offline-capable QR codes and verifiable credentials.5. **Integration with National Digital Identity Systems**Binding IPS credentials to national identity wallets (e.g., My Number, Taiwan Digital ID) to establish trusted identity assurance.#### Future OutlookThis track represents a critical step toward the future of trusted, decentralized, and patient-driven health data exchange. Future directions include:* Deeper alignment with W3C Verifiable Credentials (VC) standards* Broader adoption of SD-JWT and privacy-enhancing technologies* Interoperability testing between health wallets, identity wallets, and healthcare systems* Harmonization with AP IPS governance models and international regulatory frameworks* Expansion to support additional FHIR-based artifacts beyond IPS (e.g., immunization records, imaging summaries)* By combining FHIR IPS, digital identity, and cryptographic trust mechanisms, this track lays the foundation for a scalable and globally interoperable personal health record ecosystem.![未命名](https://hackmd.io/_uploads/SkKj82yVZx.jpg)"
+        "content": "[Back to Events](../en/events)---## PlugathonPlugathons emphasize rapid, developer-oriented testing and prototyping based on international standards, e.g., HL7, DICOM, and FHIR. These events lower the barrier to participation and foster hands-on collaboration among engineers, architects, and domain experts.### Track #1: Sharing of FHIR International Patient Demographics#### Description* This track focuses on establishing cross-institutional and cross-border patient identity consistency through a Master Patient Index (MPI) mechanism. The Patient Master Identity Registry (PMIR) Profile enables different systems to share, synchronize, and update patient demographic data (e.g., name, date of birth, identifiers), ensuring that the same individual can be accurately identified across international healthcare domains.#### Goal* To realize cross-border patient identity federation, providing the foundational layer for international health data exchange.#### Scenarios* Synchronizing patient demographic updates among multiple FHIR servers in different countries.* Resolving patient identity conflicts and maintaining consistency via PMIR subscription/notification.* Demonstrating cross-system queries of patient demographics through FHIR-based APIs.#### Future Outlook* The PMIR-based patient identity framework will evolve toward cross-border integration with the Master Patient Index (MPI), enabling international patient linking and deduplication.* Future work may include identity federation between national healthcare systems and trusted patient matching algorithms leveraging AI/ML techniques.* Integration with FHIR Consent and Privacy Policies to govern data access across regions.![12](../assets/images/track1-demographics.jpg)### Track #2: Sharing of FHIR International Patient Summary#### Description* This track supports cross-system exchange of patient summaries based on FHIR International Patient Summary (IPS) specifications.* The goal is to enable secure sharing of key health information—such as allergies, medications, conditions, procedures, and immunizations—across countries and healthcare organizations.#### Goal* To establish a standardized framework for cross-border exchange of health summaries, facilitating continuity of care for international and mobile patients.#### Scenarios* **Scenario #1 – Basic Sharing (Minimal IPS)**  - **Purpose**:** Validate creation and sharing of the minimal IPS composition with all required resources.  - **Content:**      - Composition (IPS profile) with required metadata.      - Patient (IPS patient profile).      - At least 1 Problem, 1 Allergy, and Medical Summary section.  - **Test Flow:**      - Creator creates IPS with minimal content.      - Consumer queries/retrieves the IPS via FHIR API (DocumentReference/Composition).* **Scenario #2 – Advanced Sharing (Expanded IPS)**  - **Purpose**:** Validate creation and sharing of the Expanded IPS composition with optional required resources.  - **Content:**     - #2-1 Laboratory Report         - Add DiagnosticReport (Laboratory profile) with referenced Observations.         - Include LOINC-coded lab results in IPS Results section.     - #2-2 Pathology Report         - Add DiagnosticReport (Pathology profile) with Observation and possible image references (DocumentReference).     - #2-3 Radiology Report with Image (IPS + WIA)         - Add DiagnosticReport (Radiology profile) with ImagingStudy and image references (e.g., DICOMweb URL in Media).  - **Test Flow:**     - Creator creates an expanded IPS with one or more of the above reports.     - Consumer retrieves and verifies completeness of references.     - Verify that referenced resources are resolvable and conform to profiles.* **Scenario #3 – Retrieval and Display IPS**  - **Purpose**:**      - [Required]: Validate correct rendering of IPS in a clinical viewer.      - [Optional]: Test mapping of coded values between code systems using the IHE SVCM profile to ensure terminology interoperability,.  - **Content:** Any IPS from Scenario #1 or #2.  - **Test Flow:**      - Query IPS: Recipient queries IPS via FHIR API.      - Retrieve IPS Bundle: retrieve IPS Bundle (Composition + referenced resources).      - Render in a human-readable view: preserving section structure and narrative text.      - SVCM Mapping [Option]:          - Identify coded elements in the IPS (e.g., LOINC, SNOMED CT, ICD‑10).          - Display mapped terms alongside original codes in the viewer.          - Query an SVCM server for a ConceptMap to map codes to a alternative code system. e.g, Japan, Korea, or Taiwan code systems.#### Actors &Transactions Diagram* Exchange IPS via FHIR RESTful API![圖片](../assets/images/track2-fhir-api.png)* IPS with Imaging Report via FHIR and DICOMweb API![圖片](../assets/images/track2-imaging.png)* IHE SVCM (Sharing Valuesets, Codes, and Maps)![圖片](../assets/images/track2-svcm.png)#### Future Outlook* Expansion from IPS to comprehensive health records and domain-specific summaries, e.g., oncology, immunization, and maternal health.* Adoption of FHIR-based translation and terminology mapping services (SVCM) to ensure multilingual and semantic interoperability across borders.![未命名](../assets/images/track2-overview.jpg)### Track #3: Sharing of FHIR IPS with Digtial Health Wallet #### DescriptionThis track focuses on enabling patient-mediated exchange of FHIR IPS integrating with digital signature, verifiable credentials, and digital health wallet technologies. In this track, the FHIR IPS is packaged as a cryptographically verifiable and portable credential, allowing patients to securely carry, present, and share their health summaries across borders. This approach leverages emerging international initiatives and national digital identity infrastructures, such as:* WHO Smart Health Cards (SHC)* Japan My Number Card* Taiwan Digital Identity Wallet* Other national or regional digital wallet platformsFHIR IPS data is exchanged using QR codes or secure digital channels, with access strictly controlled by explicit patient consent. Advanced credential technologies such as Selective Disclosure JWT (SD-JWT) are used to ensure privacy-preserving data sharing.#### GoalThe primary goals of this track are to:* Enable portable, patient-controlled FHIR IPS facilitating cross-border, emergency, and ad-hoc healthcare scenarios* Align FHIR IPS with global digital identity and verifiable credential ecosystems to ensure data authenticity, integrity, and trust through digital signatures and certificates* Support selective disclosure, allowing patients to share only the necessary portions of their IPSUltimately, this track aims to shift IPS exchange from system-to-system only models toward a patient-centric interoperability paradigm.#### ScenariosTypical scenarios addressed in this track include:1. **Cross-border Travel and Emergency Care**A patient traveling abroad presents a QR code from their digital health wallet.The receiving healthcare provider verifies the IPS credential, validates the digital signature, and retrieves the IPS after patient consent.2. **Patient-Controlled Selective Sharing**Using SD-JWT, a patient selectively discloses specific IPS sections (e.g., allergies, medications) while withholding other sensitive information.3. **Outpatient or Referral Visits**Patients share their IPS during first-time visits without requiring prior system integration between institutions.4. **Public Health or Disaster Response**Rapid access to trusted patient summaries using offline-capable QR codes and verifiable credentials.5. **Integration with National Digital Identity Systems**Binding IPS credentials to national identity wallets (e.g., My Number, Taiwan Digital ID) to establish trusted identity assurance.#### Future OutlookThis track represents a critical step toward the future of trusted, decentralized, and patient-driven health data exchange. Future directions include:* Deeper alignment with W3C Verifiable Credentials (VC) standards* Broader adoption of SD-JWT and privacy-enhancing technologies* Interoperability testing between health wallets, identity wallets, and healthcare systems* Harmonization with AP IPS governance models and international regulatory frameworks* Expansion to support additional FHIR-based artifacts beyond IPS (e.g., immunization records, imaging summaries)* By combining FHIR IPS, digital identity, and cryptographic trust mechanisms, this track lays the foundation for a scalable and globally interoperable personal health record ecosystem.![未命名](../assets/images/track3-wallet.jpg)"
       },
     
       {
@@ -557,6 +600,48 @@
       menu.classList.remove('is-open');
       button.setAttribute('aria-expanded', 'false');
     }
+  });
+
+  // 圖片放大功能
+  document.addEventListener('DOMContentLoaded', function() {
+    // 創建模態框
+    const modal = document.createElement('div');
+    modal.className = 'image-modal';
+    modal.id = 'imageModal';
+    modal.innerHTML = '<span class="image-modal-close">&times;</span><img id="modalImage" src="" alt="">';
+    document.body.appendChild(modal);
+
+    const modalImg = document.getElementById('modalImage');
+    const closeBtn = modal.querySelector('.image-modal-close');
+
+    // 為所有內容區域的圖片添加點擊事件
+    const contentImages = document.querySelectorAll('.content img');
+    contentImages.forEach(img => {
+      img.addEventListener('click', function() {
+        modal.style.display = 'block';
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+      });
+    });
+
+    // 關閉模態框
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal || e.target === modalImg) {
+        closeModal();
+      }
+    });
+
+    // ESC 鍵關閉
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.style.display === 'block') {
+        closeModal();
+      }
+    });
   });
 </script>
 

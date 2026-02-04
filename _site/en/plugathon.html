@@ -91,10 +91,53 @@
     }
 
     .content img {
-      max-width: 50%;
+      max-width: 75%;
       display: block;
-      margin: 0 auto;
+      margin: 20px auto;
       height: auto;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .content img:hover {
+      opacity: 0.8;
+    }
+
+    /* 圖片放大模態框樣式 */
+    .image-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      cursor: pointer;
+    }
+
+    .image-modal img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 95%;
+      max-height: 95%;
+      cursor: zoom-out;
+    }
+
+    .image-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .image-modal-close:hover {
+      color: #bbb;
     }
 
     .content iframe,
@@ -228,7 +271,7 @@
 
 <nav class="navbar">
   <a href="/en/" style="margin-right: auto;">
-    <img src="https://hackmd.io/_uploads/BJqBUW0IZg.png" alt="Logo" class="navbar-logo">
+    <img src="/assets/images/logo.png" alt="Logo" class="navbar-logo">
   </a>
 
   <button class="navbar-toggle" type="button" aria-expanded="false" aria-controls="navbarMenu" onclick="toggleMenu()">
@@ -324,7 +367,7 @@
   <li>Integration with FHIR Consent and Privacy Policies to govern data access across regions.</li>
 </ul>
 
-<p><img src="https://hackmd.io/_uploads/rk3sRXW4Wg.jpg" alt="12" /></p>
+<p><img src="../assets/images/track1-demographics.jpg" alt="12" /></p>
 
 <h3 id="track-2-sharing-of-fhir-international-patient-summary">Track #2: Sharing of FHIR International Patient Summary</h3>
 <h4 id="description-1">Description</h4>
@@ -421,15 +464,15 @@
 <ul>
   <li>
     <p>Exchange IPS via FHIR RESTful API
-<img src="https://hackmd.io/_uploads/HkQJZ2lV-l.png" alt="圖片" /></p>
+<img src="../assets/images/track2-fhir-api.png" alt="圖片" /></p>
   </li>
   <li>
     <p>IPS with Imaging Report via FHIR and DICOMweb API
-<img src="https://hackmd.io/_uploads/Sk2Z-3l4Zx.png" alt="圖片" /></p>
+<img src="../assets/images/track2-imaging.png" alt="圖片" /></p>
   </li>
   <li>
     <p>IHE SVCM (Sharing Valuesets, Codes, and Maps)
-<img src="https://hackmd.io/_uploads/B1OH-3lNZx.png" alt="圖片" /></p>
+<img src="../assets/images/track2-svcm.png" alt="圖片" /></p>
   </li>
 </ul>
 
@@ -439,7 +482,7 @@
   <li>Adoption of FHIR-based translation and terminology mapping services (SVCM) to ensure multilingual and semantic interoperability across borders.</li>
 </ul>
 
-<p><img src="https://hackmd.io/_uploads/rkTUEhyNWx.jpg" alt="未命名" /></p>
+<p><img src="../assets/images/track2-overview.jpg" alt="未命名" /></p>
 
 <h3 id="track-3-sharing-of-fhir-ips-with-digtial-health-wallet">Track #3: Sharing of FHIR IPS with Digtial Health Wallet</h3>
 <h4 id="description-2">Description</h4>
@@ -490,7 +533,7 @@ Binding IPS credentials to national identity wallets (e.g., My Number, Taiwan Di
   <li>By combining FHIR IPS, digital identity, and cryptographic trust mechanisms, this track lays the foundation for a scalable and globally interoperable personal health record ecosystem.</li>
 </ul>
 
-<p><img src="https://hackmd.io/_uploads/SkKj82yVZx.jpg" alt="未命名" /></p>
+<p><img src="../assets/images/track3-wallet.jpg" alt="未命名" /></p>
 
 </main>
 
@@ -705,6 +748,48 @@ Binding IPS credentials to national identity wallets (e.g., My Number, Taiwan Di
       menu.classList.remove('is-open');
       button.setAttribute('aria-expanded', 'false');
     }
+  });
+
+  // 圖片放大功能
+  document.addEventListener('DOMContentLoaded', function() {
+    // 創建模態框
+    const modal = document.createElement('div');
+    modal.className = 'image-modal';
+    modal.id = 'imageModal';
+    modal.innerHTML = '<span class="image-modal-close">&times;</span><img id="modalImage" src="" alt="">';
+    document.body.appendChild(modal);
+
+    const modalImg = document.getElementById('modalImage');
+    const closeBtn = modal.querySelector('.image-modal-close');
+
+    // 為所有內容區域的圖片添加點擊事件
+    const contentImages = document.querySelectorAll('.content img');
+    contentImages.forEach(img => {
+      img.addEventListener('click', function() {
+        modal.style.display = 'block';
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+      });
+    });
+
+    // 關閉模態框
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal || e.target === modalImg) {
+        closeModal();
+      }
+    });
+
+    // ESC 鍵關閉
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.style.display === 'block') {
+        closeModal();
+      }
+    });
   });
 </script>
 

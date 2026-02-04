@@ -91,10 +91,53 @@
     }
 
     .content img {
-      max-width: 50%;
+      max-width: 75%;
       display: block;
-      margin: 0 auto;
+      margin: 20px auto;
       height: auto;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .content img:hover {
+      opacity: 0.8;
+    }
+
+    /* 圖片放大模態框樣式 */
+    .image-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      cursor: pointer;
+    }
+
+    .image-modal img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 95%;
+      max-height: 95%;
+      cursor: zoom-out;
+    }
+
+    .image-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .image-modal-close:hover {
+      color: #bbb;
     }
 
     .content iframe,
@@ -228,7 +271,7 @@
 
 <nav class="navbar">
   <a href="/en/" style="margin-right: auto;">
-    <img src="https://hackmd.io/_uploads/BJqBUW0IZg.png" alt="Logo" class="navbar-logo">
+    <img src="/assets/images/logo.png" alt="Logo" class="navbar-logo">
   </a>
 
   <button class="navbar-toggle" type="button" aria-expanded="false" aria-controls="navbarMenu" onclick="toggleMenu()">
@@ -511,6 +554,48 @@
       menu.classList.remove('is-open');
       button.setAttribute('aria-expanded', 'false');
     }
+  });
+
+  // 圖片放大功能
+  document.addEventListener('DOMContentLoaded', function() {
+    // 創建模態框
+    const modal = document.createElement('div');
+    modal.className = 'image-modal';
+    modal.id = 'imageModal';
+    modal.innerHTML = '<span class="image-modal-close">&times;</span><img id="modalImage" src="" alt="">';
+    document.body.appendChild(modal);
+
+    const modalImg = document.getElementById('modalImage');
+    const closeBtn = modal.querySelector('.image-modal-close');
+
+    // 為所有內容區域的圖片添加點擊事件
+    const contentImages = document.querySelectorAll('.content img');
+    contentImages.forEach(img => {
+      img.addEventListener('click', function() {
+        modal.style.display = 'block';
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+      });
+    });
+
+    // 關閉模態框
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal || e.target === modalImg) {
+        closeModal();
+      }
+    });
+
+    // ESC 鍵關閉
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.style.display === 'block') {
+        closeModal();
+      }
+    });
   });
 </script>
 
