@@ -143,8 +143,8 @@
     .content iframe,
     .content embed,
     .content video {
-      max-width: 100%;
-      width: 100%;
+      max-width: 75%;
+      width: 75%;
       height: auto;
       aspect-ratio: 16 / 9;
       display: block;
@@ -239,6 +239,11 @@
     #searchResults {
       margin: 20px;
       padding: 10px 0;
+      display: none;
+    }
+
+    #searchResults.active {
+      display: block;
     }
 
     .search-result {
@@ -387,7 +392,7 @@
     resultsContainer.innerHTML = '';
 
     if (!query.trim()) {
-      resultsContainer.innerHTML = '<p>Please enter a search term.</p>';
+      resultsContainer.classList.remove('active');
       return;
     }
 
@@ -410,8 +415,12 @@
         resultItem.innerHTML = `<a href="${result.url}">${title}</a><p>${preview}</p>`;
         resultsContainer.appendChild(resultItem);
       });
+      resultsContainer.classList.add('active');
     } else {
-      resultsContainer.innerHTML = '<p>No results found.</p>';
+      const noResultsMsg = document.createElement('p');
+      noResultsMsg.textContent = 'No results found.';
+      resultsContainer.appendChild(noResultsMsg);
+      resultsContainer.classList.add('active');
     }
   }
 

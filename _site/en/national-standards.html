@@ -143,8 +143,8 @@
     .content iframe,
     .content embed,
     .content video {
-      max-width: 100%;
-      width: 100%;
+      max-width: 75%;
+      width: 75%;
       height: auto;
       aspect-ratio: 16 / 9;
       display: block;
@@ -239,6 +239,11 @@
     #searchResults {
       margin: 20px;
       padding: 10px 0;
+      display: none;
+    }
+
+    #searchResults.active {
+      display: block;
     }
 
     .search-result {
@@ -426,7 +431,7 @@
       {
         "title": "Governance",
         "url": "/en/governance.html",
-        "content": "Back to IntroductionGovernance and BoardAP-IPS is governed by a board composed of representatives from participating countries and organizations.JAPAN            Name      Organization                  Yasunari Shiokawa (Salt)      IHE-Japan              Masayoshi Seki      IHE-Japan              Takeshi Ozeki      IHE-Japan              Sunao Watanabe      MEDIS-DC              Takanori Yamashita      JAMI              Masahito Kawamori      University of Tokyo              Yoshimasa Kawazoe      University of Tokyo              Takeshi Imai      University of Tokyo              Katsuhiko Nishino      Tokyo Metroporitan Hiroo Hospital              Kazunori Nozaki,      University of Osaka              Syoji Uzawa(Observer)      IHE-Japan      South Korea            Name      Organization                  Hyoungho Do      IHE Korea              JoonHyun Song      HL7 Korea              HeeKyoung Jung      Daegu Technopark      Taiwan            Name      Organization                  Chung-Yueh Lien (連中岳)      Medical Image Standards   Association of Taiwan (MISAT)National Taipei University of Nursing and Health Sciences              Chien-Yeh Hsu (徐建業)      National Taipei University of Nursing and Health Sciences              Lorex Yang (楊宇凡)      Sitatech Information Services Co., Ltd              Tom Wang (王安宇)      EBM Technologies              Ping Huang Tsai      TwHealth Nexus Inc              BI-Shan(Samantha) Hsu      TwHealth Nexus Inc              Simon Yu      TwHealth Nexus Inc      Member Countries  Australia  Japan  Malaysia  Singapore  South Korea  Taiwan"
+        "content": "Back to IntroductionGovernance and BoardAP-IPS is governed by a board composed of representatives from participating countries and organizations.Search Board Members                  Name      Nation      Organization                  Hyoungho Do$      South Korea      IHE Korea              Chung-Yueh Lien (連中岳)$      Taiwan      MISAT, National Taipei University of Nursing and Health Sciences              Yasunari Shiokawa (Salt)$      Japan      IHE-Japan              JoonHyun Song      South Korea      HL7 Korea              Tom Wang      Taiwan      EBM Technologies              Masayoshi Seki      Japan      IHE-Japan              Takeshi Ozeki      Japan      IHE-Japan              Sunao Watanabe      Japan      MEDIS-DC              Takanori Yamashita      Japan      JAMI              Masahito Kawamori      Japan      University of Tokyo              HeeKyoung Jung      South Korea      Daegu Technopark              Yoshimasa Kawazoe      Japan      University of Tokyo              Takeshi Imai      Japan      University of Tokyo              Katsuhiko Nishino      Japan      Tokyo Metroporitan Hiroo Hospital              Kazunori Nozaki      Japan      University of Osaka              Lorex Yang      Taiwan      Sitatech Information Services Co., Ltd              Ping Huang Tsai      Taiwan      TwHealth Nexus Inc              BI-Shan Hsu      Taiwan      TwHealth Nexus Inc              Simon Yu      Taiwan      TwHealth Nexus Inc              Chien-Yeh Hsu      Taiwan      National Taipei University of Nursing and Health Sciences              Ryoichi Tanaka      Japan      Iwate Medical University              Henrique Martins*      Portugal      ISCTE, IHE-Catalyst              Syoji Uzawa*      Japan      IHE-Japan        Note: $Leadership; *ObserverMember Countries  Australia  Japan  Malaysia  Singapore  South Korea  Taiwan"
       },
     
       {
@@ -555,7 +560,7 @@
     resultsContainer.innerHTML = '';
 
     if (!query.trim()) {
-      resultsContainer.innerHTML = '<p>Please enter a search term.</p>';
+      resultsContainer.classList.remove('active');
       return;
     }
 
@@ -578,8 +583,12 @@
         resultItem.innerHTML = `<a href="${result.url}">${title}</a><p>${preview}</p>`;
         resultsContainer.appendChild(resultItem);
       });
+      resultsContainer.classList.add('active');
     } else {
-      resultsContainer.innerHTML = '<p>No results found.</p>';
+      const noResultsMsg = document.createElement('p');
+      noResultsMsg.textContent = 'No results found.';
+      resultsContainer.appendChild(noResultsMsg);
+      resultsContainer.classList.add('active');
     }
   }
 

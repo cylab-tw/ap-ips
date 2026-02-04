@@ -28,3 +28,9 @@ body {
   max-width: 1100px;
   margin: auto;
 }
+/* Reduce margin for back links */
+.content > a:first-child {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: -15px;
+}
