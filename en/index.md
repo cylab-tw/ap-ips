@@ -8,7 +8,7 @@ url: /en/
 # Asia Pacific International Patient Summary (AP IPS)
 ### Advancing Cross-Border Healthcare Interoperability in the Asia-Pacific Region
 
-![Overview](https://hackmd.io/_uploads/ryaDLusmZe.png)
+![Overview](../assets/images/overview.png)
 
 The alliance of Asia Pacific International Patient Summary (AP-IPS) is an international collaborative initiative dedicated to promoting the adoption, implementation, and testing of the Fast Healthcare Interoperability Resources (FHIR) International Patient Summary (IPS).
 
@@ -38,4 +38,4 @@ AP-IPS promotes a continuous and iterative interoperability lifecycle:
 
 ## Standards → Implementation → Connectathon → Validation**
 
-![Lifecycle](https://hackmd.io/_uploads/rJSU0RkNWx.png)
+![Lifecycle](../assets/images/lifecycle.png)

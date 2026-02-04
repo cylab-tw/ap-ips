@@ -28,7 +28,7 @@ Plugathons emphasize rapid, developer-oriented testing and prototyping based on 
 * Future work may include identity federation between national healthcare systems and trusted patient matching algorithms leveraging AI/ML techniques.
 * Integration with FHIR Consent and Privacy Policies to govern data access across regions.
 
-![12](https://hackmd.io/_uploads/rk3sRXW4Wg.jpg)
+![12](../assets/images/track1-demographics.jpg)
 
 ### Track #2: Sharing of FHIR International Patient Summary
 #### Description
@@ -78,20 +78,20 @@ Plugathons emphasize rapid, developer-oriented testing and prototyping based on 
 
 #### Actors &Transactions Diagram
 * Exchange IPS via FHIR RESTful API
-![圖片](https://hackmd.io/_uploads/HkQJZ2lV-l.png)
+![圖片](../assets/images/track2-fhir-api.png)
 
 * IPS with Imaging Report via FHIR and DICOMweb API
-![圖片](https://hackmd.io/_uploads/Sk2Z-3l4Zx.png)
+![圖片](../assets/images/track2-imaging.png)
 
 * IHE SVCM (Sharing Valuesets, Codes, and Maps)
-![圖片](https://hackmd.io/_uploads/B1OH-3lNZx.png)
+![圖片](../assets/images/track2-svcm.png)
 
 
 #### Future Outlook
 * Expansion from IPS to comprehensive health records and domain-specific summaries, e.g., oncology, immunization, and maternal health.
 * Adoption of FHIR-based translation and terminology mapping services (SVCM) to ensure multilingual and semantic interoperability across borders.
 
-![未命名](https://hackmd.io/_uploads/rkTUEhyNWx.jpg)
+![未命名](../assets/images/track2-overview.jpg)
 
 ### Track #3: Sharing of FHIR IPS with Digtial Health Wallet 
 #### Description
@@ -134,4 +134,4 @@ This track represents a critical step toward the future of trusted, decentralize
 * Expansion to support additional FHIR-based artifacts beyond IPS (e.g., immunization records, imaging summaries)
 * By combining FHIR IPS, digital identity, and cryptographic trust mechanisms, this track lays the foundation for a scalable and globally interoperable personal health record ecosystem.
 
-![未命名](https://hackmd.io/_uploads/SkKj82yVZx.jpg)
+![未命名](../assets/images/track3-wallet.jpg)

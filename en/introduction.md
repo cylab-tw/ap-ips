@@ -14,7 +14,7 @@ The Asia Pacific International Patient Summary Alliance (AP-IPS) was established
 ## How AP-IPS Works
 AP-IPS operates as a collaborative, country-driven interoperability framework that enables participating Asia-Pacific economies to jointly define, test, and validate interoperable IPS through collaborative specifications and Plugathon-based validation.
 
-![未命名](https://hackmd.io/_uploads/ryg0w5yVbl.jpg)
+![未命名](../assets/images/how-ap-ips-works.jpg)
 
 ### 1. Regional Needs and Use-Case Identification
 Participating economies—through healthcare authorities, standards organizations, academic institutions, hospitals, and industry representatives—collectively identify cross-border clinical scenarios where the IPS is required, such as emergency care, referral continuity, disaster response, and patient mobility. National inputs are consolidated to reflect regional clinical and operational needs, ensuring that IPS exchange requirements are grounded in real-world practice rather than isolated technical assumptions.
