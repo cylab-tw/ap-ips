@@ -46,7 +46,8 @@ AP-IPS is governed by a board composed of representatives from participating cou
 | Syoji Uzawa*              | Japan       | IHE-Japan                                                        |
 | Byoung-Kee Yi	            |South Korea | Kangwon National University/HL7 Korea |
 |Sung-Hyun Lee	            |South Korea | Flyingmountain Inc |
-|Soojin Lee	            |South Korea | Sangji university |
+|Soojin Lee	                |South Korea | Sangji university |
+|Alvin Marcelo	            |Philippines | Medical Informatics Unit, University of the Philippines |
 
 {:#boardTable}
 
