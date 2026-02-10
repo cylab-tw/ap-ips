@@ -31,7 +31,7 @@ AP-IPS is governed by a board composed of representatives from participating cou
 | Sunao Watanabe            | Japan       | MEDIS-DC                                                         |
 | Takanori Yamashita        | Japan       | JAMI                                                             |
 | Masahito Kawamori         | Japan       | University of Tokyo                                              |
-| HeeKyoung Jung            | South Korea | Daegu Technopark                                                 |
+| HeeKyoung Jung            | South Korea | Korea Total Healthcare Ecosystem Association                                                 |
 | Yoshimasa Kawazoe         | Japan       | University of Tokyo                                              |
 | Takeshi Imai              | Japan       | University of Tokyo                                              |
 | Katsuhiko Nishino         | Japan       | Tokyo Metroporitan Hiroo Hospital                                |
