@@ -36,6 +36,5 @@ AP-IPS promotes a continuous and iterative interoperability lifecycle:
 ### 你的醫療保健準備好迎接一個無國界的世界了嗎? (繁體中文) 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tMd9qNO4c4E" title="你的醫療保健準備好迎接一個無國界的世界了嗎?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Standards → Implementation → Connectathon → Validation**
-
+## Standards → Implementation → Connectathon → Validation
 ![Lifecycle](../assets/images/lifecycle.png)

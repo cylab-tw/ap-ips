@@ -5,10 +5,6 @@ lang: en
 url: /en/governance
 ---
 
-[Back to Introduction](../en/introduction)
-
----
-
 ## Governance and Board
 
 AP-IPS is governed by a board composed of representatives from participating countries and organizations.
@@ -48,6 +44,10 @@ AP-IPS is governed by a board composed of representatives from participating cou
 | Ryoichi Tanaka            | Japan       | Iwate Medical University                                         |
 | Henrique Martins*         | Portugal    | ISCTE, IHE-Catalyst                                              |
 | Syoji Uzawa*              | Japan       | IHE-Japan                                                        |
+| Byoung-Kee Yi	            |South Korea | Kangwon National University/HL7 Korea |
+|Sung-Hyun Lee	            |South Korea | Flyingmountain Inc |
+|Soojin Lee	            |South Korea | Sangji university |
+
 {:#boardTable}
 
 * **Note: $Leadership**; ***Observer**

@@ -6,7 +6,6 @@ url: /en/introduction
 ---
 
 ### [Asia Pacific Green Button](../en/overview)
-### [Governance and Board](../en/governance)
 
 # Introduction
 The Asia Pacific International Patient Summary Alliance (AP-IPS) was established to support international healthcare interoperability by focusing on the International Patient Summary (IPS) as a foundational use case.
