@@ -1,16 +1,17 @@
 ---
 layout: default
-title: Plugathon
+title: Themes
 lang: en
-url: /en/plugathon
+url: /en/themes
 ---
 
-[Back to Resources](../en/resources)
+# Themes
+* [Track #1: Sharing of FHIR International Patient Demographics](#track-1-sharing-of-fhir-international-patient-demographics)
+* [Track #2: Sharing of FHIR International Patient Summary](#track-2-sharing-of-fhir-international-patient-summary)
+* [Track #3: Sharing of FHIR IPS with Digital Health Wallet](#track-3-sharing-of-fhir-ips-with-digital-health-wallet)
 
 ---
 
-## Plugathon
-Plugathons emphasize rapid, developer-oriented testing and prototyping based on international standards, e.g., HL7, DICOM, and FHIR. These events lower the barrier to participation and foster hands-on collaboration among engineers, architects, and domain experts.
 ### Track #1: Sharing of FHIR International Patient Demographics
 #### Description
 * This track focuses on establishing cross-institutional and cross-border patient identity consistency through a Master Patient Index (MPI) mechanism. The Patient Master Identity Registry (PMIR) Profile enables different systems to share, synchronize, and update patient demographic data (e.g., name, date of birth, identifiers), ensuring that the same individual can be accurately identified across international healthcare domains.
@@ -93,7 +94,7 @@ Plugathons emphasize rapid, developer-oriented testing and prototyping based on 
 
 ![未命名](../assets/images/track2-overview.jpg)
 
-### Track #3: Sharing of FHIR IPS with Digtial Health Wallet 
+### Track #3: Sharing of FHIR IPS with Digital Health Wallet 
 #### Description
 This track focuses on enabling patient-mediated exchange of FHIR IPS integrating with digital signature, verifiable credentials, and digital health wallet technologies. In this track, the FHIR IPS is packaged as a cryptographically verifiable and portable credential, allowing patients to securely carry, present, and share their health summaries across borders. This approach leverages emerging international initiatives and national digital identity infrastructures, such as:
 * WHO Smart Health Cards (SHC)
@@ -135,3 +136,4 @@ This track represents a critical step toward the future of trusted, decentralize
 * By combining FHIR IPS, digital identity, and cryptographic trust mechanisms, this track lays the foundation for a scalable and globally interoperable personal health record ecosystem.
 
 ![未命名](../assets/images/track3-wallet.jpg)
+
