@@ -18,7 +18,6 @@ AP-IPS is governed by a board composed of representatives from participating cou
 </div>
 
 
-
 | Name | Nation | Organization |
 |------|--------|--------------|
 | **Hyoungho Do**$              | South Korea | IHE Korea                                                        |
@@ -31,7 +30,7 @@ AP-IPS is governed by a board composed of representatives from participating cou
 | Sunao Watanabe            | Japan       | MEDIS-DC                                                         |
 | Takanori Yamashita        | Japan       | JAMI                                                             |
 | Masahito Kawamori         | Japan       | University of Tokyo                                              |
-| HeeKyoung Jung            | South Korea | Korea Total Healthcare Ecosystem Association                                                 |
+| HeeKyoung Jung            | South Korea | Korea Total Healthcare Ecosystem Association                     |
 | Yoshimasa Kawazoe         | Japan       | University of Tokyo                                              |
 | Takeshi Imai              | Japan       | University of Tokyo                                              |
 | Katsuhiko Nishino         | Japan       | Tokyo Metroporitan Hiroo Hospital                                |
@@ -44,10 +43,13 @@ AP-IPS is governed by a board composed of representatives from participating cou
 | Ryoichi Tanaka            | Japan       | Iwate Medical University                                         |
 | Henrique Martins*         | Portugal    | ISCTE, IHE-Catalyst                                              |
 | Syoji Uzawa*              | Japan       | IHE-Japan                                                        |
-| Byoung-Kee Yi	            |South Korea | Kangwon National University/HL7 Korea |
-|Sung-Hyun Lee	            |South Korea | Flyingmountain Inc |
-|Soojin Lee	                |South Korea | Sangji university |
-|Alvin Marcelo	            |Philippines | Medical Informatics Unit, University of the Philippines |
+| Byoung-Kee Yi	            |South Korea | Kangwon National University/HL7 Korea                             |
+|Sung-Hyun Lee	            |South Korea | Flyingmountain Inc                                                |
+|Soojin Lee	                |South Korea | Sangji university                                                 |
+|Alvin Marcelo	            |Philippines | Medical Informatics Unit, University of the Philippines           |
+|Seung-Jong Yu	            |South Korea | Beplus Healthcare                                                 |
+|Sungwon Jung	              |South Korea | InfoClinic / Kangwon National University / HL7 Korea              |
+|Sunao Watanabe	            |Japan       | Advisor, Medical Information Development Center of JAPAN          |
 {:#boardTable}
 
 * **Note: $Leadership**; ***Observer**
