@@ -27,7 +27,7 @@ AP-IPS is governed by a board composed of representatives from participating cou
 | Tom Wang                  | Taiwan      | EBM Technologies                                                 |
 | Masayoshi Seki            | Japan       | IHE-Japan                                                        |
 | Takeshi Ozeki             | Japan       | IHE-Japan                                                        |
-| Sunao Watanabe            | Japan       | MEDIS-DC                                                         |
+| Sunao Watanabe            | Japan       | Medical Information Development Center of JAPAN                  |
 | Takanori Yamashita        | Japan       | JAMI                                                             |
 | Masahito Kawamori         | Japan       | University of Tokyo                                              |
 | HeeKyoung Jung            | South Korea | Korea Total Healthcare Ecosystem Association                     |
@@ -41,15 +41,14 @@ AP-IPS is governed by a board composed of representatives from participating cou
 | Simon Yu                  | Taiwan      | TwHealth Nexus Inc                                               |
 | Chien-Yeh Hsu             | Taiwan      | National Taipei University of Nursing and Health Sciences        |
 | Ryoichi Tanaka            | Japan       | Iwate Medical University                                         |
-| Henrique Martins*         | Portugal    | ISCTE, IHE-Catalyst                                              |
-| Syoji Uzawa*              | Japan       | IHE-Japan                                                        |
-| Byoung-Kee Yi	            |South Korea | Kangwon National University/HL7 Korea                             |
-|Sung-Hyun Lee	            |South Korea | Flyingmountain Inc                                                |
-|Soojin Lee	                |South Korea | Sangji university                                                 |
-|Alvin Marcelo	            |Philippines | Medical Informatics Unit, University of the Philippines           |
-|Seung-Jong Yu	            |South Korea | Beplus Healthcare                                                 |
-|Sungwon Jung	              |South Korea | InfoClinic / Kangwon National University / HL7 Korea              |
-|Sunao Watanabe	            |Japan       | Advisor, Medical Information Development Center of JAPAN          |
+| Byoung-Kee Yi	            |South Korea  | Kangwon National University/HL7 Korea                             |
+| Sung-Hyun Lee	            |South Korea  | Flyingmountain Inc                                                |
+| Soojin Lee	              |South Korea  | Sangji university                                                 |
+| Alvin Marcelo	            |Philippines  | Medical Informatics Unit, University of the Philippines           |
+| Sungwon Jung	            |South Korea  | InfoClinic / Kangwon National University / HL7 Korea              |
+| Henrique Martins*         |Portugal     | ISCTE, IHE-Catalyst                                              |
+| Syoji Uzawa*              |Japan        | IHE-Japan                                                        |
+| Seung-Jong Yu*	          |South Korea  | Beplus Healthcare                                                 |
 {:#boardTable}
 
 * **Note: $Leadership**; ***Observer**
