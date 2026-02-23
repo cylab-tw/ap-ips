@@ -23,7 +23,7 @@ AP-IPS promotes a continuous and iterative interoperability lifecycle:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5gO8gKLLZFQ" title="FHIR IPS: Your Health History, Unlocked" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### FHIR IPS 国際健康パスポート：ボーダレスな医療情報 (日本語)
-<iframe width="560" height="315" src="https://youtu.be/qE4knaIWjzM" title="FHIR IPS 国際健康パスポート：ボーダレスな医療情報" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qE4knaIWjzM" title="FHIR IPS 国際健康パスポート：ボーダレスな医療情報" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### FHIR IPS국제건강여권: 국경없는의료정보 (한국어)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u6U3IhGYfr0" title="FHIR IPS국제건강여권: 국경없는의료정보" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
