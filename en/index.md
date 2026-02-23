@@ -23,13 +23,11 @@ AP-IPS promotes a continuous and iterative interoperability lifecycle:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5gO8gKLLZFQ" title="FHIR IPS: Your Health History, Unlocked" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### FHIR IPS 国際健康パスポート：ボーダレスな医療情報 (日本語)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/a97RQ0qYm3A" title="FHIR IPS 国際健康パスポート：ボーダレスな医療情報" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+<iframe width="560" height="315" src="https://youtu.be/QmX4x4HeDFM" title="FHIR IPS 国際健康パスポート：ボーダレスな医療情報" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### FHIR IPS국제건강여권: 국경없는의료정보 (한국어)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u6U3IhGYfr0" title="FHIR IPS국제건강여권: 국경없는의료정보" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
- 
 ### FHIR IPS國際健康護照：無國界醫療數據 (繁體中文)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NR5ZjdnFjeY" title="FHIR IPS國際健康護照：無國界醫療數據" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
