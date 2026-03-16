@@ -41,14 +41,15 @@ AP-IPS is governed by a board composed of representatives from participating cou
 | Simon Yu                  | Taiwan      | TwHealth Nexus Inc                                               |
 | Chien-Yeh Hsu             | Taiwan      | National Taipei University of Nursing and Health Sciences        |
 | Ryoichi Tanaka            | Japan       | Iwate Medical University                                         |
-| Byoung-Kee Yi	            |South Korea  | Kangwon National University/HL7 Korea                             |
-| Sung-Hyun Lee	            |South Korea  | Flyingmountain Inc                                                |
-| Soojin Lee	              |South Korea  | Sangji university                                                 |
-| Alvin Marcelo	            |Philippines  | Medical Informatics Unit, University of the Philippines           |
-| Sungwon Jung	            |South Korea  | InfoClinic / Kangwon National University / HL7 Korea              |
+| Byoung-Kee Yi	            |South Korea  | Kangwon National University/HL7 Korea                            |
+| Sung-Hyun Lee	            |South Korea  | Flyingmountain Inc                                               |
+| Soojin Lee	              |South Korea  | Sangji university                                                |
+| Alvin Marcelo	            |Philippines  | Medical Informatics Unit, University of the Philippines          |
+| Sungwon Jung	            |South Korea  | InfoClinic / Kangwon National University / HL7 Korea             |
 | Henrique Martins*         |Portugal     | ISCTE, IHE-Catalyst                                              |
 | Syoji Uzawa*              |Japan        | IHE-Japan                                                        |
-| Seung-Jong Yu*	          |South Korea  | Beplus Healthcare                                                 |
+| Seung-Jong Yu*	          |South Korea  | Beplus Healthcare                                                |
+| Adam Chee			            | Singapore   | HL7 Singapore                                                    |
 {:#boardTable}
 
 * **Note: $Leadership**; ***Observer**
