@@ -3,6 +3,26 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  display: block;
+  overflow-x: auto;
+}
+
+.content th,
+.content td {
+  border: 1px solid #cbd5e1;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.content th {
+  background-color: #f5f7fa;
+}
+
 .navbar {
   background: #1f2d3d;
   padding: 14px 24px;
