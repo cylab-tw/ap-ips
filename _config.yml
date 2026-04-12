@@ -3,7 +3,7 @@
 # Site settings
 title: AP-IPS Connectathon
 description: International Patient Summary and Digital Health Wallet Profiles
-baseurl: ""
+baseurl: "/ap-ips"
 url: "https://cylab-tw.github.io"
 lang: en
 

@@ -2,7 +2,7 @@
 layout: default
 title: Resources
 lang: en
-url: /en/resources
+url: /ap-ips/en/resources
 ---
 
 ## [Plugathon](../en/plugathon)

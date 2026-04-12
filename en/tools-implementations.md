@@ -2,7 +2,7 @@
 layout: default
 title: Tools & Implementations
 lang: en
-url: /en/tools-implementations
+url: /ap-ips/en/tools-implementations
 ---
 
 # [Back to Resources](../en/resources)

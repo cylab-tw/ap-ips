@@ -2,7 +2,7 @@
 layout: default
 title: News
 lang: en
-url: /en/news
+url: /ap-ips/en/news
 ---
 
 # News

@@ -2,7 +2,7 @@
 layout: default
 title: IHE Profiles
 lang: en
-url: /en/ihe-profiles
+url: /ap-ips/en/ihe-profiles
 ---
 
 [Back to Resources](../en/resources)

@@ -2,7 +2,7 @@
 layout: default
 title: Contact us
 lang: en
-url: /en/contact/
+url: /ap-ips/en/contact/
 ---
 
 # Contact Us

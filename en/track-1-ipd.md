@@ -2,7 +2,7 @@
 layout: default
 title: Profile #1 - FHIR International Patient Demographics Profile
 lang: en
-url: /en/track-1-ipd
+url: /ap-ips/en/track-1-ipd
 ---
 
 # Profile #1: FHIR International Patient Demographics Profile (IPD)

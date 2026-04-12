@@ -2,17 +2,13 @@
 layout: default
 title: Governance
 lang: en
-url: /en/governance
+url: /ap-ips/en/governance
 ---
 
-<<<<<<< HEAD
-[Back to Introduction](/en/introduction)
+[Back to Introduction](/ap-ips/en/introduction)
 
 ---
 
-
-=======
->>>>>>> origin/main
 ## Governance and Board
 
 AP-IPS is governed by a board composed of representatives from participating countries and organizations.

@@ -2,7 +2,7 @@
 layout: default
 title: Connectathon
 lang: en
-url: /en/connectathon
+url: /ap-ips/en/connectathon
 ---
 
 <<<<<<< HEAD

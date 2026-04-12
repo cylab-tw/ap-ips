@@ -2,7 +2,7 @@
 layout: default
 title: HL7 FHIR IPS
 lang: en
-url: /en/hl7-fhir-ips
+url: /ap-ips/en/hl7-fhir-ips
 ---
 
 [Back to Resources](../en/resources)

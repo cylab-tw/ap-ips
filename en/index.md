@@ -2,7 +2,7 @@
 layout: default
 title: Home
 lang: en
-url: /en/
+url: /ap-ips/en/
 ---
 
 # Asia Pacific International Patient Summary (AP IPS)

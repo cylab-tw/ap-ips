@@ -2,7 +2,7 @@
 layout: default
 title: National Standards
 lang: en
-url: /en/national-standards
+url: /ap-ips/en/national-standards
 ---
 # [Back to Resources](../en/resources)
 
