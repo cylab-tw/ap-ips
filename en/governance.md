@@ -2,10 +2,10 @@
 layout: default
 title: Governance
 lang: en
-url: /ap-ips/en/governance
+url: /en/governance
 ---
 
-[Back to Introduction](/ap-ips/en/introduction)
+[Back to Introduction]({{ '/en/introduction' | relative_url }})
 
 ---
 
