@@ -25,7 +25,7 @@ AP-IPS is governed by a board composed of representatives from participating cou
 | Name | Nation | Organization |
 |------|--------|--------------|
 | **Hyoungho Do**$              | South Korea | IHE Korea                                                        |
-| **Chung-Yueh Lien (??¸­å²?**$          | Taiwan      | MISAT, National Taipei University of Nursing and Health Sciences |
+| **Chung-Yueh Lien (é€£ä¸­å²³)**$          | Taiwan      | MISAT, National Taipei University of Nursing and Health Sciences |
 | **Yasunari Shiokawa (Salt)**$ | Japan       | IHE-Japan                                                        |
 | JoonHyun Song             | South Korea | HL7 Korea                                                        |
 | Tom Wang                  | Taiwan      | EBM Technologies                                                 |
@@ -82,7 +82,7 @@ AP-IPS is governed by a board composed of representatives from participating cou
   }
 
   th::after {
-    content: ' ??;
+    content: ' ^v';
     font-size: 0.8em;
     opacity: 0.5;
   }
