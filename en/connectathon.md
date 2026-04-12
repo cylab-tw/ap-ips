@@ -44,4 +44,4 @@ To promote interoperability between healthcare IT users and vendors, the followi
 * Encouraging close collaboration among **care providers, IT professionals, and vendors** to jointly define standards and common guidelines.
 In this collaborative model, care providers contribute real-world clinical challenges, IT professionals and vendors develop standards-compliant solutions to address those needs, and healthcare organizations procure systems that conform to shared guidelines and interoperability requirements.
 
-![?–ç?](https://hackmd.io/_uploads/r1Wl8YJV-g.png)
+![Connectathon](https://hackmd.io/_uploads/r1Wl8YJV-g.png)
