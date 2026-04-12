@@ -22,7 +22,7 @@ FHIR IPS data is exchanged using QR codes or secure digital channels, with acces
 
 This section defines the actors and transactions of the IPS-DHW Profile. To claim compliance with this profile, an actor shall support all required transactions (labeled "R") and may support the optional transactions (labeled "O").
 
-**Table 3.1-1: IPS-DHW Profile ??Actors and Transactions**
+**Table 3.1-1: IPS-DHW Profile - Actors and Transactions**
 
 | Actor | Transaction | Optionality | Reference |
 |---|---|---|---|
@@ -43,7 +43,7 @@ The IPS Issuer packages a FHIR IPS document as a cryptographically signed verifi
 - Sign the IPS credential using a recognized digital certificate or cryptographic key pair (e.g., RS256 or ES256 algorithms).
 - Encode the signed IPS as an SD-JWT or W3C Verifiable Credential format.
 - Deliver the IPS credential to the Health Wallet via a secure digital channel or QR code.
-- Optionally bind the IPS credential to a national digital identity (Bind Patient Identity [IPS-W4] ??see National Identity Binding Option, Section 3.2.2).
+- Optionally bind the IPS credential to a national digital identity (Bind Patient Identity [IPS-W4] - see National Identity Binding Option, Section 3.2.2).
 
 #### 3.1.1.2 Health Wallet
 
@@ -69,7 +69,7 @@ The IPS Verifier receives and validates IPS credentials presented by patients vi
 
 Options that may be selected for each actor are listed in Table 3.2-1.
 
-**Table 3.2-1: IPS-DHW ??Actors and Options**
+**Table 3.2-1: IPS-DHW - Actors and Options**
 
 | Actor | Option | Reference |
 |---|---|---|
@@ -117,23 +117,23 @@ The IPS-DHW Profile shifts IPS exchange from system-to-system models toward a pa
 
 ### 3.4.2 Use Cases
 
-**Use Case 1 ??Cross-Border Travel and Emergency Care**
+**Use Case 1 - Cross-Border Travel and Emergency Care**
 
 A patient traveling abroad presents a QR code from their Health Wallet. The IPS Verifier scans the QR code, invokes Verify IPS Credential [IPS-W3] to validate the digital signature, and retrieves the FHIR IPS content after obtaining patient consent via Present IPS Credential [IPS-W2]. No prior system integration between the patient's home institution and the receiving provider is required.
 
-**Use Case 2 ??Patient-Controlled Selective Sharing**
+**Use Case 2 - Patient-Controlled Selective Sharing**
 
 Using the SD-JWT Option, a patient selectively discloses specific IPS sections (e.g., allergy list and current medications) while withholding other sensitive sections (e.g., mental health history). The Health Wallet generates a presentation proof containing only the requested claims. The IPS Verifier validates the proof and processes the disclosed content.
 
-**Use Case 3 ??Outpatient or Referral Visit**
+**Use Case 3 - Outpatient or Referral Visit**
 
 Patients share their IPS credentials during first-time clinic visits without requiring pre-established system-to-system connectivity between healthcare institutions. The IPS credential, issued once by the IPS Issuer, is reused across multiple healthcare encounters.
 
-**Use Case 4 ??Public Health or Disaster Response**
+**Use Case 4 - Public Health or Disaster Response**
 
 Using the Offline QR Code Option, first responders and emergency care providers access patient IPS summaries via QR code scanning without network connectivity. The IPS Verifier validates the offline credential and retrieves the IPS content for immediate clinical use.
 
-**Use Case 5 ??Integration with National Digital Identity Systems**
+**Use Case 5 - Integration with National Digital Identity Systems**
 
 Using the National Identity Binding Option, IPS credentials are bound to national identity wallets (e.g., Japan My Number Card, Taiwan Digital Identity Wallet) via Bind Patient Identity [IPS-W4]. This binding establishes trusted identity assurance for cross-border use and enables interoperability with national eHealth infrastructures.
 
@@ -174,4 +174,4 @@ Future directions include deeper alignment with W3C Verifiable Credentials, broa
 
 ---
 
-[??Back to Themes]({{ '/en/themes' | relative_url }})
+[<- Back to Themes]({{ '/en/themes' | relative_url }})

@@ -33,13 +33,13 @@ Plugathons emphasize rapid, developer-oriented testing and prototyping based on 
 ### Profile #2: Sharing of FHIR International Patient Summary
 #### Description
 * This profile supports cross-system exchange of patient summaries based on FHIR International Patient Summary (IPS) specifications.
-* The goal is to enable secure sharing of key health information?�such as allergies, medications, conditions, procedures, and immunizations?�across countries and healthcare organizations.
+* The goal is to enable secure sharing of key health information-such as allergies, medications, conditions, procedures, and immunizations-across countries and healthcare organizations.
 
 #### Goal
 * To establish a standardized framework for cross-border exchange of health summaries, facilitating continuity of care for international and mobile patients.
 
 #### Scenarios
-* **Scenario #1 ??Basic Sharing (Minimal IPS)**
+* **Scenario #1 - Basic Sharing (Minimal IPS)**
   - **Purpose**:** Validate creation and sharing of the minimal IPS composition with all required resources.
   - **Content:**
       - Composition (IPS profile) with required metadata.
@@ -48,7 +48,7 @@ Plugathons emphasize rapid, developer-oriented testing and prototyping based on 
   - **Test Flow:**
       - Creator creates IPS with minimal content.
       - Consumer queries/retrieves the IPS via FHIR API (DocumentReference/Composition).
-* **Scenario #2 ??Advanced Sharing (Expanded IPS)**
+* **Scenario #2  - Advanced Sharing (Expanded IPS)**
   - **Purpose**:** Validate creation and sharing of the Expanded IPS composition with optional required resources.
   - **Content:**
      - #2-1 Laboratory Report
@@ -62,7 +62,7 @@ Plugathons emphasize rapid, developer-oriented testing and prototyping based on 
      - Creator creates an expanded IPS with one or more of the above reports.
      - Consumer retrieves and verifies completeness of references.
      - Verify that referenced resources are resolvable and conform to profiles.
-* **Scenario #3 ??Retrieval and Display IPS**
+* **Scenario #3  - Retrieval and Display IPS**
   - **Purpose**:**
       - [Required]: Validate correct rendering of IPS in a clinical viewer.
       - [Optional]: Test mapping of coded values between code systems using the IHE SVCM profile to ensure terminology interoperability,.
@@ -72,19 +72,19 @@ Plugathons emphasize rapid, developer-oriented testing and prototyping based on 
       - Retrieve IPS Bundle: retrieve IPS Bundle (Composition + referenced resources).
       - Render in a human-readable view: preserving section structure and narrative text.
       - SVCM Mapping [Option]:
-          - Identify coded elements in the IPS (e.g., LOINC, SNOMED CT, ICD??0).
+          - Identify coded elements in the IPS (e.g., LOINC, SNOMED CT, ICD-10).
           - Display mapped terms alongside original codes in the viewer.
           - Query an SVCM server for a ConceptMap to map codes to a alternative code system. e.g, Japan, Korea, or Taiwan code systems.
 
 #### Actors &Transactions Diagram
 * Exchange IPS via FHIR RESTful API
-![?��?]({{ '/assets/images/track2-fhir-api.png' | relative_url }})
+![Track 2 FHIR API]({{ '/assets/images/track2-fhir-api.png' | relative_url }})
 
 * IPS with Imaging Report via FHIR and DICOMweb API
 ![Track 2 FHIR Imaging]({{ '/assets/images/track2-fhir-imaging.png' | relative_url }})
 
 * IHE SVCM (Sharing Valuesets, Codes, and Maps)
-![?��?]({{ '/assets/images/track2-svcm.png' | relative_url }})
+![IHE SVCM]({{ '/assets/images/track2-svcm.png' | relative_url }})
 
 
 #### Future Outlook

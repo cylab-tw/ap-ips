@@ -13,7 +13,7 @@ AP-IPS operates as a collaborative, country-driven interoperability framework th
 ![How AP-IPS Works]({{ '/assets/images/how-ap-ips-works.jpg' | relative_url }})
 
 ### 1. Regional Needs and Use-Case Identification
-Participating economies?�through healthcare authorities, standards organizations, academic institutions, hospitals, and industry representatives?�collectively identify cross-border clinical scenarios where the IPS is required, such as emergency care, referral continuity, disaster response, and patient mobility. National inputs are consolidated to reflect regional clinical and operational needs, ensuring that IPS exchange requirements are grounded in real-world practice rather than isolated technical assumptions.
+Participating economies : through healthcare authorities, standards organizations, academic institutions, hospitals, and industry representatives : collectively identify cross-border clinical scenarios where the IPS is required, such as emergency care, referral continuity, disaster response, and patient mobility. National inputs are consolidated to reflect regional clinical and operational needs, ensuring that IPS exchange requirements are grounded in real-world practice rather than isolated technical assumptions.
 
 ### 2. Joint Specification Development
 Based on agreed regional use cases, AP-IPS establishes multinational specification working groups, composed of representatives from participating countries. Rather than unilateral specification development, AP-IPS emphasizes co-creation, where all participating countries contribute equally to the definition of interoperable IPS exchange specifications. These groups collaboratively define:

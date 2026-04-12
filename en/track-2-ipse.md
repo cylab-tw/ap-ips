@@ -7,15 +7,15 @@ url: /en/track-2-ipse
 
 # Profile #2: FHIR International Patient Summary Exchange Profile (IPSE)
 
-This profile supports cross-system exchange of patient summaries based on the HL7 FHIR International Patient Summary (IPS) Implementation Guide and IHE Mobile access to Health Documents (MHD) Profile. It enables secure sharing of key health information?”such as allergies, medications, conditions, procedures, and immunizations?”across countries and healthcare organizations.
+This profile supports cross-system exchange of patient summaries based on the HL7 FHIR International Patient Summary (IPS) Implementation Guide and IHE Mobile access to Health Documents (MHD) Profile. It enables secure sharing of key health information - such as allergies, medications, conditions, procedures, and immunizations - across countries and healthcare organizations.
 
 ## 2.1 IPSE Actors, Transactions, and Content Modules
 
-This section defines the actors and transactions of the IPSE Profile. The IPSE Profile supports two complementary methods for IPS exchange: **IHE Transactions** (MHD-based) and **FHIR API** (RESTful). To claim compliance with this profile, an actor shall support transactions according to the selected binding method (see Section 2.2.6 ??API Binding Option).
+This section defines the actors and transactions of the IPSE Profile. The IPSE Profile supports two complementary methods for IPS exchange: **IHE Transactions** (MHD-based) and **FHIR API** (RESTful). To claim compliance with this profile, an actor shall support transactions according to the selected binding method (see Section 2.2.6 API Binding Option).
 
 ### Approach 1: IHE MHD Transactions
 
-**Table 2.1-1: IPSE Profile ??Actors and Transactions (IHE MHD Approach)**
+**Table 2.1-1: IPSE Profile - Actors and Transactions (IHE MHD Approach)**
 
 | Actor | Transaction | Optionality | Reference |
 |---|---|---|---|
@@ -29,7 +29,7 @@ This section defines the actors and transactions of the IPSE Profile. The IPSE P
 
 ### Approach 2: FHIR RESTful API
 
-**Table 2.1-2: IPSE Profile ??Actors and Transactions (FHIR API Approach)**
+**Table 2.1-2: IPSE Profile - Actors and Transactions (FHIR API Approach)**
 
 | Actor | Operation / Interaction | Optionality | Reference |
 |---|---|---|---|
@@ -81,7 +81,7 @@ The Terminology Server provides terminology mapping services under the IHE Shari
 
 Options that may be selected for each actor are listed in Table 2.2-1. Note that the API Binding Option (Section 2.2.6) is a fundamental transport binding and may be combined with content options.
 
-**Table 2.2-1: IPSE ??Actors and Options**
+**Table 2.2-1: IPSE - Actors and Options**
 
 | Actor | Option | Reference |
 |---|---|---|
@@ -153,7 +153,7 @@ Key concepts:
 
 ### 2.4.2 Use Cases
 
-**Use Case 1 ??Basic IPS Sharing (Minimal IPS)**
+**Use Case 1 - Basic IPS Sharing (Minimal IPS)**
 
 Purpose: Validate creation and retrieval of the minimal IPS document with all required sections.
 
@@ -172,7 +172,7 @@ Method B (FHIR RESTful API):
 
 5. IPS Consumer validates that all required sections and referenced resources are present and conformant.
 
-**Use Case 2 ??Advanced IPS Sharing (Expanded IPS)**
+**Use Case 2 - Advanced IPS Sharing (Expanded IPS)**
 
 Purpose: Validate creation and retrieval of an expanded IPS with optional diagnostic report types.
 
@@ -188,7 +188,7 @@ Process Flow:
 3. IPS Consumer retrieves the IPS and verifies completeness of all referenced resources.
 4. IPS Consumer verifies that referenced resources are resolvable and conform to the relevant profiles.
 
-**Use Case 3 ??IPS Retrieval and Rendering**
+**Use Case 3 -IPS Retrieval and Rendering**
 
 Purpose: Validate correct rendering of an IPS in a clinical viewer, with optional SVCM terminology mapping.
 
@@ -196,7 +196,7 @@ Process Flow:
 1. IPS Consumer queries IPS Repository via Find IPS Document References [ITI-67].
 2. IPS Consumer retrieves the IPS Bundle via Retrieve IPS Document [ITI-68].
 3. IPS Consumer (with Rendering Option) renders the IPS in a human-readable clinical viewer, preserving section structure and narrative text.
-4. (Optional ??Terminology Mapping Option) IPS Consumer identifies coded elements in the IPS (e.g., LOINC, SNOMED CT, ICD-10) and queries the Terminology Server for a ConceptMap to map codes to a local code system (e.g., Japanese, Korean, or Taiwanese code systems). Mapped terms are displayed alongside the original codes.
+4. (Optional - Terminology Mapping Option) IPS Consumer identifies coded elements in the IPS (e.g., LOINC, SNOMED CT, ICD-10) and queries the Terminology Server for a ConceptMap to map codes to a local code system (e.g., Japanese, Korean, or Taiwanese code systems). Mapped terms are displayed alongside the original codes.
 
 Implementation Note:
 - After retrieving the document from the Repository, the Document Consumer shall parse the FHIR Bundle content.
@@ -207,7 +207,7 @@ Implementation Note:
 
 #### Method 1: Exchange of IPS via IHE Transactions (MHD)
 
-**Actor Interaction Diagram ??IHE MHD Transactions**
+**Actor Interaction Diagram - IHE MHD Transactions**
 
 ![Exchange of IPS via IHE transactions]({{ '/assets/images/track2-ihe-transactions.png' | relative_url }})
 
@@ -228,7 +228,7 @@ Implementation Note:
 
 #### Method 2: Exchange of IPS via FHIR RESTful API
 
-**Actor Interaction Diagram ??FHIR API**
+**Actor Interaction Diagram - FHIR API**
 
 ![Exchange of IPS via FHIR API]({{ '/assets/images/track2-fhir-api.png' | relative_url }})
 
@@ -253,7 +253,7 @@ Implementation Note:
 
 #### Terminology Service Integration
 
-**IHE SVCM ??Sharing Valuesets, Codes, and Maps**
+**IHE SVCM - Sharing Valuesets, Codes, and Maps**
 
 ![IHE SVCM Terminology Mapping]({{ '/assets/images/track2-svcm.png' | relative_url }})
 
@@ -291,12 +291,12 @@ Actors adopting the FHIR RESTful API binding may implement **SMART on FHIR** (Su
 
 2. **SMART on FHIR Scopes**:
 	- Scopes define the resources and operations permitted. Common FHIR scopes include:
-	  - `fhirUser` ??Identify the current user
-	  - `launch` ??Used in EHR launch context
-	  - `patient/Bundle.read` ??Permission to read Bundle resources for the patient in context
-	  - `patient/DocumentReference.read` ??Permission to read DocumentReference resources
-	  - `patient/Composition.read` ??Permission to read Composition resources
-	  - `user/IPS.read` ??User-level read access to IPS documents
+	  - `fhirUser` : Identify the current user
+	  - `launch` : Used in EHR launch context
+	  - `patient/Bundle.read` : Permission to read Bundle resources for the patient in context
+	  - `patient/DocumentReference.read` : Permission to read DocumentReference resources
+	  - `patient/Composition.read` : Permission to read Composition resources
+	  - `user/IPS.read` : User-level read access to IPS documents
 	- Scopes are transmitted in the authorization request: `GET {authorizationServer}/authorize?scope=patient%2FBundle.read+patient%2FDocumentReference.read&...`
 
 3. **HTTP Authorization Header**:
@@ -372,4 +372,4 @@ The IPSE Profile depends on the IPD Profile (Profile #1) for cross-border patien
 
 ---
 
-[??Back to Themes]({{ '/en/themes' | relative_url }})
+[<- Back to Themes]({{ '/en/themes' | relative_url }})
