@@ -1,0 +1,47 @@
+# Jekyll Site Configuration for AP-IPS Website
+
+# Site settings
+title: AP-IPS Connectathon
+description: International Patient Summary and Digital Health Wallet Profiles
+baseurl: ""
+url: "https://cylab-tw.github.io"
+lang: en
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Permalinks
+permalink: /:path/
+
+# Markdown processor
+markdown: kramdown
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - .gitignore
+  - .git
+  - .github
+
+# Include in processing
+include:
+  - _headers
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
