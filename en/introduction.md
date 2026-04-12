@@ -43,7 +43,7 @@ Results from Plugathon testing and pilot deployments are systematically reviewed
 
 <div style="text-align: left; margin-bottom: 10px;">
   <h3 style="display: inline-flex; align-items: center; margin: 0; font-size: 1.2em;">
-    <img src="{{ '/assets/images/green-button.png' | relative_url }}" height="30" style="margin-right: 10px">
+    <img src="/ap-ips/assets/images/green-button.png" height="30" style="margin-right: 10px">
     <a href="{{ '/en/overview' | relative_url }}">Asia Pacific Green Button</a>
   </h3>
 </div>

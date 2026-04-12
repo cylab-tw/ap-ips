@@ -24,7 +24,7 @@ url: /en/overview
     </ul>
   </div>
   <div style="flex: 1; text-align: right;">
-    <img src="{{ '/assets/images/green-button.png' | relative_url }}" alt="Green Button" style="max-width: 50%; height: auto;">
+    <img src="/ap-ips/assets/images/green-button.png" alt="Green Button" style="max-width: 50%; height: auto;">
   </div>
 </div>
 
