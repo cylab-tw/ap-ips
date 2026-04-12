@@ -372,4 +372,4 @@ The IPSE Profile depends on the IPD Profile (Profile #1) for cross-border patien
 
 ---
 
-[← Back to Themes](/en/themes)
+[← Back to Themes]({{ '/en/themes' | relative_url }})

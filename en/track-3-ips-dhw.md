@@ -174,4 +174,4 @@ Future directions include deeper alignment with W3C Verifiable Credentials, broa
 
 ---
 
-[← Back to Themes](/en/themes)
+[← Back to Themes]({{ '/en/themes' | relative_url }})

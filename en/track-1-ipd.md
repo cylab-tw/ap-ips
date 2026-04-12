@@ -113,4 +113,4 @@ The IPD Profile provides the foundational patient identity layer for the IPSE Pr
 
 ---
 
-[← Back to Themes](/en/themes)
+[← Back to Themes]({{ '/en/themes' | relative_url }})
