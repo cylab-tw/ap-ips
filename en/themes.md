@@ -2,7 +2,7 @@
 layout: default
 title: Themes
 lang: en
-url: /ap-ips/en/themes
+url: /en/themes
 ---
 
 # Connectathon Themes

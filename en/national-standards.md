@@ -2,7 +2,7 @@
 layout: default
 title: National Standards
 lang: en
-url: /ap-ips/en/national-standards
+url: /en/national-standards
 ---
 # [Back to Resources]({{ '/en/resources' | relative_url }})
 

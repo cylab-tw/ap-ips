@@ -2,7 +2,7 @@
 layout: default
 title: Plugathon
 lang: en
-url: /ap-ips/en/plugathon
+url: /en/plugathon
 ---
 
 [Back to Resources]({{ '/en/resources' | relative_url }})

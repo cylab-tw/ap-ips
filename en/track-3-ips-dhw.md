@@ -2,7 +2,7 @@
 layout: default
 title: Profile #3 - IPS Digital Health Wallet Profile
 lang: en
-url: /ap-ips/en/track-3-ips-dhw
+url: /en/track-3-ips-dhw
 ---
 
 # Profile #3: IPS Digital Health Wallet Profile (IPS-DHW)

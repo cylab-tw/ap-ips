@@ -2,7 +2,7 @@
 layout: default
 title: Profile #2 - FHIR International Patient Summary Exchange Profile
 lang: en
-url: /ap-ips/en/track-2-ipse
+url: /en/track-2-ipse
 ---
 
 # Profile #2: FHIR International Patient Summary Exchange Profile (IPSE)

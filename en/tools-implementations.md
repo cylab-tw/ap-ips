@@ -2,7 +2,7 @@
 layout: default
 title: Tools & Implementations
 lang: en
-url: /ap-ips/en/tools-implementations
+url: /en/tools-implementations
 ---
 
 # [Back to Resources]({{ '/en/resources' | relative_url }})

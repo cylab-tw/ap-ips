@@ -2,7 +2,7 @@
 layout: default
 title: IHE Profiles
 lang: en
-url: /ap-ips/en/ihe-profiles
+url: /en/ihe-profiles
 ---
 
 [Back to Resources]({{ '/en/resources' | relative_url }})

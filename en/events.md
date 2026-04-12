@@ -2,7 +2,7 @@
 layout: default
 title: Events
 lang: en
-url: /ap-ips/en/events
+url: /en/events
 ---
 
 # Events

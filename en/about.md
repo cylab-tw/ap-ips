@@ -2,7 +2,7 @@
 layout: default
 title: About
 lang: en
-url: /ap-ips/en/about
+url: /en/about
 ---
 
 # About AP-IPS
