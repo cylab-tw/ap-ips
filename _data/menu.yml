@@ -3,15 +3,12 @@ en:
     url: /en/
   - title: News
     url: /en/news
+  - title: Board
+    url: /en/governance
   - title: Introduction
     url: /en/introduction
-  - title: Events
-    url: /en/events
-    sub_menu:
-      - title: Connectathon
-        url: /en/connectathon
-      - title: Plugathon
-        url: /en/plugathon
+  - title: Themes
+    url: /en/themes
   - title: Resources
     url: /en/resources
   - title: About

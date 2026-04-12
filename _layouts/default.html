@@ -2,6 +2,7 @@
 <html lang="{{ page.lang }}">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} | AP-IPS</title>
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
   <style>
@@ -11,11 +12,35 @@
       align-items: center;
       background-color: #4A2C84;
       padding: 10px;
+      position: relative;
     }
 
     .navbar-menu {
       display: flex;
       align-items: center;
+    }
+
+    .navbar-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .navbar-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #fff;
+      margin: 4px 0;
+      border-radius: 1px;
     }
 
     .navbar-menu a {
@@ -36,7 +61,7 @@
     }
 
     .navbar-logo {
-      height: 45px;
+      height: 40px;
       width: auto;
     }
 
@@ -66,10 +91,64 @@
     }
 
     .content img {
-      max-width: 50%;
+      max-width: 75%;
+      display: block;
+      margin: 20px auto;
+      height: auto;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .content img:hover {
+      opacity: 0.8;
+    }
+
+    /* 圖片放大模態框樣式 */
+    .image-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      cursor: pointer;
+    }
+
+    .image-modal img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 95%;
+      max-height: 95%;
+      cursor: zoom-out;
+    }
+
+    .image-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .image-modal-close:hover {
+      color: #bbb;
+    }
+
+    .content iframe,
+    .content embed,
+    .content video {
+      max-width: 75%;
+      width: 75%;
+      height: auto;
+      aspect-ratio: 16 / 9;
       display: block;
       margin: 0 auto;
-      height: auto;
     }
 
     #searchSuggestions {
@@ -77,7 +156,12 @@
       border: 1px solid #ccc;
       position: absolute;
       z-index: 1000;
-      width: 200px;
+      top: calc(100% + 6px);
+      right: 10px;
+      margin-top: 0;
+      width: 260px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      display: none;
     }
 
     #searchSuggestions div {
@@ -88,16 +172,120 @@
     #searchSuggestions div:hover {
       background-color: #f0f0f0;
     }
+
+    #searchSuggestions a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    #searchSuggestions p {
+      margin: 0;
+      padding: 10px;
+      color: #555;
+    }
+
+    @media (max-width: 900px) {
+      .navbar {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .navbar-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        display: none;
+        background-color: #4A2C84;
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .navbar-menu.is-open {
+        display: flex;
+      }
+
+      .navbar-menu a {
+        width: 100%;
+        margin: 0;
+        padding: 10px 15px;
+      }
+
+      .navbar-menu a:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-right: 15px;
+      }
+
+      .navbar-toggle {
+        display: inline-flex;
+      }
+
+      .navbar-search {
+        width: 100%;
+      }
+
+      .navbar-search input {
+        flex: 1;
+        width: 100%;
+      }
+
+      #searchSuggestions {
+        right: 0;
+        left: 0;
+        width: auto;
+      }
+    }
+
+    #searchResults {
+      margin: 20px;
+      padding: 10px 0;
+      display: none;
+    }
+
+    #searchResults.active {
+      display: block;
+    }
+
+    .search-result {
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .search-result a {
+      color: #4A2C84;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .search-result a:hover {
+      text-decoration: underline;
+    }
+
+    .search-result p {
+      margin: 6px 0 0;
+      color: #444;
+    }
+
+    mark.search-hit {
+      background: #ffeb3b;
+      padding: 0 2px;
+    }
   </style>
 </head>
 <body>
 
 <nav class="navbar">
   <a href="{{ '/en/' | relative_url }}" style="margin-right: auto;">
-    <img src="https://hackmd.io/_uploads/HJCHVxGSZl.png" alt="Logo" class="navbar-logo">
+    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="navbar-logo">
   </a>
 
-  <div class="navbar-menu">
+  <button class="navbar-toggle" type="button" aria-expanded="false" aria-controls="navbarMenu" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="navbar-menu" id="navbarMenu">
     {% assign menus = site.data.menu[page.lang] %}
     {% if menus %}
       {% for item in menus %}
@@ -120,7 +308,7 @@
   </div>
 </nav>
 
-<div id="searchResults" style="margin: 20px;">
+<div id="searchResults">
   <!-- Search results will be displayed here -->
 </div>
 
@@ -128,32 +316,73 @@
   {{ content }}
 </main>
 
+<script id="searchData" type="application/json">
+  [
+    {% assign search_pages = site.pages | where:"lang",page.lang | where_exp:"p","p.url" %}
+    {% for p in search_pages %}
+      {
+        "title": {{ p.title | jsonify }},
+        "url": {{ p.url | relative_url | jsonify }},
+        "content": {{ p.content | strip_html | strip_newlines | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+</script>
+
 <script>
+  const pages = JSON.parse(document.getElementById('searchData').textContent || '[]');
+
+  function escapeRegExp(text) {
+    return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function highlightMatch(text, query) {
+    if (!query || !text) return text || '';
+    const regex = new RegExp(escapeRegExp(query), 'gi');
+    return text.replace(regex, (match) => `<mark class="search-hit">${match}</mark>`);
+  }
+
+  function getSnippet(content, query, radius = 80) {
+    if (!content) return '';
+    const lower = content.toLowerCase();
+    const q = query.toLowerCase();
+    const idx = lower.indexOf(q);
+    if (idx === -1) {
+      return content.substring(0, 180) + (content.length > 180 ? '...' : '');
+    }
+    const start = Math.max(0, idx - radius);
+    const end = Math.min(content.length, idx + q.length + radius);
+    const prefix = start > 0 ? '...' : '';
+    const suffix = end < content.length ? '...' : '';
+    return prefix + content.substring(start, end) + suffix;
+  }
+
   function updateSuggestions() {
     const query = document.getElementById('searchInput').value.toLowerCase();
     const suggestionsContainer = document.getElementById('searchSuggestions');
     suggestionsContainer.innerHTML = '';
 
-    const pages = [
-      { title: 'Home', url: '/en/', content: 'Asia Pacific International Patient Summary (AP IPS) Advancing Cross-Border Healthcare Interoperability in the Asia-Pacific Region.' },
-      { title: 'News', url: '/en/news', content: 'Latest updates and news about AP-IPS and its initiatives.' },
-      { title: 'Introduction', url: '/en/introduction', content: 'Learn about the AP-IPS alliance and its goals for healthcare interoperability.' },
-      { title: 'Events', url: '/en/events', content: 'Upcoming events including Connectathon and Plugathon for interoperability testing.' },
-      { title: 'Resources', url: '/en/resources', content: 'Access HL7 FHIR IPS specifications, IHE profiles, and national standards.' },
-      { title: 'About', url: '/en/about', content: 'Information about AP-IPS and its mission to advance healthcare interoperability.' },
-      { title: 'Contact', url: '/en/contact', content: 'Get in touch with AP-IPS for inquiries and collaboration opportunities.' }
-    ];
+    if (!query.trim()) {
+      suggestionsContainer.style.display = 'none';
+      return;
+    }
 
-    const suggestions = pages.filter(page => page.content.toLowerCase().includes(query)).slice(0, 5);
+    const suggestions = pages.filter(page =>
+      (page.title || '').toLowerCase().includes(query) ||
+      (page.content || '').toLowerCase().includes(query)
+    ).slice(0, 5);
 
     if (suggestions.length > 0) {
       suggestions.forEach(suggestion => {
         const suggestionItem = document.createElement('div');
-        suggestionItem.innerHTML = `<a href="${suggestion.url}">${suggestion.title}</a>`;
+        const title = highlightMatch(suggestion.title || '', query);
+        suggestionItem.innerHTML = `<a href="${suggestion.url}">${title}</a>`;
         suggestionsContainer.appendChild(suggestionItem);
       });
+      suggestionsContainer.style.display = 'block';
     } else {
       suggestionsContainer.innerHTML = '<p>No suggestions found.</p>';
+      suggestionsContainer.style.display = 'block';
     }
   }
 
@@ -162,29 +391,105 @@
     const resultsContainer = document.getElementById('searchResults');
     resultsContainer.innerHTML = '';
 
-    const pages = [
-      { title: 'Home', url: '/en/', content: 'Asia Pacific International Patient Summary (AP IPS) Advancing Cross-Border Healthcare Interoperability in the Asia-Pacific Region.' },
-      { title: 'News', url: '/en/news', content: 'Latest updates and news about AP-IPS and its initiatives.' },
-      { title: 'Introduction', url: '/en/introduction', content: 'Learn about the AP-IPS alliance and its goals for healthcare interoperability.' },
-      { title: 'Events', url: '/en/events', content: 'Upcoming events including Connectathon and Plugathon for interoperability testing.' },
-      { title: 'Resources', url: '/en/resources', content: 'Access HL7 FHIR IPS specifications, IHE profiles, and national standards.' },
-      { title: 'About', url: '/en/about', content: 'Information about AP-IPS and its mission to advance healthcare interoperability.' },
-      { title: 'Contact', url: '/en/contact', content: 'Get in touch with AP-IPS for inquiries and collaboration opportunities.' }
-    ];
+    if (!query.trim()) {
+      resultsContainer.classList.remove('active');
+      return;
+    }
 
-    const results = pages.filter(page => page.content.toLowerCase().includes(query));
+    const results = pages.filter(page =>
+      (page.title || '').toLowerCase().includes(query) ||
+      (page.content || '').toLowerCase().includes(query)
+    );
 
     if (results.length > 0) {
+      const heading = document.createElement('h3');
+      heading.textContent = `Search results for "${query}" (${results.length})`;
+      resultsContainer.appendChild(heading);
+
       results.forEach(result => {
-        const preview = result.content.substring(0, 150) + '...';
+        const previewRaw = getSnippet(result.content || '', query, 80);
+        const preview = highlightMatch(previewRaw, query);
+        const title = highlightMatch(result.title || '', query);
         const resultItem = document.createElement('div');
-        resultItem.innerHTML = `<a href="${result.url}">${result.title}</a><p>${preview}</p>`;
+        resultItem.className = 'search-result';
+        resultItem.innerHTML = `<a href="${result.url}">${title}</a><p>${preview}</p>`;
         resultsContainer.appendChild(resultItem);
       });
+      resultsContainer.classList.add('active');
     } else {
-      resultsContainer.innerHTML = '<p>No results found.</p>';
+      const noResultsMsg = document.createElement('p');
+      noResultsMsg.textContent = 'No results found.';
+      resultsContainer.appendChild(noResultsMsg);
+      resultsContainer.classList.add('active');
     }
   }
+
+  document.getElementById('searchInput').addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      performSearch();
+    }
+  });
+
+  function toggleMenu() {
+    const menu = document.getElementById('navbarMenu');
+    const button = document.querySelector('.navbar-toggle');
+    const isOpen = menu.classList.toggle('is-open');
+    if (button) {
+      button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+  }
+
+  window.addEventListener('resize', () => {
+    const menu = document.getElementById('navbarMenu');
+    const button = document.querySelector('.navbar-toggle');
+    if (!menu || !button) return;
+    if (window.innerWidth > 900) {
+      menu.classList.remove('is-open');
+      button.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // 圖片放大功能
+  document.addEventListener('DOMContentLoaded', function() {
+    // 創建模態框
+    const modal = document.createElement('div');
+    modal.className = 'image-modal';
+    modal.id = 'imageModal';
+    modal.innerHTML = '<span class="image-modal-close">&times;</span><img id="modalImage" src="" alt="">';
+    document.body.appendChild(modal);
+
+    const modalImg = document.getElementById('modalImage');
+    const closeBtn = modal.querySelector('.image-modal-close');
+
+    // 為所有內容區域的圖片添加點擊事件
+    const contentImages = document.querySelectorAll('.content img');
+    contentImages.forEach(img => {
+      img.addEventListener('click', function() {
+        modal.style.display = 'block';
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+      });
+    });
+
+    // 關閉模態框
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal || e.target === modalImg) {
+        closeModal();
+      }
+    });
+
+    // ESC 鍵關閉
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.style.display === 'block') {
+        closeModal();
+      }
+    });
+  });
 </script>
 
 </body>

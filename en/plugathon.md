@@ -5,15 +5,15 @@ lang: en
 url: /en/plugathon
 ---
 
-[Back to Events](/en/events)
+[Back to Resources](../en/resources)
 
 ---
 
 ## Plugathon
 Plugathons emphasize rapid, developer-oriented testing and prototyping based on international standards, e.g., HL7, DICOM, and FHIR. These events lower the barrier to participation and foster hands-on collaboration among engineers, architects, and domain experts.
-### Track #1: Sharing of FHIR International Patient Demographics
+### Profile #1: Sharing of FHIR International Patient Demographics
 #### Description
-* This track focuses on establishing cross-institutional and cross-border patient identity consistency through a Master Patient Index (MPI) mechanism. The Patient Master Identity Registry (PMIR) Profile enables different systems to share, synchronize, and update patient demographic data (e.g., name, date of birth, identifiers), ensuring that the same individual can be accurately identified across international healthcare domains.
+* This profile focuses on establishing cross-institutional and cross-border patient identity consistency through a Master Patient Index (MPI) mechanism. The Patient Master Identity Registry (PMIR) Profile enables different systems to share, synchronize, and update patient demographic data (e.g., name, date of birth, identifiers), ensuring that the same individual can be accurately identified across international healthcare domains.
 
 #### Goal
 * To realize cross-border patient identity federation, providing the foundational layer for international health data exchange.
@@ -28,11 +28,11 @@ Plugathons emphasize rapid, developer-oriented testing and prototyping based on 
 * Future work may include identity federation between national healthcare systems and trusted patient matching algorithms leveraging AI/ML techniques.
 * Integration with FHIR Consent and Privacy Policies to govern data access across regions.
 
-![12](https://hackmd.io/_uploads/rk3sRXW4Wg.jpg)
+![12](../assets/images/track1-demographics.jpg)
 
-### Track #2: Sharing of FHIR International Patient Summary
+### Profile #2: Sharing of FHIR International Patient Summary
 #### Description
-* This track supports cross-system exchange of patient summaries based on FHIR International Patient Summary (IPS) specifications.
+* This profile supports cross-system exchange of patient summaries based on FHIR International Patient Summary (IPS) specifications.
 * The goal is to enable secure sharing of key health information—such as allergies, medications, conditions, procedures, and immunizations—across countries and healthcare organizations.
 
 #### Goal
@@ -78,24 +78,24 @@ Plugathons emphasize rapid, developer-oriented testing and prototyping based on 
 
 #### Actors &Transactions Diagram
 * Exchange IPS via FHIR RESTful API
-![圖片](https://hackmd.io/_uploads/HkQJZ2lV-l.png)
+![圖片](../assets/images/track2-fhir-api.png)
 
 * IPS with Imaging Report via FHIR and DICOMweb API
-![圖片](https://hackmd.io/_uploads/Sk2Z-3l4Zx.png)
+![圖片](../assets/images/track2-imaging.png)
 
 * IHE SVCM (Sharing Valuesets, Codes, and Maps)
-![圖片](https://hackmd.io/_uploads/B1OH-3lNZx.png)
+![圖片](../assets/images/track2-svcm.png)
 
 
 #### Future Outlook
 * Expansion from IPS to comprehensive health records and domain-specific summaries, e.g., oncology, immunization, and maternal health.
 * Adoption of FHIR-based translation and terminology mapping services (SVCM) to ensure multilingual and semantic interoperability across borders.
 
-![未命名](https://hackmd.io/_uploads/rkTUEhyNWx.jpg)
+![未命名](../assets/images/track2-overview.jpg)
 
-### Track #3: Sharing of FHIR IPS with Digtial Health Wallet 
+### Profile #3: Sharing of FHIR IPS with Digtial Health Wallet 
 #### Description
-This track focuses on enabling patient-mediated exchange of FHIR IPS integrating with digital signature, verifiable credentials, and digital health wallet technologies. In this track, the FHIR IPS is packaged as a cryptographically verifiable and portable credential, allowing patients to securely carry, present, and share their health summaries across borders. This approach leverages emerging international initiatives and national digital identity infrastructures, such as:
+This profile focuses on enabling patient-mediated exchange of FHIR IPS integrating with digital signature, verifiable credentials, and digital health wallet technologies. In this profile, the FHIR IPS is packaged as a cryptographically verifiable and portable credential, allowing patients to securely carry, present, and share their health summaries across borders. This approach leverages emerging international initiatives and national digital identity infrastructures, such as:
 * WHO Smart Health Cards (SHC)
 * Japan My Number Card
 * Taiwan Digital Identity Wallet
@@ -104,15 +104,15 @@ This track focuses on enabling patient-mediated exchange of FHIR IPS integrating
 FHIR IPS data is exchanged using QR codes or secure digital channels, with access strictly controlled by explicit patient consent. Advanced credential technologies such as Selective Disclosure JWT (SD-JWT) are used to ensure privacy-preserving data sharing.
 
 #### Goal
-The primary goals of this track are to:
+The primary goals of this profile are to:
 * Enable portable, patient-controlled FHIR IPS facilitating cross-border, emergency, and ad-hoc healthcare scenarios
 * Align FHIR IPS with global digital identity and verifiable credential ecosystems to ensure data authenticity, integrity, and trust through digital signatures and certificates
 * Support selective disclosure, allowing patients to share only the necessary portions of their IPS
 
-Ultimately, this track aims to shift IPS exchange from system-to-system only models toward a patient-centric interoperability paradigm.
+Ultimately, this profile aims to shift IPS exchange from system-to-system only models toward a patient-centric interoperability paradigm.
 
 #### Scenarios
-Typical scenarios addressed in this track include:
+Typical scenarios addressed in this profile include:
 1. **Cross-border Travel and Emergency Care**
 A patient traveling abroad presents a QR code from their digital health wallet.
 The receiving healthcare provider verifies the IPS credential, validates the digital signature, and retrieves the IPS after patient consent.
@@ -126,12 +126,12 @@ Rapid access to trusted patient summaries using offline-capable QR codes and ver
 Binding IPS credentials to national identity wallets (e.g., My Number, Taiwan Digital ID) to establish trusted identity assurance.
 
 #### Future Outlook
-This track represents a critical step toward the future of trusted, decentralized, and patient-driven health data exchange. Future directions include:
+This profile represents a critical step toward the future of trusted, decentralized, and patient-driven health data exchange. Future directions include:
 * Deeper alignment with W3C Verifiable Credentials (VC) standards
 * Broader adoption of SD-JWT and privacy-enhancing technologies
 * Interoperability testing between health wallets, identity wallets, and healthcare systems
 * Harmonization with AP IPS governance models and international regulatory frameworks
 * Expansion to support additional FHIR-based artifacts beyond IPS (e.g., immunization records, imaging summaries)
-* By combining FHIR IPS, digital identity, and cryptographic trust mechanisms, this track lays the foundation for a scalable and globally interoperable personal health record ecosystem.
+* By combining FHIR IPS, digital identity, and cryptographic trust mechanisms, this profile lays the foundation for a scalable and globally interoperable personal health record ecosystem.
 
-![未命名](https://hackmd.io/_uploads/SkKj82yVZx.jpg)
+![未命名](../assets/images/track3-wallet.jpg)
