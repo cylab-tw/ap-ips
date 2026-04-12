@@ -13,7 +13,7 @@ This profile establishes cross-institutional and cross-border patient identity c
 
 This section defines the actors and transactions in the IPD Profile. To claim compliance with this profile, an actor shall support all required transactions (labeled "R") and may support the optional transactions (labeled "O").
 
-**Table 1.1-1: IPD Profile – Actors and Transactions**
+**Table 1.1-1: IPD Profile ??Actors and Transactions**
 
 | Actor | Transaction | Optionality | Reference |
 |---|---|---|---|
@@ -42,7 +42,7 @@ The Patient Identity Consumer queries the Patient Identity Manager to resolve pa
 
 Options that may be selected for each actor are listed in Table 1.2-1.
 
-**Table 1.2-1: IPD – Actors and Options**
+**Table 1.2-1: IPD ??Actors and Options**
 
 | Actor | Option | Reference |
 |---|---|---|
@@ -81,15 +81,15 @@ Key concepts:
 
 ### 1.4.2 Use Cases
 
-**Use Case 1 – Cross-Border Identity Synchronization**
+**Use Case 1 ??Cross-Border Identity Synchronization**
 
 A patient's demographic data is updated in their home country's system. The update is propagated to partner country systems via the Mobile Patient Identity Feed [ITI-93] transaction to the Patient Identity Manager.
 
-**Use Case 2 – Patient Identity Query**
+**Use Case 2 ??Patient Identity Query**
 
 A healthcare provider in a foreign country queries the Patient Identity Manager using partial demographic data (e.g., name and birthdate) to resolve the patient's cross-border identity via the Mobile Patient Identity Query [ITI-78] transaction.
 
-**Use Case 3 – Identity Conflict Resolution**
+**Use Case 3 ??Identity Conflict Resolution**
 
 When conflicting demographics exist across systems (e.g., duplicate records from different countries), the Patient Identity Manager merges records into a golden record and notifies subscribed consumers via Subscribe to Patient Updates [ITI-94].
 
@@ -109,8 +109,8 @@ All transactions shall be secured using TLS compliant with BCP195. Patient demog
 
 The IPD Profile provides the foundational patient identity layer for the IPSE Profile (Profile #2). Patient identity resolution via IPD must be established before IPS documents can be securely exchanged across borders. Future integration with FHIR Consent resources will enable privacy-policy-governed identity federation.
 
-![Profile 1 Demographics](../assets/images/track1-demographics.jpg)
+![Profile 1 Demographics]({{ '/assets/images/track1-demographics.jpg' | relative_url }})
 
 ---
 
-[← Back to Themes]({{ '/en/themes' | relative_url }})
+[??Back to Themes]({{ '/en/themes' | relative_url }})

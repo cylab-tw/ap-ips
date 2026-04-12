@@ -24,7 +24,7 @@ url: /ap-ips/en/overview
     </ul>
   </div>
   <div style="flex: 1; text-align: right;">
-    <img src="../assets/images/green-button.png" alt="未命名" style="max-width: 50%; height: auto;">
+    <img src="{{ '/assets/images/green-button.png' | relative_url }}" alt="Green Button" style="max-width: 50%; height: auto;">
   </div>
 </div>
 
@@ -44,4 +44,4 @@ There are three common scenarios of AP Green Button:
 * Scenario 2: Cross-border Pharmacy Dispensing
 * Scenario 3: Emergency Care
 
-![未命名](../assets/images/green-button-scenarios.jpg)
+![Green Button Scenarios]({{ '/assets/images/green-button-scenarios.jpg' | relative_url }})

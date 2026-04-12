@@ -11,7 +11,7 @@ The News section provides updates on alliance activities, including announcement
 
 ## 2026 IHE Japan Connectathon Week
 
-![IHE Japan](../assets/images/ihe-japan.png)
+![IHE Japan]({{ '/assets/images/ihe-japan.png' | relative_url }})
 
 ### Asia Pacific Plugathon
-![AP Plugathon](../assets/images/ap-plugathon.png)
+![AP Plugathon]({{ '/assets/images/ap-plugathon.png' | relative_url }})

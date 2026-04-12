@@ -10,10 +10,10 @@ The Asia Pacific International Patient Summary Alliance (AP-IPS) was established
 ## How AP-IPS Works
 AP-IPS operates as a collaborative, country-driven interoperability framework that enables participating Asia-Pacific economies to jointly define, test, and validate interoperable IPS through collaborative specifications and Plugathon-based validation.
 
-![未命名](../assets/images/how-ap-ips-works.jpg)
+![How AP-IPS Works]({{ '/assets/images/how-ap-ips-works.jpg' | relative_url }})
 
 ### 1. Regional Needs and Use-Case Identification
-Participating economies—through healthcare authorities, standards organizations, academic institutions, hospitals, and industry representatives—collectively identify cross-border clinical scenarios where the IPS is required, such as emergency care, referral continuity, disaster response, and patient mobility. National inputs are consolidated to reflect regional clinical and operational needs, ensuring that IPS exchange requirements are grounded in real-world practice rather than isolated technical assumptions.
+Participating economies?�through healthcare authorities, standards organizations, academic institutions, hospitals, and industry representatives?�collectively identify cross-border clinical scenarios where the IPS is required, such as emergency care, referral continuity, disaster response, and patient mobility. National inputs are consolidated to reflect regional clinical and operational needs, ensuring that IPS exchange requirements are grounded in real-world practice rather than isolated technical assumptions.
 
 ### 2. Joint Specification Development
 Based on agreed regional use cases, AP-IPS establishes multinational specification working groups, composed of representatives from participating countries. Rather than unilateral specification development, AP-IPS emphasizes co-creation, where all participating countries contribute equally to the definition of interoperable IPS exchange specifications. These groups collaboratively define:
@@ -43,7 +43,7 @@ Results from Plugathon testing and pilot deployments are systematically reviewed
 
 <div style="text-align: left; margin-bottom: 10px;">
   <h3 style="display: inline-flex; align-items: center; margin: 0; font-size: 1.2em;">
-    <img src="../assets/images/green-button.png" height="30" style="margin-right: 10px">
+    <img src="{{ '/assets/images/green-button.png' | relative_url }}" height="30" style="margin-right: 10px">
     <a href="{{ '/en/overview' | relative_url }}">Asia Pacific Green Button</a>
   </h3>
 </div>
