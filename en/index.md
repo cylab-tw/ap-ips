@@ -22,17 +22,17 @@ AP-IPS promotes a continuous and iterative interoperability lifecycle:
 ###  FHIR IPS: Your Health History, Unlocked 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5gO8gKLLZFQ" title="FHIR IPS: Your Health History, Unlocked" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-### FHIR IPS ?��??�康?�ス?�ー?��??�ー?�?�ス?�医?��???(?�本�?
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qE4knaIWjzM" title="FHIR IPS ?��??�康?�ス?�ー?��??�ー?�?�ス?�医?��??? frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+### FHIR IPS 国際健康パスポート：ボーダレスな医療情報 (日本語)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qE4knaIWjzM" title="FHIR IPS 国際健康パスポート：ボーダレスな医療情報 (日本語)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-### FHIR IPS국�?건�??��?: 국경?��??��??�보 (?�국??
-<iframe width="560" height="315" src="https://www.youtube.com/embed/u6U3IhGYfr0" title="FHIR IPS국�?건�??��?: 국경?��??��??�보" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+### FHIR IPS국제건강여권: 국경없는의료정보 (한국어)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u6U3IhGYfr0" title="FHIR IPS국제건강여권: 국경없는의료정보 (한국어)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-### FHIR IPS?��??�康護照：無?��??��??��? (繁�?中�?)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NR5ZjdnFjeY" title="FHIR IPS?��??�康護照：無?��??��??��?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+### FHIR IPS國際健康護照：無國界醫療數據 (繁體中文)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NR5ZjdnFjeY" title="FHIR IPS國際健康護照：無國界醫療數據 (繁體中文)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-### 你�??��?保健準�?好�??��??�無?��??��??��??? (繁�?中�?) 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tMd9qNO4c4E" title="你�??��?保健準�?好�??��??�無?��??��??��???" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+### 你的醫療保健準備好迎接一個無國界的世界了嗎? (繁體中文)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tMd9qNO4c4E" title="你的醫療保健準備好迎接一個無國界的世界了嗎? (繁體中文)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Standards ??Implementation ??Connectathon ??Validation
+## Standards -> Implementation -> Connectathon -> Validation
 ![Lifecycle]({{ '/assets/images/lifecycle.png' | relative_url }})
