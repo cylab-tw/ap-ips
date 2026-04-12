@@ -5,7 +5,7 @@ lang: en
 url: /ap-ips/en/overview
 ---
 
-[Back to Introduction](../en/introduction)
+[Back to Introduction]({{ '/en/introduction' | relative_url }})
 
 ---
 

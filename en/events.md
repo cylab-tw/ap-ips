@@ -6,10 +6,5 @@ url: /ap-ips/en/events
 ---
 
 # Events
-<<<<<<< HEAD
-### [Connectathon](/en/connectathon)
-### [Plugathon](/en/plugathon)
-=======
-### [Connectathon](../en/connectathon)
-### [Plugathon](../en/plugathon)
->>>>>>> origin/main
+### [Connectathon]({{ '/en/connectathon' | relative_url }})
+### [Plugathon]({{ '/en/plugathon' | relative_url }})

@@ -5,9 +5,9 @@ lang: en
 url: /ap-ips/en/resources
 ---
 
-## [Plugathon](../en/plugathon)
-## [Connectathon](../en/connectathon)
-## [HL7 FHIR International Patient Summary (IPS)](../en/hl7-fhir-ips)
-## [IHE Profiles](../en/ihe-profiles)
-## [National Standards](../en/national-standards)
-## [Tools & Implementations](../en/tools-implementations)
+## [Plugathon]({{ '/en/plugathon' | relative_url }})
+## [Connectathon]({{ '/en/connectathon' | relative_url }})
+## [HL7 FHIR International Patient Summary (IPS)]({{ '/en/hl7-fhir-ips' | relative_url }})
+## [IHE Profiles]({{ '/en/ihe-profiles' | relative_url }})
+## [National Standards]({{ '/en/national-standards' | relative_url }})
+## [Tools & Implementations]({{ '/en/tools-implementations' | relative_url }})

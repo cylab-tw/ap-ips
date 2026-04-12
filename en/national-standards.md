@@ -4,7 +4,7 @@ title: National Standards
 lang: en
 url: /ap-ips/en/national-standards
 ---
-# [Back to Resources](../en/resources)
+# [Back to Resources]({{ '/en/resources' | relative_url }})
 
 ## National Standards 
 ### National Core IG

@@ -5,7 +5,7 @@ lang: en
 url: /ap-ips/en/ihe-profiles
 ---
 
-[Back to Resources](../en/resources)
+[Back to Resources]({{ '/en/resources' | relative_url }})
 
 ---
 

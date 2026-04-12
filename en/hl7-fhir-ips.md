@@ -5,7 +5,7 @@ lang: en
 url: /ap-ips/en/hl7-fhir-ips
 ---
 
-[Back to Resources](../en/resources)
+[Back to Resources]({{ '/en/resources' | relative_url }})
 
 ---
 
