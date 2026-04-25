@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Board - Asia-Pacific Patient Summary v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"24"}
+    h3,h4,h5,h6{--heading-prefix:"24"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Asia-Pacific Patient Summary</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <span title="">035</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="overview.html">Overview</a></li>
+      <li><a href="green-button.html">Green Button</a></li>
+      <li><a href="digital-wallet.html">Digital Wallet</a></li>
+      <li class="dropdown-submenu">
+        <a href="profile-ipd.html">Patient Demographics Profile (IPD)</a>
+        <ul class="dropdown-menu">
+          <li><a href="profile-ipd-scope.html">Scope</a></li>
+          <li><a href="profile-ipd-actors.html">Actors</a></li>
+          <li><a href="profile-ipd-transactions.html">Transactions</a></li>
+          <li><a href="profile-ipd-options.html">Options</a></li>
+          <li><a href="profile-ipd-security.html">Security</a></li>
+          <li><a href="profile-ipd-cross-profile.html">Cross-Profile</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="profile-ipse.html">International Patient Summary Exchange Profile (IPSE)</a>
+        <ul class="dropdown-menu">
+          <li><a href="profile-ipse-scope.html">Scope</a></li>
+          <li><a href="profile-ipse-actors.html">Actors</a></li>
+          <li><a href="profile-ipse-transactions.html">Transactions</a></li>
+          <li><a href="profile-ipse-options.html">Options</a></li>
+          <li><a href="profile-ipse-security.html">Security</a></li>
+          <li><a href="profile-ipse-cross-profile.html">Cross-Profile</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="profile-ips-dhw.html">IPS Digital Health Wallet Profile (IPS-DHW)</a>
+        <ul class="dropdown-menu">
+          <li><a href="profile-ips-dhw-scope.html">Scope</a></li>
+          <li><a href="profile-ips-dhw-actors.html">Actors</a></li>
+          <li><a href="profile-ips-dhw-transactions.html">Transactions</a></li>
+          <li><a href="profile-ips-dhw-options.html">Options</a></li>
+          <li><a href="profile-ips-dhw-security.html">Security</a></li>
+          <li><a href="profile-ips-dhw-cross-profile.html">Cross-Profile</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 1<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="volume1-actors-transactions.html">Actors and Transactions</a></li>
+      <li><a href="volume1-actor-options.html">Actor Options</a></li>
+      <li><a href="volume1-logical-model.html">Logical Model</a></li>
+      <li><a href="volume1-security-considerations.html">Security Considerations</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="volume2-iti-65.html">Provide IPS Document Bundle [ITI-65]</a></li>
+      <li><a href="volume2-iti-67.html">Find IPS Document References [ITI-67]</a></li>
+      <li><a href="volume2-iti-68.html">Retrieve IPS Document [ITI-68]</a></li>
+      <li><a href="volume2-iti-svcm.html">Concept Map Translate [ITI-SVCM]</a></li>
+      <li><a href="volume2-create-bundle.html">Create IPS Bundle (POST /Bundle)</a></li>
+      <li><a href="volume2-update-composition.html">Update IPS Composition (PUT /Composition/{id})</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 3<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="volume3-capability-statements.html">Capability Statements</a></li>
+      <li><a href="volume3-terminology.html">Terminology</a></li>
+      <li><a href="volume3-tools-implementations.html">Tools &amp; Implementations</a></li>
+      <li><a href="volume3-examples.html">Examples</a></li>
+    </ul>
+  </li>
+  <li><a href="artifacts.html">Artifacts</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="board.html">Board</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="ihe-profiles.html">IHE Profiles</a></li>
+      <li><a href="national-standards.html">National Standards</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Board</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <h2>Board</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h1 id="governance---asia-pacific-patient-summary-v010">Governance - Asia-Pacific Patient Summary v0.1.0</h1>
+
+<ul>
+  <li><a href="toc.md"><strong>Table of Contents</strong></a></li>
+  <li><strong>Governance</strong></li>
+</ul>
+
+<p><a href="introduction.html">Back to Introduction</a></p>
+
+<hr />
+
+<h2 id="governance-and-board">Governance and Board</h2>
+
+<p>AP-IPS is governed by a board composed of representatives from participating countries and organizations.</p>
+
+<h3 id="search-board-members">Search Board Members</h3>
+
+<div style="margin-bottom: 20px;">
+  <input type="text" id="searchName" placeholder="Search by Name" style="padding: 8px; margin-right: 10px; width: 200px;" />
+  <input type="text" id="searchNation" placeholder="Search by Nation" style="padding: 8px; margin-right: 10px; width: 200px;" />
+  <input type="text" id="searchOrg" placeholder="Search by Organization" style="padding: 8px; width: 200px;" />
+</div>
+
+<table id="boardTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Nation</th>
+      <th>Organization</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Hyoungho Do</strong>$</td>
+      <td>South Korea</td>
+      <td>IHE Korea</td>
+    </tr>
+    <tr>
+      <td><strong>Chung-Yueh Lien (連中岳)</strong>$</td>
+      <td>Taiwan</td>
+      <td>MISAT, National Taipei University of Nursing and Health Sciences</td>
+    </tr>
+    <tr>
+      <td><strong>Yasunari Shiokawa (Salt)</strong>$</td>
+      <td>Japan</td>
+      <td>IHE-Japan</td>
+    </tr>
+    <tr>
+      <td>JoonHyun Song</td>
+      <td>South Korea</td>
+      <td>HL7 Korea</td>
+    </tr>
+    <tr>
+      <td>Tom Wang</td>
+      <td>Taiwan</td>
+      <td>EBM Technologies</td>
+    </tr>
+    <tr>
+      <td>Masayoshi Seki</td>
+      <td>Japan</td>
+      <td>IHE-Japan</td>
+    </tr>
+    <tr>
+      <td>Takeshi Ozeki</td>
+      <td>Japan</td>
+      <td>IHE-Japan</td>
+    </tr>
+    <tr>
+      <td>Sunao Watanabe</td>
+      <td>Japan</td>
+      <td>Medical Information Development Center of JAPAN</td>
+    </tr>
+    <tr>
+      <td>Takanori Yamashita</td>
+      <td>Japan</td>
+      <td>JAMI</td>
+    </tr>
+    <tr>
+      <td>Masahito Kawamori</td>
+      <td>Japan</td>
+      <td>University of Tokyo</td>
+    </tr>
+    <tr>
+      <td>HeeKyoung Jung</td>
+      <td>South Korea</td>
+      <td>Korea Total Healthcare Ecosystem Association</td>
+    </tr>
+    <tr>
+      <td>Yoshimasa Kawazoe</td>
+      <td>Japan</td>
+      <td>University of Tokyo</td>
+    </tr>
+    <tr>
+      <td>Takeshi Imai</td>
+      <td>Japan</td>
+      <td>University of Tokyo</td>
+    </tr>
+    <tr>
+      <td>Katsuhiko Nishino</td>
+      <td>Japan</td>
+      <td>Tokyo Metroporitan Hiroo Hospital</td>
+    </tr>
+    <tr>
+      <td>Kazunori Nozaki</td>
+      <td>Japan</td>
+      <td>University of Osaka</td>
+    </tr>
+    <tr>
+      <td>Lorex Yang</td>
+      <td>Taiwan</td>
+      <td>Sitatech Information Services Co., Ltd</td>
+    </tr>
+    <tr>
+      <td>Ping Huang Tsai</td>
+      <td>Taiwan</td>
+      <td>TwHealth Nexus Inc</td>
+    </tr>
+    <tr>
+      <td>BI-Shan Hsu</td>
+      <td>Taiwan</td>
+      <td>TwHealth Nexus Inc</td>
+    </tr>
+    <tr>
+      <td>Simon Yu</td>
+      <td>Taiwan</td>
+      <td>TwHealth Nexus Inc</td>
+    </tr>
+    <tr>
+      <td>Chien-Yeh Hsu</td>
+      <td>Taiwan</td>
+      <td>National Taipei University of Nursing and Health Sciences</td>
+    </tr>
+    <tr>
+      <td>Ryoichi Tanaka</td>
+      <td>Japan</td>
+      <td>Iwate Medical University</td>
+    </tr>
+    <tr>
+      <td>Byoung-Kee Yi</td>
+      <td>South Korea</td>
+      <td>Kangwon National University/HL7 Korea</td>
+    </tr>
+    <tr>
+      <td>Sung-Hyun Lee</td>
+      <td>South Korea</td>
+      <td>Flyingmountain Inc</td>
+    </tr>
+    <tr>
+      <td>Soojin Lee</td>
+      <td>South Korea</td>
+      <td>Sangji university</td>
+    </tr>
+    <tr>
+      <td>Alvin Marcelo</td>
+      <td>Philippines</td>
+      <td>Medical Informatics Unit, University of the Philippines</td>
+    </tr>
+    <tr>
+      <td>Sungwon Jung</td>
+      <td>South Korea</td>
+      <td>InfoClinic / Kangwon National University / HL7 Korea</td>
+    </tr>
+    <tr>
+      <td>Henrique Martins*</td>
+      <td>Portugal</td>
+      <td>ISCTE, IHE-Catalyst</td>
+    </tr>
+    <tr>
+      <td>Syoji Uzawa*</td>
+      <td>Japan</td>
+      <td>IHE-Japan</td>
+    </tr>
+    <tr>
+      <td>Seung-Jong Yu*</td>
+      <td>South Korea</td>
+      <td>Beplus Healthcare</td>
+    </tr>
+    <tr>
+      <td>Adam Chee</td>
+      <td>Singapore</td>
+      <td>HL7 Singapore</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>Note: $Leadership</strong>; <strong>*Observer</strong></li>
+</ul>
+
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  th:hover {
+    background-color: #e0e0e0;
+  }
+
+  th::after {
+    content: ' ^v';
+    font-size: 0.8em;
+    opacity: 0.5;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchName = document.getElementById('searchName');
+  const searchNation = document.getElementById('searchNation');
+  const searchOrg = document.getElementById('searchOrg');
+  const table = document.getElementById('boardTable');
+
+  if (!table) return;
+
+  const rows = table.getElementsByTagName('tr');
+  let sortConfig = { column: null, direction: 'asc' };
+
+  function filterTable() {
+    const nameFilter = searchName.value.toLowerCase();
+    const nationFilter = searchNation.value.toLowerCase();
+    const orgFilter = searchOrg.value.toLowerCase();
+
+    for (let i = 1; i < rows.length; i++) {
+      const cells = rows[i].getElementsByTagName('td');
+      if (cells.length >= 3) {
+        const name = cells[0].textContent.toLowerCase();
+        const nation = cells[1].textContent.toLowerCase();
+        const org = cells[2].textContent.toLowerCase();
+
+        const matchName = name.includes(nameFilter);
+        const matchNation = nation.includes(nationFilter);
+        const matchOrg = org.includes(orgFilter);
+
+        if (matchName && matchNation && matchOrg) {
+          rows[i].style.display = '';
+        } else {
+          rows[i].style.display = 'none';
+        }
+      }
+    }
+  }
+
+  function sortTable(columnIndex) {
+    const rowsArray = Array.from(rows).slice(1);
+
+    if (sortConfig.column === columnIndex) {
+      sortConfig.direction = sortConfig.direction === 'asc' ? 'desc' : 'asc';
+    } else {
+      sortConfig.column = columnIndex;
+      sortConfig.direction = 'asc';
+    }
+
+    rowsArray.sort((rowA, rowB) => {
+      const cellsA = rowA.getElementsByTagName('td');
+      const cellsB = rowB.getElementsByTagName('td');
+
+      if (cellsA.length <= columnIndex || cellsB.length <= columnIndex) {
+        return 0;
+      }
+
+      let valueA = cellsA[columnIndex].textContent.trim();
+      let valueB = cellsB[columnIndex].textContent.trim();
+
+      valueA = valueA.replace(/\*\*/g, '').toLowerCase();
+      valueB = valueB.replace(/\*\*/g, '').toLowerCase();
+
+      if (sortConfig.direction === 'asc') {
+        return valueA.localeCompare(valueB, 'zh-TW');
+      } else {
+        return valueB.localeCompare(valueA, 'zh-TW');
+      }
+    });
+
+    const tbody = table.querySelector('tbody') || table;
+    rowsArray.forEach(row => {
+      tbody.appendChild(row);
+    });
+  }
+
+  const headerRow = rows[0];
+  const headers = headerRow.getElementsByTagName('th');
+
+  for (let i = 0; i < headers.length; i++) {
+    headers[i].style.cursor = 'pointer';
+    headers[i].addEventListener('click', function() {
+      sortTable(i);
+    });
+  }
+
+  searchName.addEventListener('keyup', filterTable);
+  searchNation.addEventListener('keyup', filterTable);
+  searchOrg.addEventListener('keyup', filterTable);
+});
+</script>
+
+<h2 id="member-countries">Member Countries</h2>
+
+<ul>
+  <li>Australia</li>
+  <li>Japan</li>
+  <li>Malaysia</li>
+  <li>Singapore</li>
+  <li>South Korea</li>
+  <li>Taiwan</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://cylab-tw.github.io/aps-ig">Asia-Pacific Patient Summary Alliance</a>.  Package hl7.fhir.asia.aps#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Apr 25, 2026 19:34+0800">2026-04-25</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

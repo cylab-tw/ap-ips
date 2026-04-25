@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="gestational-age-loinc"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet gestational-age-loinc</b></p><a name="gestational-age-loinc"> </a><a name="hcgestational-age-loinc"> </a><ul><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where COMPONENT  = LP19507-0 (Gestational age)</li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="draft"/>
+  </extension>
+  <url value="https://cylab-tw.github.io/aps-ig/ValueSet/gestational-age-loinc"/>
+  <version value="0.1.0"/>
+  <name value="GestationalAgeLoincVs"/>
+  <title value="Gestational Age (LOINC)"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-04-25T19:34:43+08:00"/>
+  <publisher value="Asia-Pacific Patient Summary Alliance"/>
+  <contact>
+    <name value="Asia-Pacific Patient Summary Alliance"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://cylab-tw.github.io/aps-ig"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Asia-Pacific Patient Summary Alliance"/>
+    <telecom>
+      <system value="email"/>
+      <value value="aps-ig@example.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="LOINC codes with component Gestational age (LP19507-0)."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="035"/>
+      <display value="South-Eastern Asia"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright Â© 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINCÂ® is a registered United States trademark of Regenstrief Institute, Inc"/>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="COMPONENT"/>
+        <op value="="/>
+        <value value="LP19507-0"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

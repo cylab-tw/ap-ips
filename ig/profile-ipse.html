@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>International Patient Summary Exchange Profile (IPSE) - Asia-Pacific Patient Summary v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Asia-Pacific Patient Summary</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <span title="">035</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="overview.html">Overview</a></li>
+      <li><a href="green-button.html">Green Button</a></li>
+      <li><a href="digital-wallet.html">Digital Wallet</a></li>
+      <li class="dropdown-submenu">
+        <a href="profile-ipd.html">Patient Demographics Profile (IPD)</a>
+        <ul class="dropdown-menu">
+          <li><a href="profile-ipd-scope.html">Scope</a></li>
+          <li><a href="profile-ipd-actors.html">Actors</a></li>
+          <li><a href="profile-ipd-transactions.html">Transactions</a></li>
+          <li><a href="profile-ipd-options.html">Options</a></li>
+          <li><a href="profile-ipd-security.html">Security</a></li>
+          <li><a href="profile-ipd-cross-profile.html">Cross-Profile</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="profile-ipse.html">International Patient Summary Exchange Profile (IPSE)</a>
+        <ul class="dropdown-menu">
+          <li><a href="profile-ipse-scope.html">Scope</a></li>
+          <li><a href="profile-ipse-actors.html">Actors</a></li>
+          <li><a href="profile-ipse-transactions.html">Transactions</a></li>
+          <li><a href="profile-ipse-options.html">Options</a></li>
+          <li><a href="profile-ipse-security.html">Security</a></li>
+          <li><a href="profile-ipse-cross-profile.html">Cross-Profile</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="profile-ips-dhw.html">IPS Digital Health Wallet Profile (IPS-DHW)</a>
+        <ul class="dropdown-menu">
+          <li><a href="profile-ips-dhw-scope.html">Scope</a></li>
+          <li><a href="profile-ips-dhw-actors.html">Actors</a></li>
+          <li><a href="profile-ips-dhw-transactions.html">Transactions</a></li>
+          <li><a href="profile-ips-dhw-options.html">Options</a></li>
+          <li><a href="profile-ips-dhw-security.html">Security</a></li>
+          <li><a href="profile-ips-dhw-cross-profile.html">Cross-Profile</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 1<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="volume1-actors-transactions.html">Actors and Transactions</a></li>
+      <li><a href="volume1-actor-options.html">Actor Options</a></li>
+      <li><a href="volume1-logical-model.html">Logical Model</a></li>
+      <li><a href="volume1-security-considerations.html">Security Considerations</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="volume2-iti-65.html">Provide IPS Document Bundle [ITI-65]</a></li>
+      <li><a href="volume2-iti-67.html">Find IPS Document References [ITI-67]</a></li>
+      <li><a href="volume2-iti-68.html">Retrieve IPS Document [ITI-68]</a></li>
+      <li><a href="volume2-iti-svcm.html">Concept Map Translate [ITI-SVCM]</a></li>
+      <li><a href="volume2-create-bundle.html">Create IPS Bundle (POST /Bundle)</a></li>
+      <li><a href="volume2-update-composition.html">Update IPS Composition (PUT /Composition/{id})</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 3<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="volume3-capability-statements.html">Capability Statements</a></li>
+      <li><a href="volume3-terminology.html">Terminology</a></li>
+      <li><a href="volume3-tools-implementations.html">Tools &amp; Implementations</a></li>
+      <li><a href="volume3-examples.html">Examples</a></li>
+    </ul>
+  </li>
+  <li><a href="artifacts.html">Artifacts</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="board.html">Board</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="ihe-profiles.html">IHE Profiles</a></li>
+      <li><a href="national-standards.html">National Standards</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>International Patient Summary Exchange Profile (IPSE)</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <h2>International Patient Summary Exchange Profile (IPSE)</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#profile-2-fhir-international-patient-summary-exchange-profile-ipse" id="markdown-toc-profile-2-fhir-international-patient-summary-exchange-profile-ipse">Profile #2: FHIR International Patient Summary Exchange Profile (IPSE)</a>    <ul>
+      <li><a href="#mhd-style-chapter-pages" id="markdown-toc-mhd-style-chapter-pages">MHD-Style Chapter Pages</a></li>
+      <li><a href="#21-ipse-actors-transactions-and-content-modules" id="markdown-toc-21-ipse-actors-transactions-and-content-modules">2.1 IPSE Actors, Transactions, and Content Modules</a>        <ul>
+          <li><a href="#approach-1-ihe-mhd-transactions" id="markdown-toc-approach-1-ihe-mhd-transactions">Approach 1: IHE MHD Transactions</a></li>
+          <li><a href="#approach-2-fhir-restful-api" id="markdown-toc-approach-2-fhir-restful-api">Approach 2: FHIR RESTful API</a></li>
+        </ul>
+      </li>
+      <li><a href="#22-ipse-actor-options" id="markdown-toc-22-ipse-actor-options">2.2 IPSE Actor Options</a></li>
+      <li><a href="#23-ipse-required-actor-groupings" id="markdown-toc-23-ipse-required-actor-groupings">2.3 IPSE Required Actor Groupings</a></li>
+      <li><a href="#24-ipse-overview" id="markdown-toc-24-ipse-overview">2.4 IPSE Overview</a>        <ul>
+          <li><a href="#representative-use-cases" id="markdown-toc-representative-use-cases">Representative use cases</a></li>
+        </ul>
+      </li>
+      <li><a href="#25-ipse-security-considerations" id="markdown-toc-25-ipse-security-considerations">2.5 IPSE Security Considerations</a></li>
+      <li><a href="#26-ipse-cross-profile-considerations" id="markdown-toc-26-ipse-cross-profile-considerations">2.6 IPSE Cross Profile Considerations</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="profile-2-fhir-international-patient-summary-exchange-profile-ipse">Profile #2: FHIR International Patient Summary Exchange Profile (IPSE)</h1>
+
+<p>This profile supports cross-system exchange of patient summaries based on the HL7 FHIR International Patient Summary (IPS) Implementation Guide and IHE Mobile access to Health Documents (MHD) Profile. It enables secure sharing of key health information, such as allergies, medications, conditions, procedures, and immunizations, across countries and healthcare organizations.</p>
+
+<h2 id="mhd-style-chapter-pages">MHD-Style Chapter Pages</h2>
+
+<ul>
+  <li><a href="profile-ipse-scope.html">IPSE Scope</a></li>
+  <li><a href="profile-ipse-actors.html">IPSE Actors</a></li>
+  <li><a href="profile-ipse-transactions.html">IPSE Transactions</a></li>
+  <li><a href="profile-ipse-options.html">IPSE Options</a></li>
+  <li><a href="profile-ipse-security.html">IPSE Security</a></li>
+  <li><a href="profile-ipse-cross-profile.html">IPSE Cross-Profile</a></li>
+</ul>
+
+<h2 id="21-ipse-actors-transactions-and-content-modules">2.1 IPSE Actors, Transactions, and Content Modules</h2>
+
+<p>The IPSE Profile supports two complementary methods for IPS exchange: IHE Transactions (MHD-based) and FHIR API (RESTful).</p>
+
+<h3 id="approach-1-ihe-mhd-transactions">Approach 1: IHE MHD Transactions</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Actor</th>
+      <th>Transaction</th>
+      <th>Optionality</th>
+      <th>Reference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IPS Creator</td>
+      <td>Provide IPS Document Bundle [ITI-65]</td>
+      <td>R</td>
+      <td>IHE MHD ITI TF-2: 3.65</td>
+    </tr>
+    <tr>
+      <td>IPS Repository</td>
+      <td>Provide IPS Document Bundle [ITI-65]</td>
+      <td>R</td>
+      <td>IHE MHD ITI TF-2: 3.65</td>
+    </tr>
+    <tr>
+      <td>IPS Repository</td>
+      <td>Find IPS Document References [ITI-67]</td>
+      <td>R</td>
+      <td>IHE MHD ITI TF-2: 3.67</td>
+    </tr>
+    <tr>
+      <td>IPS Repository</td>
+      <td>Retrieve IPS Document [ITI-68]</td>
+      <td>R</td>
+      <td>IHE MHD ITI TF-2: 3.68</td>
+    </tr>
+    <tr>
+      <td>IPS Consumer</td>
+      <td>Find IPS Document References [ITI-67]</td>
+      <td>R</td>
+      <td>IHE MHD ITI TF-2: 3.67</td>
+    </tr>
+    <tr>
+      <td>IPS Consumer</td>
+      <td>Retrieve IPS Document [ITI-68]</td>
+      <td>R</td>
+      <td>IHE MHD ITI TF-2: 3.68</td>
+    </tr>
+    <tr>
+      <td>Terminology Server</td>
+      <td>Concept Map Translate [ITI-SVCM]</td>
+      <td>O</td>
+      <td>IHE SVCM</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="approach-2-fhir-restful-api">Approach 2: FHIR RESTful API</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Actor</th>
+      <th>Operation / Interaction</th>
+      <th>Optionality</th>
+      <th>Reference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IPS Creator</td>
+      <td>Create IPS Bundle (POST /Bundle)</td>
+      <td>R</td>
+      <td>FHIR Document Resource</td>
+    </tr>
+    <tr>
+      <td>IPS Creator</td>
+      <td>Update IPS Composition (PUT /Composition/{id})</td>
+      <td>O</td>
+      <td>FHIR Composition Resource</td>
+    </tr>
+    <tr>
+      <td>IPS Repository</td>
+      <td>Create/Store IPS Bundle (POST /Bundle)</td>
+      <td>R</td>
+      <td>FHIR Document Resource</td>
+    </tr>
+    <tr>
+      <td>IPS Repository</td>
+      <td>Search DocumentReference (GET search)</td>
+      <td>R</td>
+      <td>FHIR DocumentReference Search</td>
+    </tr>
+    <tr>
+      <td>IPS Repository</td>
+      <td>Retrieve IPS Bundle (GET /Bundle/{id})</td>
+      <td>R</td>
+      <td>FHIR Bundle Resource</td>
+    </tr>
+    <tr>
+      <td>IPS Repository</td>
+      <td>Update IPS Metadata (PUT /DocumentReference/{id})</td>
+      <td>O</td>
+      <td>FHIR DocumentReference Resource</td>
+    </tr>
+    <tr>
+      <td>IPS Consumer</td>
+      <td>Search Document References (GET /DocumentReference search)</td>
+      <td>R</td>
+      <td>FHIR Search</td>
+    </tr>
+    <tr>
+      <td>IPS Consumer</td>
+      <td>Retrieve IPS Bundle (GET /Bundle/{id})</td>
+      <td>R</td>
+      <td>FHIR Bundle Resource</td>
+    </tr>
+    <tr>
+      <td>IPS Consumer</td>
+      <td>Read Composition (GET /Composition/{id})</td>
+      <td>R</td>
+      <td>FHIR Composition Resource</td>
+    </tr>
+    <tr>
+      <td>Terminology Server</td>
+      <td>Concept Map Translate (POST /ConceptMap/$translate)</td>
+      <td>O</td>
+      <td>FHIR ConceptMap Operation</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="22-ipse-actor-options">2.2 IPSE Actor Options</h2>
+
+<ul>
+  <li>Laboratory Report Option</li>
+  <li>Pathology Report Option</li>
+  <li>Radiology Report with Imaging Option</li>
+  <li>Terminology Mapping Option (SVCM)</li>
+  <li>Rendering Option</li>
+  <li>API Binding Option (FHIR RESTful)</li>
+</ul>
+
+<h2 id="23-ipse-required-actor-groupings">2.3 IPSE Required Actor Groupings</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>IPSE Actor</th>
+      <th>Actor to be grouped with</th>
+      <th>Reference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IPS Creator</td>
+      <td>CT / Time Client</td>
+      <td>ITI TF-1: Consistent Time</td>
+    </tr>
+    <tr>
+      <td>IPS Repository</td>
+      <td>CT / Time Client</td>
+      <td>ITI TF-1: Consistent Time</td>
+    </tr>
+    <tr>
+      <td>IPS Repository</td>
+      <td>ATNA / Secure Node</td>
+      <td>ITI TF-1: ATNA</td>
+    </tr>
+    <tr>
+      <td>IPS Consumer</td>
+      <td>IUA / Authorization Client</td>
+      <td>ITI TF-1: IUA</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="24-ipse-overview">2.4 IPSE Overview</h2>
+
+<p>The IPSE Profile establishes a standardized framework for cross-border exchange of health summaries using FHIR Bundle documents.</p>
+
+<h3 id="representative-use-cases">Representative use cases</h3>
+
+<ul>
+  <li>Basic IPS sharing (Minimal IPS).</li>
+  <li>Advanced IPS sharing (Expanded IPS with optional diagnostic report types).</li>
+  <li>IPS retrieval and rendering, with optional SVCM terminology mapping.</li>
+</ul>
+
+<h2 id="25-ipse-security-considerations">2.5 IPSE Security Considerations</h2>
+
+<p>All transactions shall be secured using TLS compliant with BCP195. IPS documents contain protected health information (PHI), and access control shall be enforced at the IPS Repository. OAuth 2.0 based authorization is expected for API access, including SMART on FHIR or IHE IUA aligned approaches.</p>
+
+<h2 id="26-ipse-cross-profile-considerations">2.6 IPSE Cross Profile Considerations</h2>
+
+<p>The IPSE Profile depends on the IPD Profile (Profile #1) for patient identity resolution prior to IPS exchange. The IPSE Profile may be extended by the IPS-DHW Profile (Profile #3) for patient-mediated verifiable-credential-based sharing.</p>
+
+<p><img src="track2-overview.jpg" alt="IPSE Overview" /></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://cylab-tw.github.io/aps-ig">Asia-Pacific Patient Summary Alliance</a>.  Package hl7.fhir.asia.aps#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Apr 25, 2026 19:34+0800">2026-04-25</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

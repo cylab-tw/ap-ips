@@ -1,0 +1,2 @@
+URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
+https://cylab-tw.github.io/aps-ig/ValueSet/gestational-age-loinc,0.1.0,draft,,GestationalAgeLoincVs,Gestational Age (LOINC),"LOINC codes with component Gestational age (LP19507-0).",,"LOINC"

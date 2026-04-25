@@ -1,0 +1,201 @@
+{
+  "package": "hl7.fhir.asia.aps",
+  "version": "0.1.0",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "035",
+  "extensions": [],
+  "profiles": {
+    "AllergyIntolerance": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/allergyintolerance-aps",
+        "title": "AllergyIntolerance (APS, IPS Derived)"
+      }
+    ],
+    "Bundle": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/bundle-aps",
+        "title": "Bundle (APS, IPS Derived)"
+      }
+    ],
+    "Composition": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/composition-aps",
+        "title": "Composition (APS, IPS Derived)"
+      }
+    ],
+    "Condition": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/condition-aps",
+        "title": "Condition (APS, IPS Derived)"
+      }
+    ],
+    "Device": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/device-aps",
+        "title": "Device (APS, IPS Derived)"
+      }
+    ],
+    "DeviceUseStatement": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/deviceusestatement-aps",
+        "title": "DeviceUseStatement (APS, IPS Derived)"
+      }
+    ],
+    "DiagnosticReport": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/diagnosticreport-aps",
+        "title": "DiagnosticReport (APS, IPS Derived)"
+      }
+    ],
+    "Flag": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/flag-alert-aps",
+        "title": "Flag Alert (APS, IPS Derived)"
+      }
+    ],
+    "Immunization": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/immunization-aps",
+        "title": "Immunization (APS, IPS Derived)"
+      }
+    ],
+    "Medication": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/medication-aps",
+        "title": "Medication (APS, IPS Derived)"
+      }
+    ],
+    "MedicationRequest": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/medicationrequest-aps",
+        "title": "MedicationRequest (APS, IPS Derived)"
+      }
+    ],
+    "MedicationStatement": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/medicationstatement-aps",
+        "title": "MedicationStatement (APS, IPS Derived)"
+      }
+    ],
+    "Observation": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/observation-pregnancy-edd-aps",
+        "title": "Observation Pregnancy EDD (APS, IPS Derived)"
+      },
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/observation-pregnancy-outcome-aps",
+        "title": "Observation Pregnancy Outcome (APS, IPS Derived)"
+      },
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/observation-pregnancy-status-aps",
+        "title": "Observation Pregnancy Status (APS, IPS Derived)"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/organization-aps",
+        "title": "Organization (APS, IPS Derived)"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/patient-aps",
+        "title": "Patient (APS, IPS Derived)"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/practitioner-aps",
+        "title": "Practitioner (APS, IPS Derived)"
+      }
+    ],
+    "PractitionerRole": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/practitionerrole-aps",
+        "title": "PractitionerRole (APS, IPS Derived)"
+      }
+    ],
+    "Procedure": [
+      {
+        "url": "https://cylab-tw.github.io/aps-ig/StructureDefinition/procedure-aps",
+        "title": "Procedure (APS, IPS Derived)"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement|5.3.0-ballot-tc1": [
+      "AllergyIntolerance"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/flag-priority|5.3.0-ballot-tc1": [
+      "Flag"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity|5.3.0-ballot-tc1": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/individual-pronouns|5.3.0-ballot-tc1": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/note|5.3.0-ballot-tc1": [
+      "Composition.section"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/obligation": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm": [
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/additional-binding": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page",
+      "ImplementationGuide.definition.page.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ]
+  }
+}

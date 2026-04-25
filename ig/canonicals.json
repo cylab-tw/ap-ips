@@ -1,0 +1,154 @@
+[{
+  "id" : "hl7.fhir.asia.aps",
+  "type" : "ImplementationGuide",
+  "url" : "https://cylab-tw.github.io/aps-ig/ImplementationGuide/hl7.fhir.asia.aps",
+  "version" : "0.1.0",
+  "name" : "AsiaPacificPatientSummaryIg"
+},
+{
+  "id" : "allergyintolerance-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/allergyintolerance-aps",
+  "version" : "0.1.0",
+  "name" : "AllergyIntoleranceAps"
+},
+{
+  "id" : "bundle-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/bundle-aps",
+  "version" : "0.1.0",
+  "name" : "BundleAps"
+},
+{
+  "id" : "composition-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/composition-aps",
+  "version" : "0.1.0",
+  "name" : "CompositionAps"
+},
+{
+  "id" : "condition-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/condition-aps",
+  "version" : "0.1.0",
+  "name" : "ConditionAps"
+},
+{
+  "id" : "device-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/device-aps",
+  "version" : "0.1.0",
+  "name" : "DeviceAps"
+},
+{
+  "id" : "deviceusestatement-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/deviceusestatement-aps",
+  "version" : "0.1.0",
+  "name" : "DeviceUseStatementAps"
+},
+{
+  "id" : "diagnosticreport-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/diagnosticreport-aps",
+  "version" : "0.1.0",
+  "name" : "DiagnosticReportAps"
+},
+{
+  "id" : "flag-alert-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/flag-alert-aps",
+  "version" : "0.1.0",
+  "name" : "FlagAlertAps"
+},
+{
+  "id" : "immunization-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/immunization-aps",
+  "version" : "0.1.0",
+  "name" : "ImmunizationAps"
+},
+{
+  "id" : "medication-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/medication-aps",
+  "version" : "0.1.0",
+  "name" : "MedicationAps"
+},
+{
+  "id" : "medicationrequest-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/medicationrequest-aps",
+  "version" : "0.1.0",
+  "name" : "MedicationRequestAps"
+},
+{
+  "id" : "medicationstatement-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/medicationstatement-aps",
+  "version" : "0.1.0",
+  "name" : "MedicationStatementAps"
+},
+{
+  "id" : "observation-pregnancy-edd-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/observation-pregnancy-edd-aps",
+  "version" : "0.1.0",
+  "name" : "ObservationPregnancyEddAps"
+},
+{
+  "id" : "observation-pregnancy-outcome-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/observation-pregnancy-outcome-aps",
+  "version" : "0.1.0",
+  "name" : "ObservationPregnancyOutcomeAps"
+},
+{
+  "id" : "observation-pregnancy-status-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/observation-pregnancy-status-aps",
+  "version" : "0.1.0",
+  "name" : "ObservationPregnancyStatusAps"
+},
+{
+  "id" : "organization-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/organization-aps",
+  "version" : "0.1.0",
+  "name" : "OrganizationAps"
+},
+{
+  "id" : "patient-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/patient-aps",
+  "version" : "0.1.0",
+  "name" : "PatientAps"
+},
+{
+  "id" : "practitioner-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/practitioner-aps",
+  "version" : "0.1.0",
+  "name" : "PractitionerAps"
+},
+{
+  "id" : "practitionerrole-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/practitionerrole-aps",
+  "version" : "0.1.0",
+  "name" : "PractitionerRoleAps"
+},
+{
+  "id" : "procedure-aps",
+  "type" : "StructureDefinition",
+  "url" : "https://cylab-tw.github.io/aps-ig/StructureDefinition/procedure-aps",
+  "version" : "0.1.0",
+  "name" : "ProcedureAps"
+},
+{
+  "id" : "gestational-age-loinc",
+  "type" : "ValueSet",
+  "url" : "https://cylab-tw.github.io/aps-ig/ValueSet/gestational-age-loinc",
+  "version" : "0.1.0",
+  "name" : "GestationalAgeLoincVs"
+}]

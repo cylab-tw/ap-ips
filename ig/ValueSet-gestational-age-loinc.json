@@ -1,0 +1,58 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "gestational-age-loinc",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet gestational-age-loinc</b></p><a name=\"gestational-age-loinc\"> </a><a name=\"hcgestational-age-loinc\"> </a><ul><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where COMPONENT  = LP19507-0 (Gestational age)</li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "draft"
+  }],
+  "url" : "https://cylab-tw.github.io/aps-ig/ValueSet/gestational-age-loinc",
+  "version" : "0.1.0",
+  "name" : "GestationalAgeLoincVs",
+  "title" : "Gestational Age (LOINC)",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-04-25T19:34:43+08:00",
+  "publisher" : "Asia-Pacific Patient Summary Alliance",
+  "contact" : [{
+    "name" : "Asia-Pacific Patient Summary Alliance",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://cylab-tw.github.io/aps-ig"
+    }]
+  },
+  {
+    "name" : "Asia-Pacific Patient Summary Alliance",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "aps-ig@example.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "LOINC codes with component Gestational age (LP19507-0).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "035",
+      "display" : "South-Eastern Asia"
+    }]
+  }],
+  "copyright" : "This material contains content from LOINC (http://loinc.org). LOINC is copyright Â© 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINCÂ® is a registered United States trademark of Regenstrief Institute, Inc",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "COMPONENT",
+        "op" : "=",
+        "value" : "LP19507-0"
+      }]
+    }]
+  }
+}
