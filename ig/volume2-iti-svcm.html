@@ -196,7 +196,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Asia-Pacific Patient Summary - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://cylab-tw.github.io/aps-ig/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Concept Map Translate [ITI-SVCM]</h2>
   
 
@@ -217,20 +217,40 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h1 id="volume-2-concept-map-translate-iti-svcm">Volume 2: Concept Map Translate [ITI-SVCM]</h1>
 
-<h2 id="purpose">Purpose</h2>
-
-<p>Support terminology translation and semantic interoperability across jurisdictions.</p>
-
 <h2 id="scope">Scope</h2>
 
-<ul>
-  <li>Concept mapping across coding systems</li>
-  <li>Optional runtime translation support during IPS consumption</li>
-</ul>
+<p>Concept Map Translate [ITI-SVCM] is an optional terminology transaction used to translate codes across code systems and jurisdictions during IPS consumption.</p>
+
+<h2 id="note-on-normative-source">Note on Normative Source</h2>
+
+<p>ITI-SVCM is not one of the core MHD Volume 2 transactions (MHD Volume 2 core transactions are ITI-65, ITI-66, ITI-67, ITI-68, ITI-105, ITI-106).</p>
+
+<p>For IPSE, ITI-SVCM is used as an optional terminology support function, while IPS document sharing transactions are normatively aligned to IHE MHD ITI-65/67/68.</p>
+
+<h2 id="actor-mapping-in-ipse">Actor Mapping in IPSE</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>IPSE Actor</th>
+      <th>Responsibility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Terminology Server</td>
+      <td>Performs concept translation</td>
+    </tr>
+    <tr>
+      <td>IPS Consumer</td>
+      <td>Requests concept translation when needed</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="expected-outcome">Expected Outcome</h2>
 
-<p>Consumer can display or process mapped terms alongside source terminology.</p>
+<p>Consumers can display and process semantically mapped terms while preserving original coded content.</p>
 
 
 
@@ -251,7 +271,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://cylab-tw.github.io/aps-ig">Asia-Pacific Patient Summary Alliance</a>.  Package hl7.fhir.asia.aps#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Apr 25, 2026 19:34+0800">2026-04-25</span>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://cylab-tw.github.io/aps-ig">Asia-Pacific Patient Summary Alliance</a>.  Package hl7.fhir.asia.aps#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Apr 25, 2026 19:59+0800">2026-04-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -196,7 +196,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Asia-Pacific Patient Summary - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://cylab-tw.github.io/aps-ig/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Provide IPS Document Bundle [ITI-65]</h2>
   
 
@@ -217,21 +217,85 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h1 id="volume-2-provide-ips-document-bundle-iti-65">Volume 2: Provide IPS Document Bundle [ITI-65]</h1>
 
-<h2 id="purpose">Purpose</h2>
-
-<p>Submit an IPS document bundle from an IPS Creator to an IPS Repository.</p>
-
 <h2 id="scope">Scope</h2>
 
+<p>Provide Document Bundle [ITI-65] is used to submit IPS document metadata and payload from an IPS Creator to an IPS Repository.</p>
+
+<p>Normative source: https://profiles.ihe.net/ITI/MHD/ITI-65.html</p>
+
+<h2 id="actor-roles">Actor Roles</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>IPSE Actor</th>
+      <th>IHE MHD Actor</th>
+      <th>Responsibility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IPS Creator</td>
+      <td>Document Source</td>
+      <td>Sends IPS documents and metadata</td>
+    </tr>
+    <tr>
+      <td>IPS Repository</td>
+      <td>Document Recipient</td>
+      <td>Accepts, validates, and persists submitted content</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="trigger-event">Trigger Event</h2>
+
+<p>This transaction is invoked when an IPS Creator needs to publish one or more IPS documents.</p>
+
+<h2 id="request-message">Request Message</h2>
+
 <ul>
-  <li>Bundle type document</li>
-  <li>Composition-driven IPS content</li>
-  <li>Required section conformance based on profile rules</li>
+  <li>HTTP method: POST</li>
+  <li>Interaction: FHIR transaction</li>
+  <li>Body: FHIR Bundle with type = transaction</li>
+  <li>Content types: application/fhir+json or application/fhir+xml</li>
+  <li>Typical resources in transaction bundle:
+    <ul>
+      <li>SubmissionSet-type List</li>
+      <li>one or more DocumentReference resources</li>
+      <li>optional Folder-type List resources</li>
+      <li>Binary payloads, or FHIR document bundle payload when supported</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="response-message">Response Message</h2>
+
+<ul>
+  <li>Success is returned as HTTP 200.</li>
+  <li>Response body is a transaction-response Bundle with per-entry processing outcomes.</li>
+  <li>For created entries, response status is typically 201 at entry level with assigned location.</li>
+  <li>Warnings can be returned using OperationOutcome.</li>
+</ul>
+
+<h2 id="expected-actions">Expected Actions</h2>
+
+<ul>
+  <li>IPS Repository processes the bundle atomically.</li>
+  <li>IPS Repository validates FHIR resource integrity and metadata consistency.</li>
+  <li>On validation or processing errors, the repository returns an appropriate HTTP error and OperationOutcome details.</li>
+</ul>
+
+<h2 id="security-and-audit">Security and Audit</h2>
+
+<ul>
+  <li>Apply MHD security controls and local policy for authorization and confidentiality.</li>
+  <li>Audit logging is expected for source and recipient when grouped with ATNA secure actors.</li>
+  <li>MHD security reference: https://profiles.ihe.net/ITI/MHD/1335_security_considerations.html</li>
 </ul>
 
 <h2 id="expected-outcome">Expected Outcome</h2>
 
-<p>Repository accepts, stores, and indexes IPS document metadata for subsequent query and retrieval.</p>
+<p>Repository accepts, stores, and indexes IPS document metadata and payload for subsequent discovery via ITI-67 and retrieval via ITI-68.</p>
 
 
 
@@ -252,7 +316,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://cylab-tw.github.io/aps-ig">Asia-Pacific Patient Summary Alliance</a>.  Package hl7.fhir.asia.aps#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Apr 25, 2026 19:34+0800">2026-04-25</span>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://cylab-tw.github.io/aps-ig">Asia-Pacific Patient Summary Alliance</a>.  Package hl7.fhir.asia.aps#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Apr 25, 2026 19:59+0800">2026-04-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

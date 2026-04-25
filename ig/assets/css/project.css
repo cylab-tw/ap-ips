@@ -508,22 +508,11 @@ h6.underlined {
   padding-bottom: 0.2em;
 }
 p > img {
-  display: block;
-  float: none;
-  max-width: 75%;
-  height: auto;
+  float: left;
   margin-top: 0;
-  margin-right: auto;
+  margin-right: 10px;
   margin-bottom: 10px;
-  margin-left: auto;
-}
-#segment-content h1,
-#segment-content h2,
-#segment-content h3,
-#segment-content h4,
-#segment-content h5,
-#segment-content h6 {
-  clear: both;
+  margin-left: 0;
 }
 .table td {
   padding: 6px;

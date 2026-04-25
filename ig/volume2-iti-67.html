@@ -196,7 +196,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Asia-Pacific Patient Summary - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://cylab-tw.github.io/aps-ig/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Find IPS Document References [ITI-67]</h2>
   
 
@@ -217,20 +217,83 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h1 id="volume-2-find-ips-document-references-iti-67">Volume 2: Find IPS Document References [ITI-67]</h1>
 
-<h2 id="purpose">Purpose</h2>
-
-<p>Allow an IPS Consumer to discover available IPS document references from an IPS Repository.</p>
-
 <h2 id="scope">Scope</h2>
 
+<p>Find Document References [ITI-67] is used to discover DocumentReference resources matching query criteria.</p>
+
+<p>Normative source: https://profiles.ihe.net/ITI/MHD/ITI-67.html</p>
+
+<h2 id="actor-roles">Actor Roles</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>IPSE Actor</th>
+      <th>IHE MHD Actor</th>
+      <th>Responsibility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IPS Consumer</td>
+      <td>Document Consumer</td>
+      <td>Requests matching document references</td>
+    </tr>
+    <tr>
+      <td>IPS Repository</td>
+      <td>Document Responder</td>
+      <td>Returns references that satisfy criteria</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="trigger-event">Trigger Event</h2>
+
+<p>The transaction is invoked when an IPS Consumer needs to discover available IPS documents for a patient.</p>
+
+<h2 id="request-message">Request Message</h2>
+
 <ul>
-  <li>Query by patient and optional filters</li>
-  <li>Retrieve metadata needed to select appropriate IPS documents</li>
+  <li>HTTP interaction: FHIR search on DocumentReference</li>
+  <li>Endpoint pattern: [base]/DocumentReference?<query></query></li>
+  <li>GET and POST-based search are both supported</li>
+  <li>Required search criteria in MHD:
+    <ul>
+      <li>patient or patient.identifier</li>
+      <li>status</li>
+    </ul>
+  </li>
+  <li>Optional criteria include category, type, event, facility, format, creation/date, related, security-label, and others defined by MHD/FHIR</li>
+</ul>
+
+<h2 id="response-message">Response Message</h2>
+
+<ul>
+  <li>Successful processing returns HTTP 200, including when no matching documents are found.</li>
+  <li>Response payload is a FHIR Bundle containing zero or more DocumentReference resources.</li>
+  <li>Warnings may be included as OperationOutcome entries in the response bundle.</li>
+  <li>Errors use HTTP error codes with OperationOutcome details.</li>
+</ul>
+
+<h2 id="expected-actions">Expected Actions</h2>
+
+<ul>
+  <li>IPS Repository evaluates query parameters and returns matching references.</li>
+  <li>Returned DocumentReference entries should include retrievable document locations in content.attachment.url for subsequent ITI-68 retrieval.</li>
+</ul>
+
+<h2 id="security-and-audit">Security and Audit</h2>
+
+<ul>
+  <li>Enforce local authorization and consent policy when returning metadata.</li>
+  <li>URL values in attachment.url should not leak sensitive information.</li>
+  <li>Audit logging is expected for consumer and responder roles when grouped with ATNA secure actors.</li>
+  <li>MHD security reference: https://profiles.ihe.net/ITI/MHD/1335_security_considerations.html</li>
 </ul>
 
 <h2 id="expected-outcome">Expected Outcome</h2>
 
-<p>Consumer obtains document reference results to drive document retrieval workflows.</p>
+<p>IPS Consumer receives discoverable IPS document references and can select the appropriate item(s) for retrieval by ITI-68.</p>
 
 
 
@@ -251,7 +314,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://cylab-tw.github.io/aps-ig">Asia-Pacific Patient Summary Alliance</a>.  Package hl7.fhir.asia.aps#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Apr 25, 2026 19:34+0800">2026-04-25</span>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://cylab-tw.github.io/aps-ig">Asia-Pacific Patient Summary Alliance</a>.  Package hl7.fhir.asia.aps#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Apr 25, 2026 19:59+0800">2026-04-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

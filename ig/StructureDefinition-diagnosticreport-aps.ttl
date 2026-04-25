@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "DiagnosticReportAps"] ; # 
   fhir:title [ fhir:v "DiagnosticReport (APS, IPS Derived)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-04-25T19:34:43+08:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-04-25T19:59:58+08:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Asia-Pacific Patient Summary Alliance"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Asia-Pacific Patient Summary Alliance" ] ;

@@ -196,7 +196,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Asia-Pacific Patient Summary - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://cylab-tw.github.io/aps-ig/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Actors and Transactions</h2>
   
 
@@ -212,8 +212,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#volume-1-actors-and-transactions" id="markdown-toc-volume-1-actors-and-transactions">Volume 1: Actors and Transactions</a>    <ul>
+      <li><a href="#ipd" id="markdown-toc-ipd">IPD</a></li>
+      <li><a href="#ipse" id="markdown-toc-ipse">IPSE</a>        <ul>
+          <li><a href="#profile-definition" id="markdown-toc-profile-definition">Profile Definition</a></li>
+          <li><a href="#actors" id="markdown-toc-actors">Actors</a></li>
+          <li><a href="#actors-and-transactions-ihe-mhd-approach" id="markdown-toc-actors-and-transactions-ihe-mhd-approach">Actors and Transactions (IHE MHD Approach)</a></li>
+          <li><a href="#actors-and-transactions-fhir-api-approach" id="markdown-toc-actors-and-transactions-fhir-api-approach">Actors and Transactions (FHIR API Approach)</a></li>
+          <li><a href="#key-behavioral-requirements" id="markdown-toc-key-behavioral-requirements">Key Behavioral Requirements</a></li>
+          <li><a href="#normative-transaction-links" id="markdown-toc-normative-transaction-links">Normative Transaction Links</a></li>
+        </ul>
+      </li>
+      <li><a href="#ips-dhw" id="markdown-toc-ips-dhw">IPS-DHW</a></li>
+    </ul>
+  </li>
+</ul>
+
 </div>
 <h1 id="volume-1-actors-and-transactions">Volume 1: Actors and Transactions</h1>
 
@@ -237,6 +253,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h2 id="ipse">IPSE</h2>
 
+<h3 id="profile-definition">Profile Definition</h3>
+
+<p>The International Patient Summary Exchange Profile (IPSE) supports cross-system IPS exchange using two interoperable approaches:</p>
+
+<ul>
+  <li>IHE MHD transactions</li>
+  <li>FHIR RESTful API binding</li>
+</ul>
+
+<p>To claim conformance, an actor shall implement the required transactions for the selected binding.</p>
+
+<h3 id="actors">Actors</h3>
+
 <ul>
   <li>IPS Creator</li>
   <li>IPS Repository</li>
@@ -244,13 +273,154 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Terminology Server (optional)</li>
 </ul>
 
-<p>Transactions:</p>
+<h3 id="actors-and-transactions-ihe-mhd-approach">Actors and Transactions (IHE MHD Approach)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Actor</th>
+      <th>Transaction</th>
+      <th>Optionality</th>
+      <th>Reference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IPS Creator</td>
+      <td>Provide IPS Document Bundle [ITI-65]</td>
+      <td>R</td>
+      <td>IHE MHD ITI-65</td>
+    </tr>
+    <tr>
+      <td>IPS Repository</td>
+      <td>Provide IPS Document Bundle [ITI-65]</td>
+      <td>R</td>
+      <td>IHE MHD ITI-65</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Find IPS Document References [ITI-67]</td>
+      <td>R</td>
+      <td>IHE MHD ITI-67</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Retrieve IPS Document [ITI-68]</td>
+      <td>R</td>
+      <td>IHE MHD ITI-68</td>
+    </tr>
+    <tr>
+      <td>IPS Consumer</td>
+      <td>Find IPS Document References [ITI-67]</td>
+      <td>R</td>
+      <td>IHE MHD ITI-67</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Retrieve IPS Document [ITI-68]</td>
+      <td>R</td>
+      <td>IHE MHD ITI-68</td>
+    </tr>
+    <tr>
+      <td>Terminology Server</td>
+      <td>Concept Map Translate [ITI-SVCM]</td>
+      <td>O</td>
+      <td>IHE SVCM</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="actors-and-transactions-fhir-api-approach">Actors and Transactions (FHIR API Approach)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Actor</th>
+      <th>Operation / Interaction</th>
+      <th>Optionality</th>
+      <th>Reference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IPS Creator</td>
+      <td>Create IPS Bundle (POST /Bundle)</td>
+      <td>R</td>
+      <td>FHIR Document</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Update IPS Composition (PUT /Composition/{id})</td>
+      <td>O</td>
+      <td>FHIR Composition</td>
+    </tr>
+    <tr>
+      <td>IPS Repository</td>
+      <td>Create/Store IPS Bundle (POST /Bundle)</td>
+      <td>R</td>
+      <td>FHIR Bundle</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Search DocumentReference (GET /DocumentReference?_search)</td>
+      <td>R</td>
+      <td>FHIR Search</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Retrieve IPS Bundle (GET /Bundle/{id})</td>
+      <td>R</td>
+      <td>FHIR Bundle</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Update IPS Metadata (PUT /DocumentReference/{id})</td>
+      <td>O</td>
+      <td>FHIR DocumentReference</td>
+    </tr>
+    <tr>
+      <td>IPS Consumer</td>
+      <td>Search Document References (GET /DocumentReference?_search)</td>
+      <td>R</td>
+      <td>FHIR Search</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Retrieve IPS Bundle (GET /Bundle/{id})</td>
+      <td>R</td>
+      <td>FHIR Bundle</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Read Composition (GET /Composition/{id})</td>
+      <td>R</td>
+      <td>FHIR Composition</td>
+    </tr>
+    <tr>
+      <td>Terminology Server</td>
+      <td>ConceptMap Translate (POST /ConceptMap/$translate)</td>
+      <td>O</td>
+      <td>FHIR Terminology</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="key-behavioral-requirements">Key Behavioral Requirements</h3>
 
 <ul>
-  <li>Provide IPS Document Bundle [ITI-65]</li>
-  <li>Find IPS Document References [ITI-67]</li>
-  <li>Retrieve IPS Document [ITI-68]</li>
-  <li>Concept Map Translate [ITI-SVCM] (optional)</li>
+  <li>IPS Creator shall submit a valid IPS document bundle that includes Composition, Patient, and required IPS sections.</li>
+  <li>IPS Repository shall persist IPS metadata as DocumentReference and return retrievable bundle locations.</li>
+  <li>IPS Consumer shall discover references, retrieve full IPS bundles, and process required IPS sections.</li>
+  <li>Terminology translation is optional and used when mapping coded concepts across jurisdictions.</li>
+</ul>
+
+<h3 id="normative-transaction-links">Normative Transaction Links</h3>
+
+<ul>
+  <li>Provide Document Bundle [ITI-65]: https://profiles.ihe.net/ITI/MHD/ITI-65.html</li>
+  <li>Find Document References [ITI-67]: https://profiles.ihe.net/ITI/MHD/ITI-67.html</li>
+  <li>Retrieve Document [ITI-68]: https://profiles.ihe.net/ITI/MHD/ITI-68.html</li>
+  <li>MHD Home: https://profiles.ihe.net/ITI/MHD/</li>
 </ul>
 
 <h2 id="ips-dhw">IPS-DHW</h2>
@@ -288,7 +458,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://cylab-tw.github.io/aps-ig">Asia-Pacific Patient Summary Alliance</a>.  Package hl7.fhir.asia.aps#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Apr 25, 2026 19:34+0800">2026-04-25</span>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://cylab-tw.github.io/aps-ig">Asia-Pacific Patient Summary Alliance</a>.  Package hl7.fhir.asia.aps#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Apr 25, 2026 19:59+0800">2026-04-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
