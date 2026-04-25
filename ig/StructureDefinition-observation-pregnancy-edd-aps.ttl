@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "ObservationPregnancyEddAps"] ; # 
   fhir:title [ fhir:v "Observation Pregnancy EDD (APS, IPS Derived)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-04-25T20:27:14+08:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-04-25T20:44:16+08:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Asia-Pacific Patient Summary Alliance"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Asia-Pacific Patient Summary Alliance" ] ;

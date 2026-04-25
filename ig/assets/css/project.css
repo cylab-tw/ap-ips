@@ -507,12 +507,38 @@ h6.underlined {
   border-bottom: 1px solid #dddddd;
   padding-bottom: 0.2em;
 }
-p > img {
-  float: left;
-  margin-top: 0;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  margin-left: 0;
+#segment-content p > img,
+#segment-content p > a > img {
+  float: none !important;
+  display: block;
+  max-width: 75% !important;
+  width: auto;
+  height: auto;
+  margin: 0 auto 10px auto;
+}
+
+#segment-content h1,
+#segment-content h2,
+#segment-content h3,
+#segment-content h4,
+#segment-content h5,
+#segment-content h6 {
+  clear: both;
+}
+
+#segment-content table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #cccccc;
+}
+
+#segment-content table th,
+#segment-content table td {
+  border: 1px solid #cccccc;
+}
+
+#segment-content table th {
+  background-color: #f7f7f7;
 }
 .table td {
   padding: 6px;

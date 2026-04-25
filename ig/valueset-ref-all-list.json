@@ -11,8 +11,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.95"],
     "uses" : {
     },
-    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)",
-    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)"
+    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)",
+    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/administration-method-codes",
@@ -26,8 +26,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.97"],
     "uses" : {
     },
-    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)",
-    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)"
+    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)",
+    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
@@ -126,8 +126,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.346"],
     "uses" : {
     },
-    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)",
-    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)"
+    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)",
+    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/body-site",
@@ -141,13 +141,13 @@
     "sources" : ["2.16.840.1.113883.4.642.3.141"],
     "uses" : {
     },
-    "StructureDefinition-observation-pregnancy-status-aps.html" : "Observation Pregnancy Status (APS, IPS Derived)",
-    "StructureDefinition-procedure-aps.html" : "Procedure (APS, IPS Derived)",
     "StructureDefinition-condition-aps.html" : "Condition (APS, IPS Derived)",
-    "StructureDefinition-immunization-aps.html" : "Immunization (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)",
+    "StructureDefinition-deviceusestatement-aps.html" : "DeviceUseStatement (APS, IPS Derived)",
+    "StructureDefinition-procedure-aps.html" : "Procedure (APS, IPS Derived)",
     "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)",
-    "StructureDefinition-deviceusestatement-aps.html" : "DeviceUseStatement (APS, IPS Derived)"
+    "StructureDefinition-observation-pregnancy-status-aps.html" : "Observation Pregnancy Status (APS, IPS Derived)",
+    "StructureDefinition-immunization-aps.html" : "Immunization (APS, IPS Derived)",
+    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/bundle-type",
@@ -259,9 +259,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.161"],
     "uses" : {
     },
-    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)",
+    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)",
     "StructureDefinition-procedure-aps.html" : "Procedure (APS, IPS Derived)",
-    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)"
+    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-severity",
@@ -345,9 +345,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.5"],
     "uses" : {
     },
+    "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)",
     "StructureDefinition-observation-pregnancy-status-aps.html" : "Observation Pregnancy Status (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)"
+    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/days-of-week",
@@ -529,8 +529,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.981"],
     "uses" : {
     },
-    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)",
-    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)"
+    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)",
+    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/event-status",
@@ -727,26 +727,26 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
+    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)",
+    "StructureDefinition-flag-alert-aps.html" : "Flag Alert (APS, IPS Derived)",
+    "StructureDefinition-deviceusestatement-aps.html" : "DeviceUseStatement (APS, IPS Derived)",
+    "StructureDefinition-bundle-aps.html" : "Bundle (APS, IPS Derived)",
+    "StructureDefinition-composition-aps.html" : "Composition (APS, IPS Derived)",
+    "StructureDefinition-immunization-aps.html" : "Immunization (APS, IPS Derived)",
+    "StructureDefinition-organization-aps.html" : "Organization (APS, IPS Derived)",
+    "StructureDefinition-device-aps.html" : "Device (APS, IPS Derived)",
     "StructureDefinition-practitioner-aps.html" : "Practitioner (APS, IPS Derived)",
     "StructureDefinition-allergyintolerance-aps.html" : "AllergyIntolerance (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-status-aps.html" : "Observation Pregnancy Status (APS, IPS Derived)",
-    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)",
-    "StructureDefinition-organization-aps.html" : "Organization (APS, IPS Derived)",
-    "StructureDefinition-practitionerrole-aps.html" : "PractitionerRole (APS, IPS Derived)",
-    "StructureDefinition-composition-aps.html" : "Composition (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)",
-    "StructureDefinition-flag-alert-aps.html" : "Flag Alert (APS, IPS Derived)",
-    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)",
-    "StructureDefinition-procedure-aps.html" : "Procedure (APS, IPS Derived)",
-    "StructureDefinition-medication-aps.html" : "Medication (APS, IPS Derived)",
     "StructureDefinition-condition-aps.html" : "Condition (APS, IPS Derived)",
     "StructureDefinition-diagnosticreport-aps.html" : "DiagnosticReport (APS, IPS Derived)",
-    "StructureDefinition-bundle-aps.html" : "Bundle (APS, IPS Derived)",
-    "StructureDefinition-immunization-aps.html" : "Immunization (APS, IPS Derived)",
-    "StructureDefinition-device-aps.html" : "Device (APS, IPS Derived)",
-    "StructureDefinition-patient-aps.html" : "Patient (APS, IPS Derived)",
+    "StructureDefinition-procedure-aps.html" : "Procedure (APS, IPS Derived)",
     "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)",
-    "StructureDefinition-deviceusestatement-aps.html" : "DeviceUseStatement (APS, IPS Derived)"
+    "StructureDefinition-medication-aps.html" : "Medication (APS, IPS Derived)",
+    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)",
+    "StructureDefinition-patient-aps.html" : "Patient (APS, IPS Derived)",
+    "StructureDefinition-practitionerrole-aps.html" : "PractitionerRole (APS, IPS Derived)",
+    "StructureDefinition-observation-pregnancy-status-aps.html" : "Observation Pregnancy Status (APS, IPS Derived)",
+    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -845,8 +845,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.96"],
     "uses" : {
     },
-    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)",
-    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)"
+    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)",
+    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/medication-form-codes",
@@ -1001,9 +1001,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.403"],
     "uses" : {
     },
+    "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)",
     "StructureDefinition-observation-pregnancy-status-aps.html" : "Observation Pregnancy Status (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)"
+    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
@@ -1017,9 +1017,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.396"],
     "uses" : {
     },
+    "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)",
     "StructureDefinition-observation-pregnancy-status-aps.html" : "Observation Pregnancy Status (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)"
+    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
@@ -1033,9 +1033,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.399"],
     "uses" : {
     },
+    "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)",
     "StructureDefinition-observation-pregnancy-status-aps.html" : "Observation Pregnancy Status (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)"
+    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
@@ -1049,9 +1049,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.395"],
     "uses" : {
     },
+    "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)",
     "StructureDefinition-observation-pregnancy-status-aps.html" : "Observation Pregnancy Status (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)"
+    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/observation-status",
@@ -1065,9 +1065,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.400"],
     "uses" : {
     },
+    "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)",
     "StructureDefinition-observation-pregnancy-status-aps.html" : "Observation Pregnancy Status (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)"
+    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/organization-type",
@@ -1109,8 +1109,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.433"],
     "uses" : {
     },
-    "StructureDefinition-procedure-aps.html" : "Procedure (APS, IPS Derived)",
-    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)"
+    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)",
+    "StructureDefinition-procedure-aps.html" : "Procedure (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/procedure-category",
@@ -1223,9 +1223,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.407"],
     "uses" : {
     },
+    "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)",
     "StructureDefinition-observation-pregnancy-status-aps.html" : "Observation Pregnancy Status (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)"
+    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
@@ -1239,9 +1239,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.397"],
     "uses" : {
     },
+    "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)",
     "StructureDefinition-observation-pregnancy-status-aps.html" : "Observation Pregnancy Status (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)"
+    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/report-codes",
@@ -1283,19 +1283,19 @@
     "sources" : ["2.16.840.1.113883.4.642.3.27"],
     "uses" : {
     },
-    "StructureDefinition-allergyintolerance-aps.html" : "AllergyIntolerance (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-status-aps.html" : "Observation Pregnancy Status (APS, IPS Derived)",
-    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)",
-    "StructureDefinition-composition-aps.html" : "Composition (APS, IPS Derived)",
-    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)",
-    "StructureDefinition-flag-alert-aps.html" : "Flag Alert (APS, IPS Derived)",
     "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)",
-    "StructureDefinition-procedure-aps.html" : "Procedure (APS, IPS Derived)",
+    "StructureDefinition-flag-alert-aps.html" : "Flag Alert (APS, IPS Derived)",
+    "StructureDefinition-deviceusestatement-aps.html" : "DeviceUseStatement (APS, IPS Derived)",
+    "StructureDefinition-composition-aps.html" : "Composition (APS, IPS Derived)",
+    "StructureDefinition-immunization-aps.html" : "Immunization (APS, IPS Derived)",
+    "StructureDefinition-allergyintolerance-aps.html" : "AllergyIntolerance (APS, IPS Derived)",
     "StructureDefinition-condition-aps.html" : "Condition (APS, IPS Derived)",
     "StructureDefinition-diagnosticreport-aps.html" : "DiagnosticReport (APS, IPS Derived)",
-    "StructureDefinition-immunization-aps.html" : "Immunization (APS, IPS Derived)",
+    "StructureDefinition-procedure-aps.html" : "Procedure (APS, IPS Derived)",
     "StructureDefinition-observation-pregnancy-edd-aps.html" : "Observation Pregnancy EDD (APS, IPS Derived)",
-    "StructureDefinition-deviceusestatement-aps.html" : "DeviceUseStatement (APS, IPS Derived)"
+    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)",
+    "StructureDefinition-observation-pregnancy-status-aps.html" : "Observation Pregnancy Status (APS, IPS Derived)",
+    "StructureDefinition-observation-pregnancy-outcome-aps.html" : "Observation Pregnancy Outcome (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/route-codes",
@@ -1309,10 +1309,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.98"],
     "uses" : {
     },
+    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)",
     "StructureDefinition-allergyintolerance-aps.html" : "AllergyIntolerance (APS, IPS Derived)",
     "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)",
-    "StructureDefinition-immunization-aps.html" : "Immunization (APS, IPS Derived)",
-    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)"
+    "StructureDefinition-immunization-aps.html" : "Immunization (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/search-entry-mode",
@@ -1456,9 +1456,9 @@
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
-    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)",
+    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)",
     "StructureDefinition-medication-aps.html" : "Medication (APS, IPS Derived)",
-    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)"
+    "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/uv/ips/ValueSet/medicine-active-substances-uv-ips",
@@ -1494,9 +1494,9 @@
     "systems" : ["http://standardterms.edqm.eu"],
     "uses" : {
     },
+    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)",
     "StructureDefinition-medicationstatement-aps.html" : "MedicationStatement (APS, IPS Derived)",
-    "StructureDefinition-immunization-aps.html" : "Immunization (APS, IPS Derived)",
-    "StructureDefinition-medicationrequest-aps.html" : "MedicationRequest (APS, IPS Derived)"
+    "StructureDefinition-immunization-aps.html" : "Immunization (APS, IPS Derived)"
   },
   {
     "url" : "http://hl7.org/fhir/uv/ips/ValueSet/pregnancies-summary-uv-ips",

@@ -1,0 +1,19 @@
+{
+  "url" : "https://cylab-tw.github.io/aps-ig/ImplementationGuide/hl7.fhir.asia.aps",
+  "name" : "AsiaPacificPatientSummaryIg",
+  "title" : "Asia-Pacific Patient Summary",
+  "description" : "This guide describes the Asia-Pacific Patient Summary implementation framework.",
+  "status" : "draft",
+  "package-id" : "hl7.fhir.asia.aps",
+  "ig-ver" : "0.1.0",
+  "date" : "Sat, 25 Apr, 2026 20:44:16 +0800",
+  "dateISO8601" : "2026-04-25T20:44:16+08:00",
+  "errs" : 47,
+  "warnings" : 52,
+  "hints" : 1,
+  "suppressed-hints" : 535,
+  "suppressed-warnings" : 20,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 3249435880
+}
