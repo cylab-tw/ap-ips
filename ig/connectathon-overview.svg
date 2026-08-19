@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Connectathon overview</title>
+  <desc id="desc">A simplified Connectathon diagram showing shared standards, implementation, testing, and results.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#eef6ff"/>
+      <stop offset="100%" stop-color="#f5f1ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="420" fill="url(#bg)"/>
+  <rect x="50" y="70" width="200" height="110" rx="18" fill="#dfeeff" stroke="#4c7bd9" stroke-width="3" filter="url(#shadow)"/>
+  <text x="150" y="120" text-anchor="middle" font-size="26" font-family="Arial, sans-serif" font-weight="700" fill="#1d3b6f">Standards</text>
+  <text x="150" y="155" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#355a9a">IHE / HL7 / FHIR</text>
+
+  <rect x="300" y="70" width="200" height="110" rx="18" fill="#e8f8ed" stroke="#3b9a59" stroke-width="3" filter="url(#shadow)"/>
+  <text x="400" y="120" text-anchor="middle" font-size="26" font-family="Arial, sans-serif" font-weight="700" fill="#214d34">Implementation</text>
+  <text x="400" y="155" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#2c6a47">System Build</text>
+
+  <rect x="550" y="70" width="200" height="110" rx="18" fill="#fff4d9" stroke="#d89f1a" stroke-width="3" filter="url(#shadow)"/>
+  <text x="650" y="120" text-anchor="middle" font-size="26" font-family="Arial, sans-serif" font-weight="700" fill="#7d5500">Connectathon</text>
+  <text x="650" y="155" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#8d6600">Interoperability Test</text>
+
+  <rect x="800" y="70" width="200" height="110" rx="18" fill="#fbe7f0" stroke="#b64d7a" stroke-width="3" filter="url(#shadow)"/>
+  <text x="900" y="120" text-anchor="middle" font-size="26" font-family="Arial, sans-serif" font-weight="700" fill="#6b2340">Validation</text>
+  <text x="900" y="155" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#8b3a5f">Results / QA</text>
+
+  <path d="M250 125 H300 M500 125 H550 M750 125 H800" stroke="#7a8aa3" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M460 225 C550 260, 650 260, 740 225" stroke="#4c7bd9" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <circle cx="650" cy="225" r="52" fill="#ffffff" stroke="#4c7bd9" stroke-width="4"/>
+  <text x="650" y="232" text-anchor="middle" font-size="24" font-family="Arial, sans-serif" font-weight="700" fill="#1d3b6f">Test</text>
+
+  <text x="600" y="320" text-anchor="middle" font-size="28" font-family="Arial, sans-serif" font-weight="700" fill="#2d3d50">AP-IPS Connectathon</text>
+</svg>

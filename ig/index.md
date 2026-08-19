@@ -43,8 +43,7 @@ Support practical, profile-driven cross-border interoperability across the Asia-
 | | | |
 | :--- | :--- | :--- |
 | Chung-Yueh Lien (連中岳) | Taiwan | MISAT / National Taipei University of Nursing and Health Sciences |
-
-
+| Wen-Jou Chang (張雯柔) | Taiwan | MISAT / National Taipei University of Nursing and Health Sciences |
 
 ## Resource Content
 

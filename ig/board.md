@@ -63,4 +63,3 @@ AP-IPS is governed by a board composed of representatives from participating cou
 * Singapore
 * South Korea
 * Taiwan
-

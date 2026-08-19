@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Connectathon collaboration</title>
+  <desc id="desc">Illustration of healthcare organizations, vendors, and providers collaborating around a common interoperability framework.</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f7fbff"/>
+      <stop offset="100%" stop-color="#eef6f0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="420" fill="url(#bg2)"/>
+  <rect x="70" y="120" width="180" height="150" rx="18" fill="#dfeeff" stroke="#4c7bd9" stroke-width="3"/>
+  <text x="160" y="165" text-anchor="middle" font-size="26" font-family="Arial, sans-serif" font-weight="700" fill="#1d3b6f">Clinicians</text>
+  <text x="160" y="205" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#355a9a">Use cases</text>
+  <text x="160" y="235" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#355a9a">Care needs</text>
+
+  <rect x="310" y="120" width="180" height="150" rx="18" fill="#e8f8ed" stroke="#3b9a59" stroke-width="3"/>
+  <text x="400" y="165" text-anchor="middle" font-size="26" font-family="Arial, sans-serif" font-weight="700" fill="#214d34">Vendors</text>
+  <text x="400" y="205" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#2c6a47">Implement</text>
+  <text x="400" y="235" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#2c6a47">Integrate</text>
+
+  <rect x="550" y="120" width="180" height="150" rx="18" fill="#fff4d9" stroke="#d89f1a" stroke-width="3"/>
+  <text x="640" y="165" text-anchor="middle" font-size="26" font-family="Arial, sans-serif" font-weight="700" fill="#7d5500">Standards</text>
+  <text x="640" y="205" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#8d6600">Profiles</text>
+  <text x="640" y="235" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#8d6600">Interoperability</text>
+
+  <rect x="790" y="120" width="180" height="150" rx="18" fill="#fbe7f0" stroke="#b64d7a" stroke-width="3"/>
+  <text x="880" y="165" text-anchor="middle" font-size="26" font-family="Arial, sans-serif" font-weight="700" fill="#6b2340">Providers</text>
+  <text x="880" y="205" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#8b3a5f">Test</text>
+  <text x="880" y="235" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#8b3a5f">Validate</text>
+
+  <path d="M250 195 H310 M490 195 H550 M730 195 H790" stroke="#7a8aa3" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M160 270 C280 320, 420 320, 640 270" stroke="#4c7bd9" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M640 270 C760 320, 900 320, 1040 270" stroke="#3b9a59" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <text x="600" y="345" text-anchor="middle" font-size="28" font-family="Arial, sans-serif" font-weight="700" fill="#2d3d50">Shared Collaboration for Better Interoperability</text>
+</svg>

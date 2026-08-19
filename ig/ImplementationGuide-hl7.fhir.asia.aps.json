@@ -1314,6 +1314,15 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "connectathon.html"
+        }],
+        "nameUrl" : "connectathon.html",
+        "title" : "Connectathon",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "board.html"
         }],
         "nameUrl" : "board.html",
